@@ -15,7 +15,7 @@
       "category": "bringback",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792271935475
     }
   ],
@@ -63,5 +63,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271962758
+  "lastUpdated": 1792272075753
 }
