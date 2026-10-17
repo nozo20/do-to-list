@@ -57,20 +57,6 @@
   ],
   "presets": [
     {
-      "id": "p-4",
-      "title": "Eggs, milk & bread",
-      "category": "groceries",
-      "note": "Staples",
-      "priority": false
-    },
-    {
-      "id": "p-5",
-      "title": "Strip guest bed sheets",
-      "category": "todos",
-      "note": "Before leaving",
-      "priority": false
-    },
-    {
       "id": "p-6",
       "title": "Apartment keys & wallet",
       "category": "bringback",
@@ -78,5 +64,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272212656
+  "lastUpdated": 1792272214036
 }
