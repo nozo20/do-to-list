@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792272152572-xk9e",
+      "title": "קורנישונים",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792272152572
+    },
+    {
       "id": "item-1792272148846-vgod",
       "title": "שרי",
       "category": "groceries",
@@ -81,5 +90,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272148846
+  "lastUpdated": 1792272152572
 }
