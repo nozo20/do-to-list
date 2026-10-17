@@ -55,14 +55,6 @@
       "createdAt": 1792271935475
     }
   ],
-  "presets": [
-    {
-      "id": "p-6",
-      "title": "Apartment keys & wallet",
-      "category": "bringback",
-      "note": "Entryway",
-      "priority": true
-    }
-  ],
-  "lastUpdated": 1792272214036
+  "presets": [],
+  "lastUpdated": 1792272214790
 }
