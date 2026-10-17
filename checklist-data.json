@@ -1,87 +1,6 @@
 {
   "items": [
     {
-      "id": "g-1",
-      "title": "Unsweetened oat milk & cold brew concentrate",
-      "category": "groceries",
-      "note": "2 cartons",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1001
-    },
-    {
-      "id": "g-2",
-      "title": "Pasture-raised eggs & sourdough loaf",
-      "category": "groceries",
-      "note": "Breakfast staples",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1002
-    },
-    {
-      "id": "g-3",
-      "title": "Baby spinach, cherry tomatoes & avocados",
-      "category": "groceries",
-      "note": "Produce aisle",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1003
-    },
-    {
-      "id": "g-4",
-      "title": "Dishwasher pods & paper towels",
-      "category": "groceries",
-      "note": "Apartment restock",
-      "priority": true,
-      "completed": true,
-      "createdAt": 1005
-    },
-    {
-      "id": "b-1",
-      "title": "Mom's home-cooked containers / Tupperware",
-      "category": "bringback",
-      "note": "In parents’ fridge!",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2001
-    },
-    {
-      "id": "b-2",
-      "title": "Clean folded laundry & weekender duffel",
-      "category": "bringback",
-      "note": "2 loads",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2002
-    },
-    {
-      "id": "b-3",
-      "title": "MacBook MagSafe & phone bedside charger",
-      "category": "bringback",
-      "note": "Guest room outlet",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2003
-    },
-    {
-      "id": "b-5",
-      "title": "Apartment spare keys & transit card",
-      "category": "bringback",
-      "note": "Entryway bowl",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2005
-    },
-    {
-      "id": "t-1",
-      "title": "Run dark & white laundry loads before Sunday noon",
-      "category": "todos",
-      "note": "Dryer cycle too",
-      "priority": true,
-      "completed": true,
-      "createdAt": 3001
-    },
-    {
       "id": "t-3",
       "title": "Strip guest bed sheets & tidy room before leaving",
       "category": "todos",
@@ -144,5 +63,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271906379
+  "lastUpdated": 1792271909015
 }
