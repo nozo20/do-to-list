@@ -57,20 +57,6 @@
   ],
   "presets": [
     {
-      "id": "p-2",
-      "title": "Phone & laptop chargers",
-      "category": "bringback",
-      "note": "Wall outlet",
-      "priority": true
-    },
-    {
-      "id": "p-3",
-      "title": "Clean laundry bag",
-      "category": "bringback",
-      "note": "By front door",
-      "priority": true
-    },
-    {
       "id": "p-4",
       "title": "Eggs, milk & bread",
       "category": "groceries",
@@ -92,5 +78,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272211138
+  "lastUpdated": 1792272212656
 }
