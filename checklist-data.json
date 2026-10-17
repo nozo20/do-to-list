@@ -42,7 +42,7 @@
       "category": "bringback",
       "note": "In parents’ fridge!",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2001
     },
     {
@@ -144,5 +144,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271903808
+  "lastUpdated": 1792271904934
 }
