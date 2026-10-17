@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Weekend Hub" />
+  <title>Weekend Reset — Groceries, To-Dos & Bring Back to Apartment</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            canvas: '#FBF9F5',
+            surface: '#F3EFE6',
+            card: '#FFFFFF',
+            stoneBorder: '#E6E1D6',
+            ink: {
+              primary: '#18181B',
+              secondary: '#52525B',
+              muted: '#9CA3AF'
+            },
+            grocery: {
+              DEFAULT: '#0D9488',
+              light: '#F0FDFA',
+              border: '#99F6E4',
+              dark: '#0F766E'
+            },
+            pack: {
+              DEFAULT: '#EA580C',
+              light: '#FFF7ED',
+              border: '#FED7AA',
+              dark: '#C2410C'
+            },
+            todo: {
+              DEFAULT: '#4F46E5',
+              light: '#EEF2FF',
+              border: '#C7D2FE',
+              dark: '#4338CA'
+            },
+            urgent: {
+              DEFAULT: '#E11D48',
+              light: '#FFE4E6',
+              border: '#FECDD3'
+            },
+            complete: {
+              DEFAULT: '#10B981',
+              light: '#ECFDF5',
+              border: '#A7F3D0'
+            }
+          },
+          boxShadow: {
+            'warm-sm': '0 1px 2px 0 rgba(24, 24, 27, 0.04)',
+            'warm-md': '0 4px 12px -2px rgba(24, 24, 27, 0.06), 0 2px 4px -2px rgba(24, 24, 27, 0.04)',
+            'warm-lg': '0 12px 24px -4px rgba(24, 24, 27, 0.08), 0 4px 8px -2px rgba(24, 24, 27, 0.04)',
+            'bottom-nav': '0 -4px 20px rgba(24, 24, 27, 0.08)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base & Tactile Mobile-First Styling */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #FBF9F5;
+      color: #18181B;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    /* Prevent iOS Safari zoom on input focus by ensuring 16px minimum on mobile */
+    @media screen and (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Smooth Progress Bar Shimmer & Spring Physics */
+    .progress-bar-fill {
+      transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: shimmer 2.8s infinite;
+    }
+
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Custom Tactile Checkbox Animation */
+    .check-box-btn {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .check-box-btn:active {
+      transform: scale(0.84);
+    }
+
+    .check-box-btn.checked-anim {
+      animation: checkPop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes checkPop {
+      0% { transform: scale(0.85); }
+      55% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+
+    /* Item Row Micro-interactions */
+    .checklist-row {
+      transition: background-color 0.18s ease, opacity 0.25s ease;
+    }
+
+    /* Urgent Pulse Indicator */
+    @keyframes subtlePulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.92); }
+    }
+
+    .urgent-dot {
+      animation: subtlePulse 2s infinite ease-in-out;
+    }
+
+    /* Hide scrollbar utility for horizontal pill strips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Safe-area bottom padding for mobile bottom nav */
+    .safe-bottom-nav {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    /* Confetti Canvas Pointer Events */
+    #confettiCanvas {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-pack-border selection:text-ink-primary pb-28 md:pb-10">
+
+  <!-- =========================================================
+       BAKED-IN DATA BLOCK FOR SELF-UPDATING iCLOUD HTML FILE
+       When you tap "Save Updated HTML to iCloud", this block is
+       rewritten with your latest items so the file itself stays updated!
+       ========================================================= -->
+  <script id="baked-checklist-data" type="application/json">
+  {
+    "lastUpdated": 0,
+    "syncKey": "weekend-apt-default",
+    "items": []
+  }
+  </script>
+
+  <!-- Celebratory Confetti Overlay Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- =========================================================
+       STICKY MOBILE & DESKTOP PROGRESS COMMAND HEADER
+       ========================================================= -->
+  <header
+    id="masterHeader"
+    class="sticky top-0 z-30 bg-card/95 backdrop-blur-md border-b border-stoneBorder shadow-warm-sm transition-all duration-300"
+  >
+    <!-- Top Gradient Accent Strip -->
+    <div class="h-1 w-full bg-gradient-to-r from-grocery via-pack to-todo"></div>
+
+    <div class="max-w-[1320px] mx-auto px-3.5 sm:px-6 lg:px-8 py-3 sm:py-4">
+      <!-- Top Row: Title + Quick Sync & Leaving Check Controls -->
+      <div class="flex items-center justify-between gap-2">
+        <!-- Left: Brand & Route Pill -->
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface text-ink-secondary border border-stoneBorder">
+              <span>🏡 Parents</span>
+              <span class="text-pack font-bold">→</span>
+              <span>🏢 Apt</span>
+            </span>
+
+            <!-- Urgent Must-Bring Counter Pill -->
+            <button
+              id="urgentHeaderAlert"
+              type="button"
+              onclick="togglePriorityFilter()"
+              class="hidden items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-urgent-light text-urgent border border-urgent-border active:scale-95 transition-transform"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-urgent urgent-dot"></span>
+              <span id="urgentHeaderCount">0 Must-Bring</span>
+            </button>
+
+            <!-- 100% Complete Pill -->
+            <span id="celebrationBadge" class="hidden items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-complete-light text-complete border border-complete-border">
+              🎉 100% Done!
+            </span>
+          </div>
+
+          <h1 class="font-display text-lg sm:text-2xl font-extrabold text-ink-primary tracking-tight truncate mt-0.5">
+            Weekend Checklist &amp; Packing Hub
+          </h1>
+        </div>
+
+        <!-- Right: Sync Button, Leaving Check Button & Percentage -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          <!-- Multi-Device & iCloud Sync Modal Button -->
+          <button
+            id="openSyncModalBtn"
+            type="button"
+            onclick="openSyncModal()"
+            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas hover:bg-surface text-ink-primary transition-all active:scale-95 min-h-[40px]"
+            title="Cloud Sync & iCloud Drive File Options"
+          >
+            <span id="syncStatusDot" class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span class="hidden sm:inline" id="syncStatusLabel">Sync &amp; iCloud</span>
+            <span class="sm:hidden">☁️ Sync</span>
+          </button>
+
+          <!-- Leaving Soon Check Button -->
+          <button
+            id="departureModeBtn"
+            type="button"
+            onclick="toggleDepartureMode()"
+            title="Show only remaining Bring Back & Must-Bring items before walking out the door"
+            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-surface hover:bg-pack-light hover:border-pack-border hover:text-pack-dark text-ink-primary transition-all active:scale-95 min-h-[40px]"
+          >
+            <span>🚗</span>
+            <span id="departureModeLabel" class="hidden xs:inline sm:inline">Leaving Check</span>
+          </button>
+
+          <!-- Live Percentage Readout -->
+          <div class="text-right pl-1">
+            <div id="overallPercentage" class="font-display font-mono text-xl sm:text-3xl font-extrabold text-ink-primary tabular-nums leading-none">
+              0%
+            </div>
+            <div id="overallCounter" class="font-mono text-[10px] sm:text-xs font-medium text-ink-secondary tabular-nums mt-0.5">
+              0/0
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar Track -->
+      <div class="mt-2.5">
+        <div class="w-full h-2.5 sm:h-3 bg-surface rounded-full overflow-hidden border border-stoneBorder p-0.5">
+          <div
+            id="overallProgressBar"
+            class="progress-bar-fill h-full rounded-full bg-gradient-to-r from-grocery via-pack to-todo"
+            style="width: 0%"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Desktop Sub-Progress Pills (Hidden on small phones to keep sticky header compact, shown on md+) -->
+      <div class="hidden md:grid grid-cols-3 gap-2.5 mt-3">
+        <!-- Groceries Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('groceries')"
+          class="group text-left bg-canvas hover:bg-grocery-light/60 border border-stoneBorder hover:border-grocery-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-grocery-light border border-grocery-border flex items-center justify-center text-xs shrink-0">🛒</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Shopping &amp; Groceries</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-groceries" class="h-full bg-grocery transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-groceries" class="font-mono text-xs font-semibold text-grocery-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+
+        <!-- Bring Back Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('bringback')"
+          class="group text-left bg-canvas hover:bg-pack-light/60 border border-stoneBorder hover:border-pack-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-pack-light border border-pack-border flex items-center justify-center text-xs shrink-0">📦</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Bring Back to Apt</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-bringback" class="h-full bg-pack transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-bringback" class="font-mono text-xs font-semibold text-pack-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+
+        <!-- Weekend To-Dos Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('todos')"
+          class="group text-left bg-canvas hover:bg-todo-light/60 border border-stoneBorder hover:border-todo-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-todo-light border border-todo-border flex items-center justify-center text-xs shrink-0">✅</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Weekend To-Dos</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-todos" class="h-full bg-todo transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-todos" class="font-mono text-xs font-semibold text-todo-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="w-full max-w-[1320px] mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1 flex flex-col gap-4">
+
+    <!-- Active Departure Mode Banner -->
+    <div id="departureBanner" class="hidden items-center justify-between gap-3 px-4 py-3 rounded-2xl bg-pack-light border-2 border-pack text-pack-dark shadow-warm-sm">
+      <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+        <span class="text-lg shrink-0">🔑</span>
+        <span><strong>Leaving Soon Check:</strong> Showing only remaining <em>Bring Back to Apt</em> &amp; <em>⚡ Must Bring</em> fridge/charger items so nothing is forgotten!</span>
+      </div>
+      <button
+        type="button"
+        onclick="toggleDepartureMode()"
+        class="px-3 py-1.5 rounded-xl bg-white border border-pack-border text-xs font-bold text-pack-dark hover:bg-pack hover:text-white transition-colors shrink-0 min-h-[36px]"
+      >
+        Exit
+      </button>
+    </div>
+
+    <!-- =========================================================
+         QUICK-ADD COMPOSER & 1-TAP PRESETS
+         ========================================================= -->
+    <section aria-label="Add Checklist Item" class="bg-card border border-stoneBorder rounded-2xl p-3.5 sm:p-5 shadow-warm-sm">
+      <form id="addItemForm" class="flex flex-col gap-2.5">
+        <div class="flex flex-col lg:flex-row gap-2">
+          <!-- Item Title Input -->
+          <div class="relative flex-1">
+            <input
+              id="itemTitleInput"
+              type="text"
+              required
+              enterkeyhint="done"
+              placeholder="Add item or task (e.g., Mom's lasagna Tupperware, Oat milk)..."
+              class="w-full pl-3.5 pr-9 py-2.5 sm:py-3 rounded-xl bg-canvas border border-stoneBorder text-ink-primary placeholder-ink-muted text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack transition-all"
+            />
+            <kbd class="hidden md:inline-flex items-center px-1.5 py-0.5 text-[11px] font-mono font-medium text-ink-muted bg-surface border border-stoneBorder rounded absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              /
+            </kbd>
+          </div>
+
+          <!-- Category + Note + Priority + Submit Row -->
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap lg:flex-nowrap gap-2">
+            <!-- Category Selector Dropdown -->
+            <select
+              id="itemCategorySelect"
+              aria-label="Category"
+              class="col-span-1 sm:w-48 px-3 py-2.5 sm:py-3 rounded-xl bg-surface border border-stoneBorder text-ink-primary text-base sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack cursor-pointer"
+            >
+              <option value="groceries">🛒 Groceries</option>
+              <option value="bringback" selected>📦 Bring Back</option>
+              <option value="todos">✅ To-Dos</option>
+            </select>
+
+            <!-- Optional Quantity / Note Input -->
+            <input
+              id="itemNoteInput"
+              type="text"
+              enterkeyhint="done"
+              placeholder="Note / Qty (e.g. Fridge)"
+              class="col-span-1 sm:w-44 px-3 py-2.5 sm:py-3 rounded-xl bg-canvas border border-stoneBorder text-ink-primary placeholder-ink-muted text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack transition-all font-mono"
+            />
+
+            <!-- High-Priority / Must Bring Toggle Button -->
+            <button
+              id="priorityToggleBtn"
+              type="button"
+              aria-pressed="false"
+              title="Flag as Must Bring / High Priority"
+              class="col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-stoneBorder bg-canvas text-ink-secondary hover:border-urgent-border hover:text-urgent text-xs sm:text-sm font-semibold transition-all select-none shrink-0 min-h-[44px]"
+            >
+              <span>⚡</span>
+              <span>Must Bring</span>
+            </button>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="col-span-1 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 sm:py-3 rounded-xl bg-ink-primary hover:bg-zinc-800 text-white font-display font-semibold text-sm shadow-warm-sm active:scale-95 transition-all shrink-0 min-h-[44px]"
+            >
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>Add Item</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Quick-Add Chips -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pt-1 pb-0.5 no-scrollbar text-xs">
+          <span class="text-ink-muted font-medium shrink-0 pr-1">1-Tap Add:</span>
+          <button type="button" onclick="quickAddPreset('Leftover food Tupperware', 'bringback', 'In fridge!', true)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-pack-light active:bg-pack-border text-pack-dark border border-pack-border font-medium transition-colors">
+            + 🥡 Fridge Leftovers
+          </button>
+          <button type="button" onclick="quickAddPreset('Phone & laptop chargers', 'bringback', 'Wall outlet', true)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-pack-light active:bg-pack-border text-pack-dark border border-pack-border font-medium transition-colors">
+            + 🔌 Chargers
+          </button>
+          <button type="button" onclick="quickAddPreset('Clean laundry bag', 'bringback', 'By front door', true)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-pack-light active:bg-pack-border text-pack-dark border border-pack-border font-medium transition-colors">
+            + 🧺 Clean Laundry
+          </button>
+          <button type="button" onclick="quickAddPreset('Eggs, milk & sourdough', 'groceries', 'Breakfast staples', false)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-grocery-light active:bg-grocery-border text-grocery-dark border border-grocery-border font-medium transition-colors">
+            + 🥖 Eggs &amp; Milk
+          </button>
+          <button type="button" onclick="quickAddPreset('Strip guest bed sheets', 'todos', 'Before leaving', false)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-todo-light active:bg-todo-border text-todo-dark border border-todo-border font-medium transition-colors">
+            + 🛏️ Strip Bed Sheets
+          </button>
+          <button type="button" onclick="quickAddPreset('Apartment keys & wallet', 'bringback', 'Entryway bowl', true)" class="shrink-0 px-2.5 py-1.5 rounded-lg bg-pack-light active:bg-pack-border text-pack-dark border border-pack-border font-medium transition-colors">
+            + 🔑 Apt Keys
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         UNIFIED FILTER, SEARCH & WEEKEND RESET BAR
+         ========================================================= -->
+    <section aria-label="List Controls and Weekend Actions" class="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 bg-surface/80 border border-stoneBorder rounded-2xl p-2.5 sm:px-4">
+      <!-- Left: Status Filter Pills + Priority Filter + Search -->
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Segmented Status Filter -->
+        <div class="inline-flex p-1 rounded-xl bg-canvas border border-stoneBorder" role="group" aria-label="Filter items by status">
+          <button
+            type="button"
+            data-filter="all"
+            onclick="setStatusFilter('all')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-ink-primary text-white shadow-warm-sm min-h-[34px]"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            data-filter="remaining"
+            onclick="setStatusFilter('remaining')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]"
+          >
+            Remaining
+          </button>
+          <button
+            type="button"
+            data-filter="completed"
+            onclick="setStatusFilter('completed')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]"
+          >
+            Done
+          </button>
+        </div>
+
+        <!-- Must Bring Priority Filter Pill -->
+        <button
+          id="filterPriorityBtn"
+          type="button"
+          onclick="togglePriorityFilter()"
+          class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas text-ink-secondary hover:text-urgent hover:border-urgent-border transition-all min-h-[36px]"
+        >
+          <span>⚡ Must Bring</span>
+        </button>
+
+        <!-- Search Input -->
+        <div class="relative flex-1 sm:w-52 min-w-[140px]">
+          <svg class="w-4 h-4 text-ink-muted absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search list..."
+            class="w-full pl-8 pr-7 py-1.5 rounded-xl bg-canvas border border-stoneBorder text-xs sm:text-sm text-ink-primary placeholder-ink-muted focus:outline-none focus:border-ink-secondary transition-all"
+          />
+          <button
+            id="clearSearchBtn"
+            type="button"
+            onclick="clearSearch()"
+            class="hidden absolute right-2 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink-primary p-1"
+            title="Clear search"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Weekend Workflow Action Buttons -->
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1.5 lg:pt-0 border-t lg:border-t-0 border-stoneBorder">
+        <button
+          type="button"
+          onclick="uncheckAllForNextWeekend()"
+          title="Keep all items on the list but reset their checkmarks for next weekend"
+          class="shrink-0 inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-card hover:bg-canvas text-ink-primary border border-stoneBorder shadow-warm-sm transition-all active:scale-95 min-h-[36px]"
+        >
+          <svg class="w-3.5 h-3.5 text-pack" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Reset for Next Weekend</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="clearCompletedItems()"
+          title="Delete all currently checked-off items"
+          class="shrink-0 inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-semibold bg-card hover:bg-urgent-light/50 text-ink-secondary hover:text-urgent border border-stoneBorder transition-all active:scale-95 min-h-[36px]"
+        >
+          <span>Clear Done</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="restoreSampleList()"
+          title="Restore the default starter items"
+          class="shrink-0 inline-flex items-center gap-1 px-2.5 py-2 rounded-xl text-xs font-medium text-ink-secondary hover:text-ink-primary hover:bg-canvas transition-colors min-h-[36px]"
+        >
+          <span>Sample List</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         THREE-COLUMN CATEGORIZED WORKSPACE
+         ========================================================= -->
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-5 flex-1 items-start">
+
+      <!-- COLUMN 1: SHOPPING & GROCERIES -->
+      <section
+        id="col-groceries"
+        aria-label="Shopping and Groceries"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col"
+      >
+        <div class="p-3.5 sm:p-4 bg-grocery-light/60 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-grocery text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              🛒
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Shopping &amp; Groceries
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Stock up for the apartment &amp; week</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-groceries" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-grocery-border text-grocery-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('groceries')"
+              title="Add item to Shopping & Groceries"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-grocery hover:text-white text-grocery-dark border border-grocery-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-groceries" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+      <!-- COLUMN 2: BRING BACK TO APARTMENT -->
+      <section
+        id="col-bringback"
+        aria-label="Bring Back to Apartment"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col ring-1 ring-pack-border/70"
+      >
+        <div class="p-3.5 sm:p-4 bg-pack-light/70 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-pack text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              📦
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Bring Back to Apt
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Fridge leftovers, laundry &amp; chargers</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-bringback" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-pack-border text-pack-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('bringback')"
+              title="Add item to Bring Back to Apartment"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-pack hover:text-white text-pack-dark border border-pack-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-bringback" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+      <!-- COLUMN 3: WEEKEND TO-DOS -->
+      <section
+        id="col-todos"
+        aria-label="Weekend To-Dos"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col"
+      >
+        <div class="p-3.5 sm:p-4 bg-todo-light/60 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-todo text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              ✅
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Weekend To-Dos
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Chores, errands &amp; Sunday prep</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-todos" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-todo-border text-todo-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('todos')"
+              title="Add task to Weekend To-Dos"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-todo hover:text-white text-todo-dark border border-todo-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-todos" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+    </main>
+
+    <!-- Desktop Footer Info -->
+    <footer class="pt-4 pb-6 text-center text-xs text-ink-muted flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-stoneBorder/60">
+      <p>Tap any item to check it off • Use <strong>☁️ Sync &amp; iCloud</strong> to keep your phone &amp; laptop in sync.</p>
+      <button
+        type="button"
+        onclick="saveUpdatedHtmlFile()"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface hover:bg-stoneBorder/60 text-ink-primary font-semibold transition-colors"
+      >
+        <span>💾 Save Updated HTML File for iCloud Drive</span>
+      </button>
+    </footer>
+  </div>
+
+  <!-- =========================================================
+       FIXED MOBILE BOTTOM CATEGORY NAVIGATION BAR (< 1024px)
+       ========================================================= -->
+  <nav
+    aria-label="Mobile Category Navigation"
+    class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur-md border-t border-stoneBorder shadow-bottom-nav safe-bottom-nav"
+  >
+    <div class="grid grid-cols-4 gap-1 px-2 py-1.5 max-w-lg mx-auto">
+      <button
+        type="button"
+        data-mobtab="all"
+        onclick="setMobileTab('all')"
+        class="mob-tab-btn flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all bg-ink-primary text-white"
+      >
+        <span class="text-sm leading-none">📋</span>
+        <span class="text-[11px] font-bold mt-1 leading-none">All Lists</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="groceries"
+        onclick="setMobileTab('groceries')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">🛒</span>
+          <span id="mobCount-groceries" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-grocery-light text-grocery-dark border border-grocery-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">Groceries</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="bringback"
+        onclick="setMobileTab('bringback')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">📦</span>
+          <span id="mobCount-bringback" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-pack-light text-pack-dark border border-pack-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">Bring Back</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="todos"
+        onclick="setMobileTab('todos')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">✅</span>
+          <span id="mobCount-todos" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-todo-light text-todo-dark border border-todo-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">To-Dos</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       CLOUD SYNC & iCLOUD DRIVE FILE HUB MODAL
+       ========================================================= -->
+  <div
+    id="syncModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-xs"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="syncModalTitle"
+  >
+    <div class="bg-card border border-stoneBorder rounded-2xl max-w-lg w-full p-5 sm:p-6 shadow-warm-lg max-h-[90vh] overflow-y-auto flex flex-col gap-4">
+      <div class="flex items-start justify-between gap-3 border-b border-stoneBorder pb-3">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-pack-light text-pack-dark border border-pack-border">
+            ☁️ Multi-Device &amp; iCloud Sync
+          </span>
+          <h2 id="syncModalTitle" class="font-display text-xl font-extrabold text-ink-primary mt-1">
+            Keep Your Checklist Updated Everywhere
+          </h2>
+        </div>
+        <button
+          type="button"
+          onclick="closeSyncModal()"
+          class="w-8 h-8 rounded-lg bg-surface hover:bg-stoneBorder/60 flex items-center justify-center text-ink-secondary font-bold"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Option 1: Real-Time Cloud Sync Key -->
+      <div class="p-4 rounded-xl bg-canvas border border-stoneBorder space-y-2.5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-display text-sm font-bold text-ink-primary flex items-center gap-1.5">
+            <span>1. Live Cloud Sync (Automatic across devices)</span>
+          </h3>
+          <span id="modalCloudBadge" class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-surface text-ink-secondary">
+            Connecting...
+          </span>
+        </div>
+        <p class="text-xs text-ink-secondary leading-relaxed">
+          Enter the same <strong>Personal Sync Passphrase</strong> on your phone and your computer. Any item you check off or add syncs live in the cloud—even when opened from a downloaded file!
+        </p>
+        <form onsubmit="applyCustomSyncKey(event)" class="flex gap-2 pt-1">
+          <input
+            id="syncKeyInput"
+            type="text"
+            required
+            placeholder="e.g., sarah-weekend-apt"
+            class="flex-1 px-3 py-2 rounded-xl bg-white border border-stoneBorder font-mono text-sm text-ink-primary focus:outline-none focus:border-pack"
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 rounded-xl bg-ink-primary hover:bg-zinc-800 text-white text-xs font-bold shrink-0 active:scale-95 transition-transform"
+          >
+            Connect Key
+          </button>
+        </form>
+      </div>
+
+      <!-- Option 2: How iCloud Drive HTML Files Work + Self-Updating HTML Button -->
+      <div class="p-4 rounded-xl bg-pack-light/50 border border-pack-border space-y-2.5">
+        <h3 class="font-display text-sm font-bold text-pack-dark flex items-center gap-1.5">
+          <span>2. Using an HTML File in an iCloud Drive Folder</span>
+        </h3>
+        <p class="text-xs text-ink-secondary leading-relaxed">
+          <strong>Important iOS/macOS tip:</strong> For security, web browsers cannot silently overwrite a local <code>.html</code> file on your disk by themselves. If you want the <code>.html</code> file in your iCloud folder to physically contain your updated list (for offline use), tap below to save/replace the file in iCloud Drive with your current items baked right inside it:
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button
+            type="button"
+            onclick="saveUpdatedHtmlFile()"
+            class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-pack hover:bg-pack-dark text-white text-xs font-bold shadow-warm-sm active:scale-95 transition-all min-h-[42px]"
+          >
+            <span>💾 Save Updated HTML to iCloud / Files</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Option 3: Shareable Sync Link & JSON Backup -->
+      <div class="p-4 rounded-xl bg-canvas border border-stoneBorder space-y-2.5">
+        <h3 class="font-display text-sm font-bold text-ink-primary">
+          3. Instant Snapshot Link &amp; Backup File
+        </h3>
+        <p class="text-xs text-ink-secondary">
+          Copy a link with your current list encoded inside it, or export/import a tiny JSON backup file in your iCloud folder.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button
+            type="button"
+            onclick="copyShareableSyncLink()"
+            class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-surface text-ink-primary border border-stoneBorder text-xs font-semibold transition-colors min-h-[38px]"
+          >
+            <span>🔗 Copy Sync Link</span>
+          </button>
+          <button
+            type="button"
+            onclick="exportJsonBackup()"
+            class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-surface text-ink-primary border border-stoneBorder text-xs font-semibold transition-colors min-h-[38px]"
+          >
+            <span>⬇️ Export JSON</span>
+          </button>
+          <label class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-surface text-ink-primary border border-stoneBorder text-xs font-semibold transition-colors cursor-pointer min-h-[38px]">
+            <span>⬆️ Import JSON</span>
+            <input type="file" accept=".json" onchange="importJsonBackup(event)" class="hidden" />
+          </label>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] text-ink-muted pt-1">
+        <span id="currentUserIdDisplay" class="font-mono truncate max-w-[260px]">Session: Initializing...</span>
+        <button
+          type="button"
+          onclick="closeSyncModal()"
+          class="px-4 py-1.5 rounded-lg bg-surface text-ink-primary font-semibold hover:bg-stoneBorder/60"
+        >
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       NON-BLOCKING TOAST WITH UNDO ACTION
+       ========================================================= -->
+  <div
+    id="toastContainer"
+    aria-live="polite"
+    class="fixed bottom-20 lg:bottom-6 right-4 left-4 sm:left-auto z-50 flex flex-col gap-2 max-w-sm w-auto sm:w-full pointer-events-none"
+  ></div>
+
+  <!-- =========================================================
+       APPLICATION LOGIC & REAL-TIME CLOUD / iCLOUD PERSISTENCE
+       ========================================================= -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // Starter items tailored for transitioning between Parents' Place and Apartment
+    const DEFAULT_ITEMS = [
+      // 🛒 Shopping & Groceries
+      {
+        id: 'g-1',
+        title: 'Unsweetened oat milk & cold brew concentrate',
+        category: 'groceries',
+        note: '2 cartons',
+        priority: false,
+        completed: false,
+        createdAt: 1001
+      },
+      {
+        id: 'g-2',
+        title: 'Pasture-raised eggs & sourdough loaf',
+        category: 'groceries',
+        note: 'Breakfast staples',
+        priority: false,
+        completed: true,
+        createdAt: 1002
+      },
+      {
+        id: 'g-3',
+        title: 'Baby spinach, cherry tomatoes & avocados',
+        category: 'groceries',
+        note: 'Produce aisle',
+        priority: false,
+        completed: false,
+        createdAt: 1003
+      },
+      {
+        id: 'g-4',
+        title: 'Greek yogurt & frozen berries',
+        category: 'groceries',
+        note: '1 large tub',
+        priority: false,
+        completed: false,
+        createdAt: 1004
+      },
+      {
+        id: 'g-5',
+        title: 'Dishwasher pods & paper towels',
+        category: 'groceries',
+        note: 'Apartment restock',
+        priority: true,
+        completed: false,
+        createdAt: 1005
+      },
+
+      // 📦 Bring Back to Apartment (from parents' place)
+      {
+        id: 'b-1',
+        title: "Mom's home-cooked containers / Tupperware",
+        category: 'bringback',
+        note: 'In parents’ fridge!',
+        priority: true,
+        completed: false,
+        createdAt: 2001
+      },
+      {
+        id: 'b-2',
+        title: 'Clean folded laundry & weekender duffel',
+        category: 'bringback',
+        note: '2 loads',
+        priority: true,
+        completed: false,
+        createdAt: 2002
+      },
+      {
+        id: 'b-3',
+        title: 'MacBook MagSafe & phone bedside charger',
+        category: 'bringback',
+        note: 'Guest room outlet',
+        priority: true,
+        completed: false,
+        createdAt: 2003
+      },
+      {
+        id: 'b-4',
+        title: 'Extra olive oil & spice jars from pantry',
+        category: 'bringback',
+        note: 'Pantry raid',
+        priority: false,
+        completed: true,
+        createdAt: 2004
+      },
+      {
+        id: 'b-5',
+        title: 'Apartment spare keys & transit card',
+        category: 'bringback',
+        note: 'Entryway bowl',
+        priority: true,
+        completed: true,
+        createdAt: 2005
+      },
+
+      // ✅ Weekend To-Dos
+      {
+        id: 't-1',
+        title: 'Run dark & white laundry loads before Sunday noon',
+        category: 'todos',
+        note: 'Dryer cycle too',
+        priority: true,
+        completed: true,
+        createdAt: 3001
+      },
+      {
+        id: 't-2',
+        title: 'Help parents fix Wi-Fi printer / TV settings',
+        category: 'todos',
+        note: '15 mins',
+        priority: false,
+        completed: true,
+        createdAt: 3002
+      },
+      {
+        id: 't-3',
+        title: 'Strip guest bed sheets & tidy room before leaving',
+        category: 'todos',
+        note: 'Sunday afternoon',
+        priority: false,
+        completed: false,
+        createdAt: 3003
+      },
+      {
+        id: 't-4',
+        title: 'Fill up gas tank / check train schedule back',
+        category: 'todos',
+        note: 'Beat evening traffic',
+        priority: false,
+        completed: false,
+        createdAt: 3004
+      },
+      {
+        id: 't-5',
+        title: 'Meal-prep lunches once back at the apartment',
+        category: 'todos',
+        note: 'Sunday night',
+        priority: false,
+        completed: false,
+        createdAt: 3005
+      }
+    ];
+
+    // Global App State
+    const state = {
+      items: [],
+      lastUpdated: 0,
+      syncKey: 'weekend-apt-default',
+      statusFilter: 'all',        // 'all' | 'remaining' | 'completed'
+      priorityOnly: false,
+      departureMode: false,
+      searchQuery: '',
+      mobileTab: 'all',           // 'all' | 'groceries' | 'bringback' | 'todos'
+      composerPriority: false,
+      editingId: null,
+      lastProgressPct: 0,
+      undoSnapshot: null,
+      cloudConnected: false
+    };
+
+    // Firebase / Firestore references
+    let db = null;
+    let auth = null;
+    let currentUser = null;
+    let unsubscribeSnapshot = null;
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'weekend-checklist-hub';
+
+    // =========================================================
+    // 1. INITIALIZATION: BAKED HTML DATA + URL HASH + FIRESTORE
+    // =========================================================
+    function loadInitialLocalOrBakedState() {
+      // 1. Check if URL hash has a #sync= payload
+      if (window.location.hash && window.location.hash.startsWith('#sync=')) {
+        try {
+          const encoded = window.location.hash.replace('#sync=', '');
+          const decoded = JSON.parse(decodeURIComponent(escape(atob(encoded))));
+          if (decoded && Array.isArray(decoded.items)) {
+            state.items = decoded.items;
+            state.lastUpdated = decoded.lastUpdated || Date.now();
+            if (decoded.syncKey) state.syncKey = decoded.syncKey;
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+            showToast('🔗 Imported checklist from Sync Link!');
+            return;
+          }
+        } catch (err) {
+          console.warn('Could not parse URL sync hash:', err);
+        }
+      }
+
+      // 2. Check the embedded #baked-checklist-data tag (for self-updated iCloud HTML files)
+      try {
+        const bakedEl = document.getElementById('baked-checklist-data');
+        if (bakedEl) {
+          const baked = JSON.parse(bakedEl.textContent);
+          if (baked && Array.isArray(baked.items) && baked.items.length > 0) {
+            state.items = baked.items;
+            state.lastUpdated = baked.lastUpdated || Date.now();
+            if (baked.syncKey) state.syncKey = baked.syncKey;
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Could not read baked checklist data:', err);
+      }
+
+      // 3. Fallback to default starter checklist
+      state.items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      state.lastUpdated = 0;
+    }
+
+    function updateBakedScriptTagInDom() {
+      const bakedEl = document.getElementById('baked-checklist-data');
+      if (!bakedEl) return;
+      const payload = {
+        lastUpdated: state.lastUpdated,
+        syncKey: state.syncKey,
+        items: state.items
+      };
+      bakedEl.textContent = '\n' + JSON.stringify(payload, null, 2) + '\n';
+    }
+
+    async function initCloudSync() {
+      try {
+        if (typeof __firebase_config === 'undefined' || !__firebase_config) {
+          updateSyncStatusUI('offline', 'iCloud File Mode');
+          return;
+        }
+
+        const firebaseConfig = JSON.parse(__firebase_config);
+        const app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
+
+        // RULE 3: Authenticate FIRST before any Firestore queries
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+          await signInAnonymously(auth);
+        }
+
+        onAuthStateChanged(auth, async (user) => {
+          currentUser = user;
+          if (!user) return;
+
+          const uidEl = document.getElementById('currentUserIdDisplay');
+          if (uidEl) uidEl.textContent = `User ID: ${user.uid}`;
+
+          // Check user's private settings doc for their last-used syncKey
+          try {
+            const prefRef = doc(db, 'artifacts', appId, 'users', user.uid, 'settings', 'preferences');
+            const prefSnap = await getDoc(prefRef);
+            if (prefSnap.exists() && prefSnap.data().syncKey) {
+              state.syncKey = prefSnap.data().syncKey;
+            }
+          } catch (e) {
+            console.warn('Preferences read skipped:', e);
+          }
+
+          const syncInput = document.getElementById('syncKeyInput');
+          if (syncInput) syncInput.value = state.syncKey;
+
+          subscribeToSharedChecklist(state.syncKey);
+        });
+      } catch (err) {
+        console.warn('Cloud sync unavailable (offline/file mode):', err);
+        updateSyncStatusUI('offline', 'Local File Mode');
+      }
+    }
+
+    function sanitizeSyncKey(rawKey) {
+      return (rawKey || 'weekend-apt-default')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9-_]/g, '-')
+        .replace(/-+/g, '-')
+        .slice(0, 60) || 'weekend-apt-default';
+    }
+
+    function subscribeToSharedChecklist(rawKey) {
+      if (!db || !currentUser) return;
+
+      const cleanKey = sanitizeSyncKey(rawKey);
+      state.syncKey = cleanKey;
+
+      const syncInput = document.getElementById('syncKeyInput');
+      if (syncInput) syncInput.value = cleanKey;
+
+      if (unsubscribeSnapshot) {
+        unsubscribeSnapshot();
+      }
+
+      // RULE 1: Strict public path so any of the user's devices with the same Sync Key stay synced
+      const checklistDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'weekendChecklists', cleanKey);
+
+      unsubscribeSnapshot = onSnapshot(
+        checklistDocRef,
+        async (docSnap) => {
+          state.cloudConnected = true;
+          updateSyncStatusUI('online', `Synced (${cleanKey})`);
+
+          if (docSnap.exists()) {
+            const cloudData = docSnap.data();
+            const cloudUpdated = cloudData.lastUpdated || 0;
+
+            // If cloud has newer data or local is still untouched default, adopt cloud state
+            if (cloudUpdated >= state.lastUpdated && Array.isArray(cloudData.items)) {
+              state.items = cloudData.items;
+              state.lastUpdated = cloudUpdated;
+              updateBakedScriptTagInDom();
+              renderApp();
+            } else if (state.lastUpdated > cloudUpdated) {
+              // Local baked file has newer edits—push them up to cloud
+              await pushStateToCloud();
+            }
+          } else {
+            // Initialize cloud document with current items
+            await pushStateToCloud();
+          }
+        },
+        (err) => {
+          console.warn('Firestore snapshot error:', err);
+          updateSyncStatusUI('offline', 'Offline Mode');
+        }
+      );
+    }
+
+    async function pushStateToCloud() {
+      updateBakedScriptTagInDom();
+      if (!db || !currentUser) return;
+
+      try {
+        const cleanKey = sanitizeSyncKey(state.syncKey);
+        const checklistDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'weekendChecklists', cleanKey);
+        await setDoc(checklistDocRef, {
+          items: state.items,
+          lastUpdated: state.lastUpdated,
+          updatedBy: currentUser.uid
+        });
+      } catch (err) {
+        console.warn('Could not push to cloud:', err);
+      }
+    }
+
+    function recordStateChange() {
+      state.lastUpdated = Date.now();
+      updateBakedScriptTagInDom();
+      renderApp();
+      pushStateToCloud();
+    }
+
+    function updateSyncStatusUI(status, text) {
+      const dot = document.getElementById('syncStatusDot');
+      const label = document.getElementById('syncStatusLabel');
+      const modalBadge = document.getElementById('modalCloudBadge');
+
+      if (status === 'online') {
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-complete';
+        if (label) label.textContent = 'Cloud Synced';
+        if (modalBadge) {
+          modalBadge.className = 'text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-complete-light text-complete border border-complete-border';
+          modalBadge.textContent = `🟢 ${text}`;
+        }
+      } else {
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-pack';
+        if (label) label.textContent = 'Sync & iCloud';
+        if (modalBadge) {
+          modalBadge.className = 'text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-pack-light text-pack-dark border border-pack-border';
+          modalBadge.textContent = `📦 ${text}`;
+        }
+      }
+    }
+
+    // =========================================================
+    // 2. SELF-UPDATING HTML EXPORT FOR iCLOUD DRIVE & SHARE LINK
+    // =========================================================
+    function saveUpdatedHtmlFile() {
+      state.lastUpdated = Date.now();
+      updateBakedScriptTagInDom();
+
+      const fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+      const fileName = 'weekend-checklist.html';
+
+      // On iPhone/iPad, try native Web Share API with file so user can tap "Save to Files" -> iCloud Drive directly
+      if (navigator.canShare && typeof File !== 'undefined') {
+        const fileObj = new File([blob], fileName, { type: 'text/html' });
+        if (navigator.canShare({ files: [fileObj] })) {
+          navigator.share({
+            title: 'Weekend Checklist & Packing Hub',
+            text: 'Updated Weekend Checklist HTML file for iCloud Drive',
+            files: [fileObj]
+          }).then(() => {
+            showToast('💾 Saved updated HTML file!');
+          }).catch(() => {
+            triggerDirectDownload(blob, fileName);
+          });
+          return;
+        }
+      }
+
+      triggerDirectDownload(blob, fileName);
+    }
+
+    function triggerDirectDownload(blob, fileName) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      showToast('💾 Downloaded updated weekend-checklist.html! Move/replace it in your iCloud folder.');
+    }
+
+    function copyShareableSyncLink() {
+      const payload = {
+        lastUpdated: state.lastUpdated || Date.now(),
+        syncKey: state.syncKey,
+        items: state.items
+      };
+      const base64 = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+      const shareUrl = `${window.location.origin}${window.location.pathname}#sync=${base64}`;
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = shareUrl;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      tempInput.remove();
+
+      showToast('🔗 Sync link copied to clipboard!');
+    }
+
+    function exportJsonBackup() {
+      const payload = {
+        lastUpdated: state.lastUpdated || Date.now(),
+        syncKey: state.syncKey,
+        items: state.items
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      triggerDirectDownload(blob, 'weekend-checklist-backup.json');
+    }
+
+    function importJsonBackup(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if (parsed && Array.isArray(parsed.items)) {
+            state.undoSnapshot = JSON.parse(JSON.stringify(state.items));
+            state.items = parsed.items;
+            recordStateChange();
+            closeSyncModal();
+            showToast('⬆️ Checklist imported from JSON file!', true);
+          }
+        } catch (err) {
+          showToast('Could not read JSON file.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    async function applyCustomSyncKey(event) {
+      event.preventDefault();
+      const input = document.getElementById('syncKeyInput');
+      if (!input) return;
+      const newKey = sanitizeSyncKey(input.value);
+      state.syncKey = newKey;
+      input.value = newKey;
+
+      if (db && currentUser) {
+        try {
+          const prefRef = doc(db, 'artifacts', appId, 'users', currentUser.uid, 'settings', 'preferences');
+          await setDoc(prefRef, { syncKey: newKey }, { merge: true });
+        } catch (e) {
+          console.warn('Could not save syncKey preference:', e);
+        }
+        subscribeToSharedChecklist(newKey);
+        showToast(`☁️ Connected to Sync Key: "${newKey}"`);
+      } else {
+        updateBakedScriptTagInDom();
+        showToast(`Saved Sync Key "${newKey}" locally.`);
+      }
+    }
+
+    // =========================================================
+    // 3. PROGRESS METRICS & CELEBRATION ENGINE
+    // =========================================================
+    function updateProgressDashboard() {
+      const total = state.items.length;
+      const completed = state.items.filter(i => i.completed).length;
+      const pct = total === 0 ? 0 : Math.round((completed / total) * 100);
+
+      const pctEl = document.getElementById('overallPercentage');
+      const countEl = document.getElementById('overallCounter');
+      const barEl = document.getElementById('overallProgressBar');
+      const celebBadge = document.getElementById('celebrationBadge');
+
+      pctEl.textContent = `${pct}%`;
+      countEl.textContent = `${completed}/${total} done`;
+      barEl.style.width = `${pct}%`;
+      barEl.setAttribute('aria-valuenow', pct);
+
+      // Urgent / Must Bring counter in header
+      const urgentRemaining = state.items.filter(i => i.priority && !i.completed).length;
+      const urgentAlertEl = document.getElementById('urgentHeaderAlert');
+      const urgentCountEl = document.getElementById('urgentHeaderCount');
+
+      if (urgentRemaining > 0) {
+        urgentAlertEl.classList.remove('hidden');
+        urgentAlertEl.classList.add('inline-flex');
+        urgentCountEl.textContent = `${urgentRemaining} Must-Bring left`;
+      } else {
+        urgentAlertEl.classList.add('hidden');
+        urgentAlertEl.classList.remove('inline-flex');
+      }
+
+      // 100% Celebratory State
+      if (total > 0 && pct === 100) {
+        barEl.className = 'progress-bar-fill h-full rounded-full bg-complete';
+        celebBadge.classList.remove('hidden');
+        celebBadge.classList.add('inline-flex');
+
+        if (state.lastProgressPct < 100 && state.lastProgressPct !== 0) {
+          triggerConfettiCelebration();
+          showToast('🎉 100% Done! All weekend tasks & packing items complete.');
+        }
+      } else {
+        barEl.className = 'progress-bar-fill h-full rounded-full bg-gradient-to-r from-grocery via-pack to-todo';
+        celebBadge.classList.add('hidden');
+        celebBadge.classList.remove('inline-flex');
+      }
+
+      state.lastProgressPct = pct;
+
+      // Sub-category progress bars, column badges & mobile bottom nav remaining badges
+      const categories = ['groceries', 'bringback', 'todos'];
+      categories.forEach(cat => {
+        const catItems = state.items.filter(i => i.category === cat);
+        const catTotal = catItems.length;
+        const catDone = catItems.filter(i => i.completed).length;
+        const catRemaining = catTotal - catDone;
+        const catPct = catTotal === 0 ? 0 : Math.round((catDone / catTotal) * 100);
+
+        const subCount = document.getElementById(`subCount-${cat}`);
+        const subBar = document.getElementById(`subBar-${cat}`);
+        const colBadge = document.getElementById(`colBadge-${cat}`);
+        const mobCount = document.getElementById(`mobCount-${cat}`);
+
+        if (subCount) subCount.textContent = `${catDone}/${catTotal}`;
+        if (subBar) subBar.style.width = `${catPct}%`;
+        if (colBadge) colBadge.textContent = `${catDone}/${catTotal}`;
+        if (mobCount) mobCount.textContent = `${catRemaining}`;
+      });
+    }
+
+    // =========================================================
+    // 4. FILTERING & RENDERING CHECKLIST COLUMNS
+    // =========================================================
+    function getFilteredItemsForCategory(category) {
+      return state.items
+        .filter(item => {
+          if (item.category !== category) return false;
+
+          if (state.departureMode) {
+            if (item.completed) return false;
+            if (item.category !== 'bringback' && !item.priority) return false;
+          }
+
+          if (state.statusFilter === 'remaining' && item.completed) return false;
+          if (state.statusFilter === 'completed' && !item.completed) return false;
+
+          if (state.priorityOnly && !item.priority) return false;
+
+          if (state.searchQuery.trim() !== '') {
+            const q = state.searchQuery.toLowerCase();
+            const matchTitle = item.title.toLowerCase().includes(q);
+            const matchNote = (item.note || '').toLowerCase().includes(q);
+            if (!matchTitle && !matchNote) return false;
+          }
+
+          return true;
+        })
+        .sort((a, b) => {
+          if (a.completed !== b.completed) return a.completed ? 1 : -1;
+          if (a.priority !== b.priority) return a.priority ? -1 : 1;
+          return a.createdAt - b.createdAt;
+        });
+    }
+
+    function getCategoryAccentClasses(category) {
+      if (category === 'groceries') {
+        return {
+          checkboxChecked: 'bg-grocery border-grocery text-white',
+          checkboxUnchecked: 'border-stoneBorder hover:border-grocery',
+          noteBadge: 'bg-grocery-light text-grocery-dark border-grocery-border'
+        };
+      }
+      if (category === 'bringback') {
+        return {
+          checkboxChecked: 'bg-pack border-pack text-white',
+          checkboxUnchecked: 'border-stoneBorder hover:border-pack',
+          noteBadge: 'bg-pack-light text-pack-dark border-pack-border'
+        };
+      }
+      return {
+        checkboxChecked: 'bg-todo border-todo text-white',
+        checkboxUnchecked: 'border-stoneBorder hover:border-todo',
+        noteBadge: 'bg-todo-light text-todo-dark border-todo-border'
+      };
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderColumns() {
+      const categories = ['groceries', 'bringback', 'todos'];
+
+      categories.forEach(cat => {
+        const container = document.getElementById(`list-${cat}`);
+        const colSection = document.getElementById(`col-${cat}`);
+
+        // Handle Mobile Bottom Tab Visibility
+        if (state.mobileTab === 'all' || state.mobileTab === cat) {
+          colSection.classList.remove('hidden');
+          colSection.classList.add('flex');
+        } else {
+          colSection.classList.add('hidden');
+          colSection.classList.remove('flex');
+        }
+
+        const filtered = getFilteredItemsForCategory(cat);
+        const totalInCat = state.items.filter(i => i.category === cat).length;
+        const accent = getCategoryAccentClasses(cat);
+
+        if (filtered.length === 0) {
+          container.innerHTML = renderEmptyState(cat, totalInCat);
+          return;
+        }
+
+        container.innerHTML = filtered.map(item => {
+          // Inline Edit Mode Row
+          if (state.editingId === item.id) {
+            return `
+              <div class="p-3.5 bg-surface/90">
+                <form onsubmit="saveInlineEdit(event, '${item.id}')" class="flex flex-col gap-2.5">
+                  <input
+                    id="edit-title-${item.id}"
+                    type="text"
+                    required
+                    value="${escapeHtml(item.title)}"
+                    class="w-full px-3 py-2.5 rounded-xl bg-card border border-stoneBorder text-base sm:text-sm font-medium text-ink-primary focus:outline-none focus:border-ink-primary"
+                    placeholder="Item name..."
+                  />
+                  <div class="flex flex-wrap items-center gap-2">
+                    <input
+                      id="edit-note-${item.id}"
+                      type="text"
+                      value="${escapeHtml(item.note || '')}"
+                      class="flex-1 min-w-[130px] px-3 py-2 rounded-xl bg-card border border-stoneBorder text-base sm:text-xs font-mono text-ink-primary focus:outline-none focus:border-ink-primary"
+                      placeholder="Qty or location note..."
+                    />
+                    <select
+                      id="edit-cat-${item.id}"
+                      class="px-3 py-2 rounded-xl bg-card border border-stoneBorder text-base sm:text-xs font-semibold text-ink-primary"
+                    >
+                      <option value="groceries" ${item.category === 'groceries' ? 'selected' : ''}>🛒 Groceries</option>
+                      <option value="bringback" ${item.category === 'bringback' ? 'selected' : ''}>📦 Bring Back</option>
+                      <option value="todos" ${item.category === 'todos' ? 'selected' : ''}>✅ To-Dos</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center justify-between pt-1">
+                    <label class="inline-flex items-center gap-2 text-xs font-semibold text-urgent cursor-pointer select-none py-1">
+                      <input
+                        id="edit-prio-${item.id}"
+                        type="checkbox"
+                        ${item.priority ? 'checked' : ''}
+                        class="w-4 h-4 rounded border-stoneBorder text-urgent focus:ring-urgent"
+                      />
+                      <span>⚡ Must Bring</span>
+                    </label>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onclick="cancelInlineEdit()"
+                        class="px-3 py-1.5 rounded-xl text-xs font-semibold text-ink-secondary bg-card border border-stoneBorder"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="submit"
+                        class="px-4 py-1.5 rounded-xl text-xs font-semibold bg-ink-primary text-white"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            `;
+          }
+
+          // Standard Mobile-Ergonomic Checklist Row
+          const rowOpacity = item.completed ? 'opacity-60 bg-canvas/50' : 'bg-card';
+          const titleStyle = item.completed ? 'line-through text-ink-muted' : 'text-ink-primary font-medium';
+
+          return `
+            <div class="checklist-row group px-3.5 sm:px-4 py-3 flex items-start justify-between gap-2.5 ${rowOpacity}">
+              <!-- Left: Touch-Friendly Checkbox + Item Title & Badges -->
+              <div class="flex items-start gap-3 flex-1 min-w-0">
+                <button
+                  type="button"
+                  onclick="toggleItemCheck('${item.id}')"
+                  aria-label="${item.completed ? 'Mark as incomplete' : 'Mark as complete'}"
+                  class="check-box-btn mt-0.5 w-6 h-6 sm:w-5 sm:h-5 rounded-lg border-2 flex items-center justify-center shrink-0 ${
+                    item.completed ? accent.checkboxChecked + ' checked-anim' : accent.checkboxUnchecked + ' bg-white'
+                  }"
+                >
+                  ${
+                    item.completed
+                      ? `<svg class="w-4 h-4 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                         </svg>`
+                      : ''
+                  }
+                </button>
+
+                <div class="flex-1 min-w-0">
+                  <button
+                    type="button"
+                    onclick="toggleItemCheck('${item.id}')"
+                    class="item-title-text text-left text-[15px] leading-snug break-words w-full py-0.5 ${titleStyle}"
+                  >
+                    ${escapeHtml(item.title)}
+                  </button>
+
+                  ${
+                    item.note || item.priority
+                      ? `<div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+                          ${
+                            item.priority
+                              ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-urgent-light text-urgent border border-urgent-border">
+                                   <span>⚡ Must Bring</span>
+                                 </span>`
+                              : ''
+                          }
+                          ${
+                            item.note
+                              ? `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-mono font-medium border ${accent.noteBadge}">
+                                   ${escapeHtml(item.note)}
+                                 </span>`
+                              : ''
+                          }
+                        </div>`
+                      : ''
+                  }
+                </div>
+              </div>
+
+              <!-- Right: Mobile-Visible Touch Action Buttons -->
+              <div class="flex items-center gap-0.5 sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100 transition-opacity shrink-0">
+                <button
+                  type="button"
+                  onclick="toggleItemPriority('${item.id}')"
+                  title="${item.priority ? 'Remove Must Bring priority' : 'Mark as Must Bring'}"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-xs transition-colors ${
+                    item.priority
+                      ? 'bg-urgent-light text-urgent border border-urgent-border'
+                      : 'text-ink-muted hover:text-urgent active:bg-urgent-light/50'
+                  }"
+                >
+                  ⚡
+                </button>
+                <button
+                  type="button"
+                  onclick="startInlineEdit('${item.id}')"
+                  title="Edit item"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-muted hover:text-ink-primary active:bg-surface transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onclick="deleteItem('${item.id}')"
+                  title="Delete item"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-muted hover:text-urgent active:bg-urgent-light/60 transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      });
+    }
+
+    function renderEmptyState(category, totalInCat) {
+      const labels = {
+        groceries: {
+          icon: '🥑',
+          emptyTitle: 'No groceries on the list yet',
+          emptySub: 'Add apartment staples, produce, or snacks for the week ahead.'
+        },
+        bringback: {
+          icon: '🥡',
+          emptyTitle: 'Nothing queued to pack back',
+          emptySub: 'Add fridge leftovers, chargers, or clean laundry so nothing stays behind.'
+        },
+        todos: {
+          icon: '✨',
+          emptyTitle: 'Weekend to-do list is clear',
+          emptySub: 'Add errands, laundry cycles, or Sunday prep tasks.'
+        }
+      };
+
+      const info = labels[category];
+
+      if (totalInCat > 0) {
+        return `
+          <div class="p-7 text-center">
+            <p class="text-2xl mb-1">🎉</p>
+            <p class="font-display text-sm font-bold text-ink-primary">All clear in this view</p>
+            <p class="text-xs text-ink-secondary mt-0.5">Switch your active filter to see other items.</p>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="p-7 text-center">
+          <p class="text-2xl mb-1.5">${info.icon}</p>
+          <p class="font-display text-sm font-bold text-ink-primary">${info.emptyTitle}</p>
+          <p class="text-xs text-ink-secondary mt-1 max-w-xs mx-auto">${info.emptySub}</p>
+        </div>
+      `;
+    }
+
+    function renderApp() {
+      updateProgressDashboard();
+      renderColumns();
+    }
+
+    // =========================================================
+    // 5. ITEM CRUD & WORKFLOW ACTIONS
+    // =========================================================
+    function addItem(title, category, note = '', priority = false) {
+      const cleanTitle = title.trim();
+      if (!cleanTitle) return;
+
+      const newItem = {
+        id: 'item-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+        title: cleanTitle,
+        category: category,
+        note: note.trim(),
+        priority: Boolean(priority),
+        completed: false,
+        createdAt: Date.now()
+      };
+
+      state.items.unshift(newItem);
+      recordStateChange();
+    }
+
+    function quickAddPreset(title, category, note, priority) {
+      addItem(title, category, note, priority);
+      showToast(`Added "${title}"`);
+    }
+
+    function toggleItemCheck(id) {
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+      item.completed = !item.completed;
+      recordStateChange();
+    }
+
+    function toggleItemPriority(id) {
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+      item.priority = !item.priority;
+      recordStateChange();
+    }
+
+    function deleteItem(id) {
+      const idx = state.items.findIndex(i => i.id === id);
+      if (idx === -1) return;
+      const removed = state.items[idx];
+      state.undoSnapshot = JSON.parse(JSON.stringify(state.items));
+      state.items.splice(idx, 1);
+      recordStateChange();
+      showToast(`Removed "${removed.title}"`, true);
+    }
+
+    function startInlineEdit(id) {
+      state.editingId = id;
+      renderColumns();
+      setTimeout(() => {
+        const input = document.getElementById(`edit-title-${id}`);
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      }, 20);
+    }
+
+    function cancelInlineEdit() {
+      state.editingId = null;
+      renderColumns();
+    }
+
+    function saveInlineEdit(e, id) {
+      e.preventDefault();
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+
+      const newTitle = document.getElementById(`edit-title-${id}`).value.trim();
+      const newNote = document.getElementById(`edit-note-${id}`).value.trim();
+      const newCat = document.getElementById(`edit-cat-${id}`).value;
+      const newPrio = document.getElementById(`edit-prio-${id}`).checked;
+
+      if (newTitle) {
+        item.title = newTitle;
+        item.note = newNote;
+        item.category = newCat;
+        item.priority = newPrio;
+      }
+
+      state.editingId = null;
+      recordStateChange();
+    }
+
+    function setStatusFilter(filterVal) {
+      state.statusFilter = filterVal;
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        if (btn.dataset.filter === filterVal) {
+          btn.className = 'filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-ink-primary text-white shadow-warm-sm min-h-[34px]';
+        } else {
+          btn.className = 'filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]';
+        }
+      });
+      renderColumns();
+    }
+
+    function togglePriorityFilter() {
+      state.priorityOnly = !state.priorityOnly;
+      const btn = document.getElementById('filterPriorityBtn');
+      if (state.priorityOnly) {
+        btn.className = 'inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-urgent bg-urgent text-white shadow-warm-sm transition-all min-h-[36px]';
+      } else {
+        btn.className = 'inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas text-ink-secondary hover:text-urgent hover:border-urgent-border transition-all min-h-[36px]';
+      }
+      renderColumns();
+    }
+
+    function toggleDepartureMode() {
+      state.departureMode = !state.departureMode;
+      const btn = document.getElementById('departureModeBtn');
+      const banner = document.getElementById('departureBanner');
+      const label = document.getElementById('departureModeLabel');
+
+      if (state.departureMode) {
+        btn.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-pack bg-pack text-white shadow-warm-sm transition-all active:scale-95 min-h-[40px]';
+        label.textContent = 'Exit Check';
+        banner.classList.remove('hidden');
+        banner.classList.add('flex');
+        if (window.innerWidth < 1024 && state.mobileTab !== 'all') {
+          setMobileTab('all');
+        }
+      } else {
+        btn.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-surface hover:bg-pack-light hover:border-pack-border hover:text-pack-dark text-ink-primary transition-all active:scale-95 min-h-[40px]';
+        label.textContent = 'Leaving Check';
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }
+      renderColumns();
+    }
+
+    function setMobileTab(tab) {
+      state.mobileTab = tab;
+      document.querySelectorAll('.mob-tab-btn').forEach(btn => {
+        if (btn.dataset.mobtab === tab) {
+          btn.className = 'mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all bg-ink-primary text-white shadow-warm-sm';
+        } else {
+          btn.className = 'mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary';
+        }
+      });
+
+      // Also sync the quick-add category dropdown when switching tabs on phone
+      if (tab !== 'all') {
+        const catSelect = document.getElementById('itemCategorySelect');
+        if (catSelect) catSelect.value = tab;
+      }
+
+      renderColumns();
+    }
+
+    function focusCategoryView(category) {
+      if (window.innerWidth < 1024) {
+        setMobileTab(category);
+      }
+      const el = document.getElementById(`col-${category}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function prefillCategoryComposer(category) {
+      const select = document.getElementById('itemCategorySelect');
+      const input = document.getElementById('itemTitleInput');
+      select.value = category;
+      input.focus();
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function clearSearch() {
+      state.searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderColumns();
+    }
+
+    function uncheckAllForNextWeekend() {
+      const checkedCount = state.items.filter(i => i.completed).length;
+      if (checkedCount === 0) {
+        showToast('All items are already unchecked and ready!');
+        return;
+      }
+      state.undoSnapshot = JSON.parse(JSON.stringify(state.items));
+      state.items.forEach(item => {
+        item.completed = false;
+      });
+      state.lastProgressPct = 0;
+      recordStateChange();
+      showToast(`Reset ${checkedCount} items for next weekend!`, true);
+    }
+
+    function clearCompletedItems() {
+      const completedCount = state.items.filter(i => i.completed).length;
+      if (completedCount === 0) {
+        showToast('No completed items to clear.');
+        return;
+      }
+      state.undoSnapshot = JSON.parse(JSON.stringify(state.items));
+      state.items = state.items.filter(i => !i.completed);
+      recordStateChange();
+      showToast(`Cleared ${completedCount} completed ${completedCount === 1 ? 'item' : 'items'}.`, true);
+    }
+
+    function restoreSampleList() {
+      state.undoSnapshot = JSON.parse(JSON.stringify(state.items));
+      state.items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      state.statusFilter = 'all';
+      state.priorityOnly = false;
+      state.departureMode = false;
+      recordStateChange();
+      showToast('Restored starter weekend checklist!', true);
+    }
+
+    function undoLastAction() {
+      if (!state.undoSnapshot) return;
+      state.items = JSON.parse(JSON.stringify(state.undoSnapshot));
+      state.undoSnapshot = null;
+      recordStateChange();
+      showToast('Action undone.');
+    }
+
+    function openSyncModal() {
+      const modal = document.getElementById('syncModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      const syncInput = document.getElementById('syncKeyInput');
+      if (syncInput) syncInput.value = state.syncKey;
+    }
+
+    function closeSyncModal() {
+      const modal = document.getElementById('syncModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // =========================================================
+    // 6. TOAST NOTIFICATIONS & CONFETTI
+    // =========================================================
+    function showToast(message, showUndo = false) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-ink-primary text-white text-xs sm:text-sm font-medium shadow-warm-lg border border-zinc-700 transition-all duration-300 transform translate-y-2 opacity-0';
+
+      toast.innerHTML = `
+        <span>${escapeHtml(message)}</span>
+        ${
+          showUndo
+            ? `<button type="button" onclick="undoLastAction(); this.closest('div').remove();" class="px-2.5 py-1 rounded-lg bg-pack text-white font-bold text-xs hover:bg-pack-dark transition-colors shrink-0">
+                 Undo
+               </button>`
+            : ''
+        }
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    function triggerConfettiCelebration() {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const colors = ['#0D9488', '#EA580C', '#4F46E5', '#10B981', '#F59E0B', '#E11D48'];
+      const particles = Array.from({ length: 70 }, () => ({
+        x: Math.random() * canvas.width,
+        y: -20 - Math.random() * 80,
+        size: 6 + Math.random() * 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedX: (Math.random() - 0.5) * 5,
+        speedY: 3 + Math.random() * 4.5,
+        rotation: Math.random() * 360,
+        rotationSpeed: (Math.random() - 0.5) * 10
+      }));
+
+      let frame = 0;
+      function animateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+          p.rotation += p.rotationSpeed;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65);
+          ctx.restore();
+        });
+
+        frame++;
+        if (frame < 120) {
+          requestAnimationFrame(animateConfetti);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      requestAnimationFrame(animateConfetti);
+    }
+
+    // Expose functions to global window for inline onclick handlers
+    Object.assign(window, {
+      quickAddPreset,
+      toggleItemCheck,
+      toggleItemPriority,
+      deleteItem,
+      startInlineEdit,
+      cancelInlineEdit,
+      saveInlineEdit,
+      setStatusFilter,
+      togglePriorityFilter,
+      toggleDepartureMode,
+      setMobileTab,
+      focusCategoryView,
+      prefillCategoryComposer,
+      clearSearch,
+      uncheckAllForNextWeekend,
+      clearCompletedItems,
+      restoreSampleList,
+      undoLastAction,
+      openSyncModal,
+      closeSyncModal,
+      saveUpdatedHtmlFile,
+      copyShareableSyncLink,
+      exportJsonBackup,
+      importJsonBackup,
+      applyCustomSyncKey
+    });
+
+    // =========================================================
+    // 7. DOM READY & EVENT LISTENERS
+    // =========================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      loadInitialLocalOrBakedState();
+
+      const total = state.items.length;
+      const done = state.items.filter(i => i.completed).length;
+      state.lastProgressPct = total === 0 ? 0 : Math.round((done / total) * 100);
+
+      renderApp();
+      initCloudSync();
+
+      // Add Item Form Submission
+      const form = document.getElementById('addItemForm');
+      const titleInput = document.getElementById('itemTitleInput');
+      const noteInput = document.getElementById('itemNoteInput');
+      const catSelect = document.getElementById('itemCategorySelect');
+      const prioBtn = document.getElementById('priorityToggleBtn');
+
+      prioBtn.addEventListener('click', () => {
+        state.composerPriority = !state.composerPriority;
+        prioBtn.setAttribute('aria-pressed', String(state.composerPriority));
+        if (state.composerPriority) {
+          prioBtn.className = 'col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-urgent bg-urgent-light text-urgent text-xs sm:text-sm font-bold transition-all select-none shrink-0 min-h-[44px]';
+        } else {
+          prioBtn.className = 'col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-stoneBorder bg-canvas text-ink-secondary hover:border-urgent-border hover:text-urgent text-xs sm:text-sm font-semibold transition-all select-none shrink-0 min-h-[44px]';
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addItem(titleInput.value, catSelect.value, noteInput.value, state.composerPriority);
+        titleInput.value = '';
+        noteInput.value = '';
+        if (state.composerPriority) {
+          prioBtn.click();
+        }
+        // Blur input on mobile after adding so the keyboard dismisses cleanly
+        if (window.innerWidth < 768) {
+          titleInput.blur();
+        } else {
+          titleInput.focus();
+        }
+      });
+
+      // Search Input Listener
+      const searchInput = document.getElementById('searchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      searchInput.addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        if (state.searchQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        renderColumns();
+      });
+
+      // Close modal on backdrop click
+      document.getElementById('syncModal').addEventListener('click', (e) => {
+        if (e.target.id === 'syncModal') closeSyncModal();
+      });
+
+      // Keyboard shortcut `/` to focus quick-add input
+      window.addEventListener('keydown', (e) => {
+        if (
+          e.key === '/' &&
+          document.activeElement.tagName !== 'INPUT' &&
+          document.activeElement.tagName !== 'TEXTAREA' &&
+          document.activeElement.tagName !== 'SELECT'
+        ) {
+          e.preventDefault();
+          titleInput.focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
