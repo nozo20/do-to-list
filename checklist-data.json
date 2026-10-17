@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792272148846-vgod",
+      "title": "שרי",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792272148846
+    },
+    {
       "id": "item-1792272146422-1qd5",
       "title": "גבינות קשות",
       "category": "groceries",
@@ -72,5 +81,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272146422
+  "lastUpdated": 1792272148846
 }
