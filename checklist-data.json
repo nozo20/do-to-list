@@ -51,7 +51,7 @@
       "category": "bringback",
       "note": "2 loads",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2002
     },
     {
@@ -60,7 +60,7 @@
       "category": "bringback",
       "note": "Guest room outlet",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2003
     },
     {
@@ -144,5 +144,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271904934
+  "lastUpdated": 1792271906379
 }
