@@ -6,7 +6,7 @@
       "category": "todos",
       "note": "Sunday afternoon",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 3003
     },
     {
@@ -63,5 +63,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271909015
+  "lastUpdated": 1792271910699
 }
