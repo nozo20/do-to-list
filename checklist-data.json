@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792272178644-lzwy",
+      "title": "מצעים?",
+      "category": "todos",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792272178644
+    },
+    {
       "id": "item-1792272152572-xk9e",
       "title": "קורנישונים",
       "category": "groceries",
@@ -90,5 +99,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272152572
+  "lastUpdated": 1792272178644
 }
