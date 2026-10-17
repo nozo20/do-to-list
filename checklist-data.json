@@ -1,24 +1,5 @@
 {
-  "items": [
-    {
-      "id": "t-3",
-      "title": "Strip guest bed sheets & tidy room before leaving",
-      "category": "todos",
-      "note": "Sunday afternoon",
-      "priority": false,
-      "completed": true,
-      "createdAt": 3003
-    },
-    {
-      "id": "t-4",
-      "title": "Fill up gas tank / check train schedule back",
-      "category": "todos",
-      "note": "Beat evening traffic",
-      "priority": false,
-      "completed": false,
-      "createdAt": 3004
-    }
-  ],
+  "items": [],
   "presets": [
     {
       "id": "p-1",
@@ -63,5 +44,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271910699
+  "lastUpdated": 1792271913427
 }
