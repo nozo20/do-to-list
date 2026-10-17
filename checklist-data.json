@@ -33,7 +33,7 @@
       "category": "groceries",
       "note": "Apartment restock",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 1005
     },
     {
@@ -144,5 +144,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792271837969
+  "lastUpdated": 1792271902657
 }
