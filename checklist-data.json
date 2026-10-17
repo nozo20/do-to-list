@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "t-1",
+      "title": "Run dark & white laundry loads before Sunday noon",
+      "category": "todos",
+      "note": "Dryer cycle too",
+      "priority": true,
+      "completed": false,
+      "createdAt": 3001
+    }
+  ],
+  "presets": [
+    {
+      "id": "p-1",
+      "title": "Leftover food Tupperware",
+      "category": "bringback",
+      "note": "In fridge!",
+      "priority": true
+    },
+    {
+      "id": "p-2",
+      "title": "Phone & laptop chargers",
+      "category": "bringback",
+      "note": "Wall outlet",
+      "priority": true
+    },
+    {
+      "id": "p-3",
+      "title": "Clean laundry bag",
+      "category": "bringback",
+      "note": "By front door",
+      "priority": true
+    },
+    {
+      "id": "p-4",
+      "title": "Eggs, milk & bread",
+      "category": "groceries",
+      "note": "Staples",
+      "priority": false
+    },
+    {
+      "id": "p-5",
+      "title": "Strip guest bed sheets",
+      "category": "todos",
+      "note": "Before leaving",
+      "priority": false
+    },
+    {
+      "id": "p-6",
+      "title": "Apartment keys & wallet",
+      "category": "bringback",
+      "note": "Entryway",
+      "priority": true
+    }
+  ],
+  "lastUpdated": 1792271442541
+}
