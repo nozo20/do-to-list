@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Weekend Hub" />
+  <title>Weekend Reset — Groceries, To-Dos & Bring Back to Apartment</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono, Heebo (for clean Hebrew support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', '"Heebo"', 'sans-serif'],
+            sans: ['"Inter"', '"Heebo"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', '"Heebo"', 'monospace'],
+          },
+          colors: {
+            canvas: '#FBF9F5',
+            surface: '#F3EFE6',
+            card: '#FFFFFF',
+            stoneBorder: '#E6E1D6',
+            ink: {
+              primary: '#18181B',
+              secondary: '#52525B',
+              muted: '#9CA3AF'
+            },
+            grocery: {
+              DEFAULT: '#0D9488',
+              light: '#F0FDFA',
+              border: '#99F6E4',
+              dark: '#0F766E'
+            },
+            pack: {
+              DEFAULT: '#EA580C',
+              light: '#FFF7ED',
+              border: '#FED7AA',
+              dark: '#C2410C'
+            },
+            todo: {
+              DEFAULT: '#4F46E5',
+              light: '#EEF2FF',
+              border: '#C7D2FE',
+              dark: '#4338CA'
+            },
+            urgent: {
+              DEFAULT: '#E11D48',
+              light: '#FFE4E6',
+              border: '#FECDD3'
+            },
+            complete: {
+              DEFAULT: '#10B981',
+              light: '#ECFDF5',
+              border: '#A7F3D0'
+            }
+          },
+          boxShadow: {
+            'warm-sm': '0 1px 2px 0 rgba(24, 24, 27, 0.04)',
+            'warm-md': '0 4px 12px -2px rgba(24, 24, 27, 0.06), 0 2px 4px -2px rgba(24, 24, 27, 0.04)',
+            'warm-lg': '0 12px 24px -4px rgba(24, 24, 27, 0.08), 0 4px 8px -2px rgba(24, 24, 27, 0.04)',
+            'bottom-nav': '0 -4px 20px rgba(24, 24, 27, 0.08)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base & Tactile Mobile-First Styling */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #FBF9F5;
+      color: #18181B;
+      font-family: 'Inter', 'Heebo', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    /* Prevent iOS Safari zoom on input focus by ensuring 16px minimum on mobile */
+    @media screen and (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Smooth Progress Bar Shimmer & Spring Physics */
+    .progress-bar-fill {
+      transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: shimmer 2.8s infinite;
+    }
+
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Custom Tactile Checkbox Animation */
+    .check-box-btn {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .check-box-btn:active {
+      transform: scale(0.84);
+    }
+
+    .check-box-btn.checked-anim {
+      animation: checkPop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes checkPop {
+      0% { transform: scale(0.85); }
+      55% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+
+    /* Item Row Micro-interactions */
+    .checklist-row {
+      transition: background-color 0.18s ease, opacity 0.25s ease;
+    }
+
+    /* Urgent Pulse Indicator */
+    @keyframes subtlePulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.92); }
+    }
+
+    .urgent-dot {
+      animation: subtlePulse 2s infinite ease-in-out;
+    }
+
+    /* Hide scrollbar utility for horizontal pill strips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Safe-area bottom padding for mobile bottom nav */
+    .safe-bottom-nav {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    /* Confetti Canvas Pointer Events */
+    #confettiCanvas {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-pack-border selection:text-ink-primary pb-28 md:pb-10">
+
+  <!-- Celebratory Confetti Overlay Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Diagnostic Warning Banner (Only shown if localStorage is blocked by browser settings) -->
+  <div id="storageWarningBanner" class="hidden bg-urgent text-white px-4 py-2 text-xs font-semibold text-center">
+    ⚠️ Browser storage (localStorage) is blocked! Make sure you are not in Private/Incognito mode or a restricted file preview so changes can be saved.
+  </div>
+
+  <!-- =========================================================
+       STICKY MOBILE & DESKTOP PROGRESS COMMAND HEADER
+       ========================================================= -->
+  <header
+    id="masterHeader"
+    class="sticky top-0 z-30 bg-card/95 backdrop-blur-md border-b border-stoneBorder shadow-warm-sm transition-all duration-300"
+  >
+    <!-- Top Gradient Accent Strip -->
+    <div class="h-1 w-full bg-gradient-to-r from-grocery via-pack to-todo"></div>
+
+    <div class="max-w-[1320px] mx-auto px-3.5 sm:px-6 lg:px-8 py-3 sm:py-4">
+      <!-- Top Row: Title + Quick Sync & Leaving Check Controls -->
+      <div class="flex items-center justify-between gap-2">
+        <!-- Left: Brand & Route Pill + Save Status Indicator -->
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface text-ink-secondary border border-stoneBorder">
+              <span>🏡 Parents</span>
+              <span class="text-pack font-bold">→</span>
+              <span>🏢 Apt</span>
+            </span>
+
+            <!-- Live Save / Sync Status Badge -->
+            <span
+              id="saveIndicatorBadge"
+              class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-canvas text-ink-secondary border border-stoneBorder"
+              title="All changes are saved automatically to your device"
+            >
+              <span id="saveIndicatorDot" class="w-1.5 h-1.5 rounded-full bg-complete"></span>
+              <span id="saveIndicatorText">Saved locally</span>
+            </span>
+
+            <!-- Urgent Must-Bring Counter Pill -->
+            <button
+              id="urgentHeaderAlert"
+              type="button"
+              onclick="togglePriorityFilter()"
+              class="hidden items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-urgent-light text-urgent border border-urgent-border active:scale-95 transition-transform"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-urgent urgent-dot"></span>
+              <span id="urgentHeaderCount">0 Must-Bring</span>
+            </button>
+
+            <!-- 100% Complete Pill -->
+            <span id="celebrationBadge" class="hidden items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-complete-light text-complete border border-complete-border">
+              🎉 100% Done!
+            </span>
+          </div>
+
+          <h1 class="font-display text-lg sm:text-2xl font-extrabold text-ink-primary tracking-tight truncate mt-0.5">
+            Weekend Checklist &amp; Packing Hub
+          </h1>
+        </div>
+
+        <!-- Right: Sync Button, Leaving Check Button & Percentage -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          <!-- Multi-Device Sync Modal Button -->
+          <button
+            id="openSyncModalBtn"
+            type="button"
+            onclick="openSyncModal()"
+            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas hover:bg-surface text-ink-primary transition-all active:scale-95 min-h-[40px]"
+            title="Sync across Phone & Computer"
+          >
+            <span id="syncStatusDot" class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span class="hidden sm:inline" id="syncStatusLabel">Cloud Sync</span>
+            <span class="sm:hidden">☁️ Sync</span>
+          </button>
+
+          <!-- Leaving Soon Check Button -->
+          <button
+            id="departureModeBtn"
+            type="button"
+            onclick="toggleDepartureMode()"
+            title="Show only remaining Bring Back & Must-Bring items before walking out the door"
+            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-surface hover:bg-pack-light hover:border-pack-border hover:text-pack-dark text-ink-primary transition-all active:scale-95 min-h-[40px]"
+          >
+            <span>🚗</span>
+            <span id="departureModeLabel" class="hidden xs:inline sm:inline">Leaving Check</span>
+          </button>
+
+          <!-- Live Percentage Readout -->
+          <div class="text-right pl-1">
+            <div id="overallPercentage" class="font-display font-mono text-xl sm:text-3xl font-extrabold text-ink-primary tabular-nums leading-none">
+              0%
+            </div>
+            <div id="overallCounter" class="font-mono text-[10px] sm:text-xs font-medium text-ink-secondary tabular-nums mt-0.5">
+              0/0
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar Track -->
+      <div class="mt-2.5">
+        <div class="w-full h-2.5 sm:h-3 bg-surface rounded-full overflow-hidden border border-stoneBorder p-0.5">
+          <div
+            id="overallProgressBar"
+            class="progress-bar-fill h-full rounded-full bg-gradient-to-r from-grocery via-pack to-todo"
+            style="width: 0%"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Desktop Sub-Progress Pills (Hidden on small phones to keep sticky header compact, shown on md+) -->
+      <div class="hidden md:grid grid-cols-3 gap-2.5 mt-3">
+        <!-- Groceries Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('groceries')"
+          class="group text-left bg-canvas hover:bg-grocery-light/60 border border-stoneBorder hover:border-grocery-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-grocery-light border border-grocery-border flex items-center justify-center text-xs shrink-0">🛒</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Shopping &amp; Groceries</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-groceries" class="h-full bg-grocery transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-groceries" class="font-mono text-xs font-semibold text-grocery-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+
+        <!-- Bring Back Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('bringback')"
+          class="group text-left bg-canvas hover:bg-pack-light/60 border border-stoneBorder hover:border-pack-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-pack-light border border-pack-border flex items-center justify-center text-xs shrink-0">📦</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Bring Back to Apt</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-bringback" class="h-full bg-pack transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-bringback" class="font-mono text-xs font-semibold text-pack-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+
+        <!-- Weekend To-Dos Sub-Pill -->
+        <button
+          type="button"
+          onclick="focusCategoryView('todos')"
+          class="group text-left bg-canvas hover:bg-todo-light/60 border border-stoneBorder hover:border-todo-border rounded-xl px-3 py-2 transition-all flex items-center justify-between gap-3"
+        >
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-6 h-6 rounded-lg bg-todo-light border border-todo-border flex items-center justify-center text-xs shrink-0">✅</span>
+            <span class="font-display text-xs font-bold text-ink-primary truncate">Weekend To-Dos</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <div class="w-16 h-1.5 bg-stoneBorder/70 rounded-full overflow-hidden">
+              <div id="subBar-todos" class="h-full bg-todo transition-all duration-500 rounded-full" style="width: 0%"></div>
+            </div>
+            <span id="subCount-todos" class="font-mono text-xs font-semibold text-todo-dark tabular-nums">0/0</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="w-full max-w-[1320px] mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1 flex flex-col gap-4">
+
+    <!-- Active Departure Mode Banner -->
+    <div id="departureBanner" class="hidden items-center justify-between gap-3 px-4 py-3 rounded-2xl bg-pack-light border-2 border-pack text-pack-dark shadow-warm-sm">
+      <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+        <span class="text-lg shrink-0">🔑</span>
+        <span><strong>Leaving Soon Check:</strong> Showing only remaining <em>Bring Back to Apt</em> &amp; <em>⚡ Must Bring</em> fridge/charger items so nothing is forgotten!</span>
+      </div>
+      <button
+        type="button"
+        onclick="toggleDepartureMode()"
+        class="px-3 py-1.5 rounded-xl bg-white border border-pack-border text-xs font-bold text-pack-dark hover:bg-pack hover:text-white transition-colors shrink-0 min-h-[36px]"
+      >
+        Exit
+      </button>
+    </div>
+
+    <!-- =========================================================
+         QUICK-ADD COMPOSER & CUSTOMIZABLE 1-TAP PRESETS
+         ========================================================= -->
+    <section aria-label="Add Checklist Item" class="bg-card border border-stoneBorder rounded-2xl p-3.5 sm:p-5 shadow-warm-sm">
+      <form id="addItemForm" class="flex flex-col gap-3">
+        <div class="flex flex-col lg:flex-row gap-2">
+          <!-- Item Title Input (dir="auto" for seamless Hebrew & English) -->
+          <div class="relative flex-1">
+            <input
+              id="itemTitleInput"
+              type="text"
+              dir="auto"
+              required
+              enterkeyhint="done"
+              placeholder="Add item or task (בעברית או באנגלית)..."
+              class="w-full pl-3.5 pr-9 py-2.5 sm:py-3 rounded-xl bg-canvas border border-stoneBorder text-ink-primary placeholder-ink-muted text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack transition-all"
+            />
+            <kbd class="hidden md:inline-flex items-center px-1.5 py-0.5 text-[11px] font-mono font-medium text-ink-muted bg-surface border border-stoneBorder rounded absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              /
+            </kbd>
+          </div>
+
+          <!-- Category + Note + Priority + Save to 1-Tap + Submit Row -->
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap lg:flex-nowrap gap-2">
+            <!-- Category Selector Dropdown -->
+            <select
+              id="itemCategorySelect"
+              aria-label="Category"
+              class="col-span-1 sm:w-44 px-3 py-2.5 sm:py-3 rounded-xl bg-surface border border-stoneBorder text-ink-primary text-base sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack cursor-pointer"
+            >
+              <option value="groceries">🛒 Groceries</option>
+              <option value="bringback" selected>📦 Bring Back</option>
+              <option value="todos">✅ To-Dos</option>
+            </select>
+
+            <!-- Optional Quantity / Note Input -->
+            <input
+              id="itemNoteInput"
+              type="text"
+              dir="auto"
+              enterkeyhint="done"
+              placeholder="Note / Qty (e.g. Fridge)"
+              class="col-span-1 sm:w-40 px-3 py-2.5 sm:py-3 rounded-xl bg-canvas border border-stoneBorder text-ink-primary placeholder-ink-muted text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-pack/30 focus:border-pack transition-all font-mono"
+            />
+
+            <!-- High-Priority / Must Bring Toggle Button -->
+            <button
+              id="priorityToggleBtn"
+              type="button"
+              aria-pressed="false"
+              title="Flag as Must Bring / High Priority"
+              class="col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-stoneBorder bg-canvas text-ink-secondary hover:border-urgent-border hover:text-urgent text-xs sm:text-sm font-semibold transition-all select-none shrink-0 min-h-[44px]"
+            >
+              <span>⚡</span>
+              <span>Must Bring</span>
+            </button>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="col-span-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 rounded-xl bg-ink-primary hover:bg-zinc-800 text-white font-display font-semibold text-sm shadow-warm-sm active:scale-95 transition-all shrink-0 min-h-[44px]"
+            >
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>Add Item</span>
+            </button>
+
+            <!-- Save Current Input directly as a 1-Tap Preset Button -->
+            <button
+              type="button"
+              onclick="saveComposerAsPreset()"
+              title="Save typed item as a permanent 1-Tap Add shortcut button"
+              class="col-span-2 sm:col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 sm:py-3 rounded-xl border border-pack-border bg-pack-light/60 hover:bg-pack-light text-pack-dark text-xs font-bold transition-all active:scale-95 shrink-0 min-h-[40px] sm:min-h-[44px]"
+            >
+              <span>⭐</span>
+              <span>Save to 1-Tap</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- =========================================================
+             CUSTOMIZABLE 1-TAP ADD PRESETS BAR
+             ========================================================= -->
+        <div class="pt-1 border-t border-stoneBorder/60 flex flex-col gap-2">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1" id="presetChipsContainer">
+              <!-- Populated dynamically by renderPresetsBar() -->
+            </div>
+
+            <!-- Manage / Add Presets Action Buttons -->
+            <div class="flex items-center gap-1 shrink-0">
+              <button
+                type="button"
+                onclick="toggleNewPresetForm()"
+                class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold bg-surface hover:bg-stoneBorder/70 text-ink-primary border border-stoneBorder transition-colors"
+                title="Create a new 1-Tap shortcut button"
+              >
+                <span>+ New 1-Tap</span>
+              </button>
+              <button
+                id="togglePresetEditBtn"
+                type="button"
+                onclick="togglePresetManageMode()"
+                class="inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-semibold bg-canvas hover:bg-surface text-ink-secondary border border-stoneBorder transition-colors"
+                title="Remove or reset 1-Tap buttons"
+              >
+                <span>✏️</span>
+                <span class="hidden sm:inline" id="togglePresetEditLabel">Edit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Inline Form to Add a New 1-Tap Preset -->
+          <div id="newPresetDrawer" class="hidden p-3 rounded-xl bg-surface/90 border border-stoneBorder">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-ink-primary flex items-center gap-1.5">
+                <span>⭐ Create New Permanent 1-Tap Button</span>
+              </span>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="restoreDefaultPresets()"
+                  class="text-[11px] font-semibold text-ink-secondary hover:text-ink-primary underline"
+                >
+                  Restore Default 1-Tap Buttons
+                </button>
+                <button
+                  type="button"
+                  onclick="toggleNewPresetForm(false)"
+                  class="text-xs font-bold text-ink-muted hover:text-ink-primary px-1"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-2">
+              <input
+                id="presetTitleInput"
+                type="text"
+                dir="auto"
+                placeholder="Shortcut name (e.g. קופסאות אוכל מאמא / Almond Milk)"
+                class="sm:col-span-5 px-3 py-2 rounded-lg bg-white border border-stoneBorder text-xs sm:text-sm text-ink-primary focus:outline-none focus:border-pack"
+              />
+              <select
+                id="presetCategorySelect"
+                class="sm:col-span-3 px-2.5 py-2 rounded-lg bg-white border border-stoneBorder text-xs sm:text-sm font-semibold text-ink-primary"
+              >
+                <option value="bringback">📦 Bring Back</option>
+                <option value="groceries">🛒 Groceries</option>
+                <option value="todos">✅ To-Dos</option>
+              </select>
+              <input
+                id="presetNoteInput"
+                type="text"
+                dir="auto"
+                placeholder="Optional note (e.g. במקרר)"
+                class="sm:col-span-2 px-3 py-2 rounded-lg bg-white border border-stoneBorder text-xs sm:text-sm font-mono text-ink-primary focus:outline-none focus:border-pack"
+              />
+              <div class="sm:col-span-2 flex items-center gap-1.5">
+                <label class="inline-flex items-center gap-1 text-xs font-semibold text-urgent cursor-pointer select-none px-2 py-2 rounded-lg bg-white border border-stoneBorder">
+                  <input id="presetPriorityCheck" type="checkbox" class="rounded text-urgent" />
+                  <span>⚡</span>
+                </label>
+                <button
+                  type="button"
+                  onclick="handleAddPresetFromDrawer()"
+                  class="flex-1 py-2 px-3 rounded-lg bg-ink-primary hover:bg-zinc-800 text-white text-xs font-bold transition-colors"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         UNIFIED FILTER, SEARCH & WEEKEND RESET BAR
+         ========================================================= -->
+    <section aria-label="List Controls and Weekend Actions" class="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 bg-surface/80 border border-stoneBorder rounded-2xl p-2.5 sm:px-4">
+      <!-- Left: Status Filter Pills + Priority Filter + Search -->
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Segmented Status Filter -->
+        <div class="inline-flex p-1 rounded-xl bg-canvas border border-stoneBorder" role="group" aria-label="Filter items by status">
+          <button
+            type="button"
+            data-filter="all"
+            onclick="setStatusFilter('all')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-ink-primary text-white shadow-warm-sm min-h-[34px]"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            data-filter="remaining"
+            onclick="setStatusFilter('remaining')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]"
+          >
+            Remaining
+          </button>
+          <button
+            type="button"
+            data-filter="completed"
+            onclick="setStatusFilter('completed')"
+            class="filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]"
+          >
+            Done
+          </button>
+        </div>
+
+        <!-- Must Bring Priority Filter Pill -->
+        <button
+          id="filterPriorityBtn"
+          type="button"
+          onclick="togglePriorityFilter()"
+          class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas text-ink-secondary hover:text-urgent hover:border-urgent-border transition-all min-h-[36px]"
+        >
+          <span>⚡ Must Bring</span>
+        </button>
+
+        <!-- Search Input -->
+        <div class="relative flex-1 sm:w-52 min-w-[140px]">
+          <svg class="w-4 h-4 text-ink-muted absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            id="searchInput"
+            type="text"
+            dir="auto"
+            placeholder="Search list..."
+            class="w-full pl-8 pr-7 py-1.5 rounded-xl bg-canvas border border-stoneBorder text-xs sm:text-sm text-ink-primary placeholder-ink-muted focus:outline-none focus:border-ink-secondary transition-all"
+          />
+          <button
+            id="clearSearchBtn"
+            type="button"
+            onclick="clearSearch()"
+            class="hidden absolute right-2 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink-primary p-1"
+            title="Clear search"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Weekend Workflow Action Buttons -->
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1.5 lg:pt-0 border-t lg:border-t-0 border-stoneBorder">
+        <button
+          type="button"
+          onclick="uncheckAllForNextWeekend()"
+          title="Keep all items on the list but reset their checkmarks for next weekend"
+          class="shrink-0 inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-card hover:bg-canvas text-ink-primary border border-stoneBorder shadow-warm-sm transition-all active:scale-95 min-h-[36px]"
+        >
+          <svg class="w-3.5 h-3.5 text-pack" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Reset for Next Weekend</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="clearCompletedItems()"
+          title="Delete all currently checked-off items"
+          class="shrink-0 inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-semibold bg-card hover:bg-urgent-light/50 text-ink-secondary hover:text-urgent border border-stoneBorder transition-all active:scale-95 min-h-[36px]"
+        >
+          <span>Clear Done</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="restoreSampleList()"
+          title="Restore the default starter items"
+          class="shrink-0 inline-flex items-center gap-1 px-2.5 py-2 rounded-xl text-xs font-medium text-ink-secondary hover:text-ink-primary hover:bg-canvas transition-colors min-h-[36px]"
+        >
+          <span>Sample List</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         THREE-COLUMN CATEGORIZED WORKSPACE
+         ========================================================= -->
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-5 flex-1 items-start">
+
+      <!-- COLUMN 1: SHOPPING & GROCERIES -->
+      <section
+        id="col-groceries"
+        aria-label="Shopping and Groceries"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col"
+      >
+        <div class="p-3.5 sm:p-4 bg-grocery-light/60 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-grocery text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              🛒
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Shopping &amp; Groceries
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Stock up for the apartment &amp; week</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-groceries" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-grocery-border text-grocery-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('groceries')"
+              title="Add item to Shopping & Groceries"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-grocery hover:text-white text-grocery-dark border border-grocery-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-groceries" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+      <!-- COLUMN 2: BRING BACK TO APARTMENT -->
+      <section
+        id="col-bringback"
+        aria-label="Bring Back to Apartment"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col ring-1 ring-pack-border/70"
+      >
+        <div class="p-3.5 sm:p-4 bg-pack-light/70 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-pack text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              📦
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Bring Back to Apt
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Fridge leftovers, laundry &amp; chargers</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-bringback" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-pack-border text-pack-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('bringback')"
+              title="Add item to Bring Back to Apartment"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-pack hover:text-white text-pack-dark border border-pack-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-bringback" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+      <!-- COLUMN 3: WEEKEND TO-DOS -->
+      <section
+        id="col-todos"
+        aria-label="Weekend To-Dos"
+        class="bg-card border border-stoneBorder rounded-2xl shadow-warm-sm overflow-hidden flex flex-col"
+      >
+        <div class="p-3.5 sm:p-4 bg-todo-light/60 border-b border-stoneBorder flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-todo text-white flex items-center justify-center text-base shadow-warm-sm shrink-0">
+              ✅
+            </div>
+            <div>
+              <h2 class="font-display text-base font-bold text-ink-primary leading-tight">
+                Weekend To-Dos
+              </h2>
+              <p class="text-[11px] sm:text-xs text-ink-secondary">Chores, errands &amp; Sunday prep</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <span id="colBadge-todos" class="font-mono text-xs font-bold px-2.5 py-1 rounded-lg bg-white border border-todo-border text-todo-dark tabular-nums">
+              0/0
+            </span>
+            <button
+              type="button"
+              onclick="prefillCategoryComposer('todos')"
+              title="Add task to Weekend To-Dos"
+              class="w-9 h-9 rounded-xl bg-white hover:bg-todo hover:text-white text-todo-dark border border-todo-border flex items-center justify-center font-bold text-lg transition-colors active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div id="list-todos" class="divide-y divide-stoneBorder/70"></div>
+      </section>
+
+    </main>
+
+    <!-- Clean Footer Info -->
+    <footer class="pt-4 pb-6 text-center text-xs text-ink-muted flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-stoneBorder/60">
+      <p>Changes are automatically saved on this device • Tap <strong>⭐</strong> on any item to turn it into a 1-Tap shortcut.</p>
+      <button
+        type="button"
+        onclick="openSyncModal()"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface hover:bg-stoneBorder/60 text-ink-primary font-semibold transition-colors"
+      >
+        <span>☁️ Multi-Device Cloud Sync Settings</span>
+      </button>
+    </footer>
+  </div>
+
+  <!-- =========================================================
+       FIXED MOBILE BOTTOM CATEGORY NAVIGATION BAR (< 1024px)
+       ========================================================= -->
+  <nav
+    aria-label="Mobile Category Navigation"
+    class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur-md border-t border-stoneBorder shadow-bottom-nav safe-bottom-nav"
+  >
+    <div class="grid grid-cols-4 gap-1 px-2 py-1.5 max-w-lg mx-auto">
+      <button
+        type="button"
+        data-mobtab="all"
+        onclick="setMobileTab('all')"
+        class="mob-tab-btn flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all bg-ink-primary text-white"
+      >
+        <span class="text-sm leading-none">📋</span>
+        <span class="text-[11px] font-bold mt-1 leading-none">All Lists</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="groceries"
+        onclick="setMobileTab('groceries')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">🛒</span>
+          <span id="mobCount-groceries" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-grocery-light text-grocery-dark border border-grocery-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">Groceries</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="bringback"
+        onclick="setMobileTab('bringback')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">📦</span>
+          <span id="mobCount-bringback" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-pack-light text-pack-dark border border-pack-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">Bring Back</span>
+      </button>
+
+      <button
+        type="button"
+        data-mobtab="todos"
+        onclick="setMobileTab('todos')"
+        class="mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary"
+      >
+        <div class="flex items-center gap-1">
+          <span class="text-sm leading-none">✅</span>
+          <span id="mobCount-todos" class="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-todo-light text-todo-dark border border-todo-border">0</span>
+        </div>
+        <span class="text-[11px] font-bold mt-1 leading-none">To-Dos</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       STREAMLINED MULTI-DEVICE SYNC MODAL (FOR GITHUB PAGES)
+       ========================================================= -->
+  <div
+    id="syncModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-xs"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="syncModalTitle"
+  >
+    <div class="bg-card border border-stoneBorder rounded-2xl max-w-lg w-full p-5 sm:p-6 shadow-warm-lg max-h-[90vh] overflow-y-auto flex flex-col gap-4">
+      <div class="flex items-start justify-between gap-3 border-b border-stoneBorder pb-3">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-pack-light text-pack-dark border border-pack-border">
+            ☁️ Cross-Device Sync (Phone ↔ Computer)
+          </span>
+          <h2 id="syncModalTitle" class="font-display text-xl font-extrabold text-ink-primary mt-1">
+            Sync Your Checklist Across Devices
+          </h2>
+        </div>
+        <button
+          type="button"
+          onclick="closeSyncModal()"
+          class="w-8 h-8 rounded-lg bg-surface hover:bg-stoneBorder/60 flex items-center justify-center text-ink-secondary font-bold"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Method 1: Instant Sync Passphrase (Works everywhere on GitHub Pages with zero setup) -->
+      <div class="p-4 rounded-xl bg-canvas border border-stoneBorder space-y-2.5">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="font-display text-sm font-bold text-ink-primary">
+            1. Secret Sync Key (Easiest — Works Immediately)
+          </h3>
+          <span id="modalCloudBadge" class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-surface text-ink-secondary">
+            Local Only
+          </span>
+        </div>
+        <p class="text-xs text-ink-secondary leading-relaxed">
+          Type a unique secret passphrase below on both your <strong>phone</strong> and your <strong>computer</strong> (for example: <code>noam-wknd-8492</code>). Every item &amp; 1-Tap button will automatically stay in sync between your devices!
+        </p>
+        <form onsubmit="applyCustomSyncKey(event)" class="flex flex-col sm:flex-row gap-2 pt-1">
+          <input
+            id="syncKeyInput"
+            type="text"
+            placeholder="Enter secret sync key (e.g. my-weekend-9921)"
+            class="flex-1 px-3 py-2 rounded-xl bg-white border border-stoneBorder font-mono text-sm text-ink-primary focus:outline-none focus:border-pack"
+          />
+          <div class="flex gap-1.5">
+            <button
+              type="submit"
+              class="flex-1 sm:flex-initial px-4 py-2 rounded-xl bg-ink-primary hover:bg-zinc-800 text-white text-xs font-bold shrink-0 active:scale-95 transition-transform"
+            >
+              Connect &amp; Sync
+            </button>
+            <button
+              type="button"
+              onclick="forcePullFromCloudNow()"
+              title="Pull latest state from cloud now"
+              class="px-3 py-2 rounded-xl bg-surface hover:bg-stoneBorder/70 text-ink-primary border border-stoneBorder text-xs font-semibold shrink-0"
+            >
+              ↻ Pull
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Method 2: Direct GitHub Repository Sync (Optional 100% Private Storage inside User's Repo) -->
+      <details class="p-4 rounded-xl bg-surface/60 border border-stoneBorder group">
+        <summary class="font-display text-sm font-bold text-ink-primary cursor-pointer list-none flex items-center justify-between">
+          <span>2. Save Directly Inside Your GitHub Repo (Optional / Private)</span>
+          <span class="text-xs text-ink-secondary group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <div class="mt-3 space-y-2.5 text-xs text-ink-secondary">
+          <p class="leading-relaxed">
+            Want your checklist data saved as a private file (<code>checklist-data.json</code>) directly inside your own GitHub repository instead of a sync key? Enter your repository name and a GitHub Personal Access Token (with <code>repo</code> / Contents read &amp; write permission):
+          </p>
+          <div class="space-y-2 pt-1">
+            <input
+              id="ghRepoInput"
+              type="text"
+              placeholder="username/repo-name (e.g. noam/weekend-list)"
+              class="w-full px-3 py-2 rounded-xl bg-white border border-stoneBorder font-mono text-xs text-ink-primary"
+            />
+            <input
+              id="ghTokenInput"
+              type="password"
+              placeholder="GitHub Token (ghp_... or github_pat_...)"
+              class="w-full px-3 py-2 rounded-xl bg-white border border-stoneBorder font-mono text-xs text-ink-primary"
+            />
+            <div class="flex gap-2 pt-1">
+              <button
+                type="button"
+                onclick="saveGitHubRepoConfig()"
+                class="flex-1 py-2 px-3 rounded-xl bg-pack hover:bg-pack-dark text-white font-bold text-xs transition-colors"
+              >
+                Save &amp; Sync with GitHub Repo
+              </button>
+              <button
+                type="button"
+                onclick="clearGitHubRepoConfig()"
+                class="py-2 px-3 rounded-xl bg-white border border-stoneBorder text-ink-secondary hover:text-urgent font-semibold text-xs"
+              >
+                Disconnect
+              </button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Method 3: Quick Backup / Restore JSON -->
+      <div class="p-3.5 rounded-xl bg-canvas border border-stoneBorder flex flex-wrap items-center justify-between gap-2">
+        <span class="text-xs font-semibold text-ink-secondary">Manual Backup:</span>
+        <div class="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onclick="exportJsonBackup()"
+            class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-surface text-ink-primary border border-stoneBorder text-xs font-semibold transition-colors"
+          >
+            <span>⬇️ Export JSON</span>
+          </button>
+          <label class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-surface text-ink-primary border border-stoneBorder text-xs font-semibold transition-colors cursor-pointer">
+            <span>⬆️ Import JSON</span>
+            <input type="file" accept=".json" onchange="importJsonBackup(event)" class="hidden" />
+          </label>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] text-ink-muted pt-1">
+        <span id="lastSyncedTimestamp">Local storage active</span>
+        <button
+          type="button"
+          onclick="closeSyncModal()"
+          class="px-4 py-1.5 rounded-lg bg-surface text-ink-primary font-semibold hover:bg-stoneBorder/60"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       NON-BLOCKING TOAST WITH UNDO ACTION
+       ========================================================= -->
+  <div
+    id="toastContainer"
+    aria-live="polite"
+    class="fixed bottom-20 lg:bottom-6 right-4 left-4 sm:left-auto z-50 flex flex-col gap-2 max-w-sm w-auto sm:w-full pointer-events-none"
+  ></div>
+
+  <!-- =========================================================
+       APPLICATION LOGIC: LOCALSTORAGE + CUSTOM 1-TAP + CLOUD SYNC
+       ========================================================= -->
+  <script>
+    const STORAGE_KEY = 'weekend_hub_state_v2';
+    const GH_CONFIG_KEY = 'weekend_hub_gh_config_v1';
+
+    // Default starter items (Only loaded the very first time if localStorage is completely empty)
+    const DEFAULT_ITEMS = [
+      // 🛒 Shopping & Groceries
+      {
+        id: 'g-1',
+        title: 'Unsweetened oat milk & cold brew concentrate',
+        category: 'groceries',
+        note: '2 cartons',
+        priority: false,
+        completed: false,
+        createdAt: 1001
+      },
+      {
+        id: 'g-2',
+        title: 'Pasture-raised eggs & sourdough loaf',
+        category: 'groceries',
+        note: 'Breakfast staples',
+        priority: false,
+        completed: true,
+        createdAt: 1002
+      },
+      {
+        id: 'g-3',
+        title: 'Baby spinach, cherry tomatoes & avocados',
+        category: 'groceries',
+        note: 'Produce aisle',
+        priority: false,
+        completed: false,
+        createdAt: 1003
+      },
+      {
+        id: 'g-4',
+        title: 'Dishwasher pods & paper towels',
+        category: 'groceries',
+        note: 'Apartment restock',
+        priority: true,
+        completed: false,
+        createdAt: 1005
+      },
+
+      // 📦 Bring Back to Apartment (from parents' place)
+      {
+        id: 'b-1',
+        title: "Mom's home-cooked containers / Tupperware",
+        category: 'bringback',
+        note: 'In parents’ fridge!',
+        priority: true,
+        completed: false,
+        createdAt: 2001
+      },
+      {
+        id: 'b-2',
+        title: 'Clean folded laundry & weekender duffel',
+        category: 'bringback',
+        note: '2 loads',
+        priority: true,
+        completed: false,
+        createdAt: 2002
+      },
+      {
+        id: 'b-3',
+        title: 'MacBook MagSafe & phone bedside charger',
+        category: 'bringback',
+        note: 'Guest room outlet',
+        priority: true,
+        completed: false,
+        createdAt: 2003
+      },
+      {
+        id: 'b-5',
+        title: 'Apartment spare keys & transit card',
+        category: 'bringback',
+        note: 'Entryway bowl',
+        priority: true,
+        completed: true,
+        createdAt: 2005
+      },
+
+      // ✅ Weekend To-Dos
+      {
+        id: 't-1',
+        title: 'Run dark & white laundry loads before Sunday noon',
+        category: 'todos',
+        note: 'Dryer cycle too',
+        priority: true,
+        completed: true,
+        createdAt: 3001
+      },
+      {
+        id: 't-3',
+        title: 'Strip guest bed sheets & tidy room before leaving',
+        category: 'todos',
+        note: 'Sunday afternoon',
+        priority: false,
+        completed: false,
+        createdAt: 3003
+      },
+      {
+        id: 't-4',
+        title: 'Fill up gas tank / check train schedule back',
+        category: 'todos',
+        note: 'Beat evening traffic',
+        priority: false,
+        completed: false,
+        createdAt: 3004
+      }
+    ];
+
+    // Default 1-Tap Presets (User can freely add new ones or delete any of these)
+    const DEFAULT_PRESETS = [
+      {
+        id: 'p-1',
+        title: 'Leftover food Tupperware',
+        category: 'bringback',
+        note: 'In fridge!',
+        priority: true
+      },
+      {
+        id: 'p-2',
+        title: 'Phone & laptop chargers',
+        category: 'bringback',
+        note: 'Wall outlet',
+        priority: true
+      },
+      {
+        id: 'p-3',
+        title: 'Clean laundry bag',
+        category: 'bringback',
+        note: 'By front door',
+        priority: true
+      },
+      {
+        id: 'p-4',
+        title: 'Eggs, milk & bread',
+        category: 'groceries',
+        note: 'Staples',
+        priority: false
+      },
+      {
+        id: 'p-5',
+        title: 'Strip guest bed sheets',
+        category: 'todos',
+        note: 'Before leaving',
+        priority: false
+      },
+      {
+        id: 'p-6',
+        title: 'Apartment keys & wallet',
+        category: 'bringback',
+        note: 'Entryway',
+        priority: true
+      }
+    ];
+
+    // Global Application State
+    const state = {
+      items: [],
+      presets: [],
+      lastUpdated: 0,
+      syncKey: '',
+      statusFilter: 'all',        // 'all' | 'remaining' | 'completed'
+      priorityOnly: false,
+      departureMode: false,
+      searchQuery: '',
+      mobileTab: 'all',           // 'all' | 'groceries' | 'bringback' | 'todos'
+      composerPriority: false,
+      presetManageMode: false,    // Toggles prominent delete buttons & reset option on 1-Tap presets
+      editingId: null,
+      lastProgressPct: 0,
+      undoSnapshot: null,
+      clientId: 'client-' + Math.random().toString(36).substring(2, 9),
+      ghConfig: { repo: '', token: '', sha: '' }
+    };
+
+    let ntfyEventSource = null;
+    let syncDebounceTimer = null;
+
+    // =========================================================
+    // 1. BULLETPROOF LOCALSTORAGE PERSISTENCE
+    // =========================================================
+    function checkStorageAvailable() {
+      try {
+        const testKey = '__storage_test__';
+        window.localStorage.setItem(testKey, testKey);
+        window.localStorage.removeItem(testKey);
+        return true;
+      } catch (e) {
+        const banner = document.getElementById('storageWarningBanner');
+        if (banner) banner.classList.remove('hidden');
+        return false;
+      }
+    }
+
+    function loadStateFromLocalStorage() {
+      checkStorageAvailable();
+
+      // Load GitHub optional config if saved
+      try {
+        const rawGh = window.localStorage.getItem(GH_CONFIG_KEY);
+        if (rawGh) {
+          const parsedGh = JSON.parse(rawGh);
+          if (parsedGh && parsedGh.repo && parsedGh.token) {
+            state.ghConfig = parsedGh;
+          }
+        }
+      } catch (e) {
+        console.warn('Could not read GitHub config:', e);
+      }
+
+      // Load checklist items, custom 1-Tap presets & syncKey from localStorage
+      try {
+        const savedRaw = window.localStorage.getItem(STORAGE_KEY);
+        if (savedRaw !== null) {
+          const parsed = JSON.parse(savedRaw);
+          state.items = Array.isArray(parsed.items) ? parsed.items : [];
+          state.presets = Array.isArray(parsed.presets) ? parsed.presets : JSON.parse(JSON.stringify(DEFAULT_PRESETS));
+          state.lastUpdated = typeof parsed.lastUpdated === 'number' ? parsed.lastUpdated : Date.now();
+          state.syncKey = typeof parsed.syncKey === 'string' ? parsed.syncKey : '';
+          return;
+        }
+      } catch (err) {
+        console.warn('Error reading localStorage:', err);
+      }
+
+      // Only if localStorage was completely empty (first visit ever), initialize defaults and save immediately
+      state.items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      state.presets = JSON.parse(JSON.stringify(DEFAULT_PRESETS));
+      state.lastUpdated = Date.now();
+      saveStateToLocalStorage();
+    }
+
+    function saveStateToLocalStorage() {
+      try {
+        const payload = {
+          items: state.items,
+          presets: state.presets,
+          lastUpdated: state.lastUpdated,
+          syncKey: state.syncKey
+        };
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+        flashSavedIndicator('Saved locally');
+      } catch (err) {
+        console.error('Failed to save to localStorage:', err);
+        const banner = document.getElementById('storageWarningBanner');
+        if (banner) banner.classList.remove('hidden');
+      }
+    }
+
+    function flashSavedIndicator(text) {
+      const badgeText = document.getElementById('saveIndicatorText');
+      const badgeDot = document.getElementById('saveIndicatorDot');
+      if (badgeText) {
+        badgeText.textContent = text || 'Saved ✓';
+      }
+      if (badgeDot) {
+        badgeDot.className = 'w-1.5 h-1.5 rounded-full bg-complete';
+      }
+    }
+
+    // Central mutation handler: called on EVERY item or preset change
+    function recordStateChange() {
+      state.lastUpdated = Date.now();
+      saveStateToLocalStorage();
+      renderApp();
+      scheduleCloudPush();
+    }
+
+    // =========================================================
+    // 2. CROSS-DEVICE CLOUD SYNC (NTFY RELAY + GITHUB REPO API)
+    // =========================================================
+    function sanitizeSyncTopic(rawKey) {
+      if (!rawKey || !rawKey.trim()) return '';
+      const clean = rawKey
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9-_]/g, '-')
+        .replace(/-+/g, '-')
+        .slice(0, 48);
+      return clean ? `wknd-hub-v2-${clean}` : '';
+    }
+
+    function initCrossDeviceSync() {
+      // Populate UI inputs
+      const syncInput = document.getElementById('syncKeyInput');
+      if (syncInput && state.syncKey) {
+        syncInput.value = state.syncKey;
+      }
+
+      const ghRepoInput = document.getElementById('ghRepoInput');
+      const ghTokenInput = document.getElementById('ghTokenInput');
+      if (ghRepoInput && state.ghConfig.repo) ghRepoInput.value = state.ghConfig.repo;
+      if (ghTokenInput && state.ghConfig.token) ghTokenInput.value = state.ghConfig.token;
+
+      // Connect to Sync Key relay if configured
+      if (state.syncKey) {
+        connectNtfySync(state.syncKey);
+      } else if (state.ghConfig.repo && state.ghConfig.token) {
+        pullFromGitHubRepo();
+      } else {
+        updateSyncStatusUI('local', 'Local Only');
+      }
+
+      // Whenever user returns to the tab or unlocks phone, pull latest changes automatically
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          if (state.syncKey) {
+            pullLatestFromNtfy(state.syncKey, true);
+          }
+          if (state.ghConfig.repo && state.ghConfig.token) {
+            pullFromGitHubRepo(true);
+          }
+        }
+      });
+    }
+
+    async function connectNtfySync(rawKey) {
+      const topic = sanitizeSyncTopic(rawKey);
+      if (!topic) {
+        updateSyncStatusUI('local', 'Local Only');
+        return;
+      }
+
+      updateSyncStatusUI('connecting', 'Syncing...');
+
+      // 1. Pull latest cached message from ntfy topic first
+      await pullLatestFromNtfy(rawKey, true);
+
+      // 2. Open real-time SSE stream for instant updates while app is open
+      if (ntfyEventSource) {
+        ntfyEventSource.close();
+      }
+
+      try {
+        ntfyEventSource = new EventSource(`https://ntfy.sh/${topic}/sse`);
+        ntfyEventSource.onopen = () => {
+          updateSyncStatusUI('online', `Synced (${rawKey})`);
+        };
+        ntfyEventSource.onmessage = (event) => {
+          try {
+            const outer = JSON.parse(event.data);
+            if (outer && outer.event === 'message' && outer.message) {
+              const incoming = JSON.parse(outer.message);
+              applyIncomingCloudState(incoming);
+            }
+          } catch (e) {
+            // Ignore keepalive or non-JSON packets
+          }
+        };
+        ntfyEventSource.onerror = () => {
+          // SSE might reconnect automatically; keep status informative
+        };
+      } catch (err) {
+        console.warn('SSE connection error:', err);
+      }
+    }
+
+    async function pullLatestFromNtfy(rawKey, silent = false) {
+      const topic = sanitizeSyncTopic(rawKey);
+      if (!topic) return;
+
+      try {
+        const res = await fetch(`https://ntfy.sh/${topic}/json?poll=1&since=all`, {
+          cache: 'no-store'
+        });
+        if (!res.ok) return;
+
+        const text = await res.text();
+        const lines = text.trim().split('\n').filter(Boolean);
+
+        let latestPayload = null;
+        for (const line of lines) {
+          try {
+            const pkt = JSON.parse(line);
+            if (pkt && pkt.event === 'message' && pkt.message) {
+              const data = JSON.parse(pkt.message);
+              if (data && Array.isArray(data.items)) {
+                if (!latestPayload || (data.lastUpdated || 0) > (latestPayload.lastUpdated || 0)) {
+                  latestPayload = data;
+                }
+              }
+            }
+          } catch (e) {
+            // Skip malformed line
+          }
+        }
+
+        if (latestPayload) {
+          const updated = applyIncomingCloudState(latestPayload);
+          updateSyncStatusUI('online', `Synced (${rawKey})`);
+          if (updated && !silent) {
+            showToast('☁️ Pulled latest checklist from cloud!');
+          }
+        } else {
+          // No cloud state exists yet on this key -> push our current local state up!
+          await pushStateToNtfy();
+          updateSyncStatusUI('online', `Synced (${rawKey})`);
+        }
+      } catch (err) {
+        console.warn('Could not poll ntfy:', err);
+      }
+    }
+
+    async function pushStateToNtfy() {
+      const topic = sanitizeSyncTopic(state.syncKey);
+      if (!topic) return;
+
+      try {
+        const payload = {
+          items: state.items,
+          presets: state.presets,
+          lastUpdated: state.lastUpdated,
+          sender: state.clientId
+        };
+
+        await fetch(`https://ntfy.sh/${topic}`, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+
+        updateSyncStatusUI('online', `Synced (${state.syncKey})`);
+        flashSavedIndicator('Saved & Synced ☁️');
+      } catch (err) {
+        console.warn('Failed to push state to ntfy:', err);
+      }
+    }
+
+    function applyIncomingCloudState(incoming) {
+      if (!incoming || !Array.isArray(incoming.items)) return false;
+      if (incoming.sender === state.clientId) return false;
+
+      const incomingTime = incoming.lastUpdated || 0;
+      if (incomingTime > state.lastUpdated) {
+        state.items = incoming.items;
+        if (Array.isArray(incoming.presets)) {
+          state.presets = incoming.presets;
+        }
+        state.lastUpdated = incomingTime;
+        saveStateToLocalStorage();
+        renderApp();
+        flashSavedIndicator('Updated from Cloud ☁️');
+        return true;
+      }
+      return false;
+    }
+
+    function scheduleCloudPush() {
+      if (syncDebounceTimer) clearTimeout(syncDebounceTimer);
+      syncDebounceTimer = setTimeout(() => {
+        if (state.syncKey) {
+          pushStateToNtfy();
+        }
+        if (state.ghConfig.repo && state.ghConfig.token) {
+          pushToGitHubRepo();
+        }
+      }, 350);
+    }
+
+    function applyCustomSyncKey(event) {
+      event.preventDefault();
+      const input = document.getElementById('syncKeyInput');
+      const rawKey = (input ? input.value : '').trim();
+
+      state.syncKey = rawKey;
+      saveStateToLocalStorage();
+
+      if (rawKey) {
+        connectNtfySync(rawKey);
+        showToast(`☁️ Connected to Sync Key "${rawKey}"!`);
+      } else {
+        if (ntfyEventSource) ntfyEventSource.close();
+        updateSyncStatusUI('local', 'Local Only');
+        showToast('Disconnected Sync Key (saving locally only).');
+      }
+    }
+
+    function forcePullFromCloudNow() {
+      if (state.syncKey) {
+        pullLatestFromNtfy(state.syncKey, false);
+      } else if (state.ghConfig.repo && state.ghConfig.token) {
+        pullFromGitHubRepo(false);
+      } else {
+        showToast('Enter a Sync Key first to pull from cloud.');
+      }
+    }
+
+    // Optional Method 2: Direct GitHub Repository Contents API Sync
+    async function saveGitHubRepoConfig() {
+      const repo = document.getElementById('ghRepoInput').value.trim().replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
+      const token = document.getElementById('ghTokenInput').value.trim();
+
+      if (!repo || !token) {
+        showToast('Please enter both username/repo and GitHub token.');
+        return;
+      }
+
+      state.ghConfig = { repo, token, sha: state.ghConfig.sha || '' };
+      window.localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(state.ghConfig));
+      showToast('Connecting to GitHub repository...');
+      await pullFromGitHubRepo(false);
+    }
+
+    function clearGitHubRepoConfig() {
+      state.ghConfig = { repo: '', token: '', sha: '' };
+      window.localStorage.removeItem(GH_CONFIG_KEY);
+      document.getElementById('ghRepoInput').value = '';
+      document.getElementById('ghTokenInput').value = '';
+      showToast('Disconnected GitHub Repo sync.');
+    }
+
+    async function pullFromGitHubRepo(silent = true) {
+      const { repo, token } = state.ghConfig;
+      if (!repo || !token) return;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}/contents/checklist-data.json`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store'
+        });
+
+        if (res.status === 404) {
+          // File doesn't exist yet -> create it with our current state
+          await pushToGitHubRepo();
+          return;
+        }
+
+        if (!res.ok) {
+          if (!silent) showToast('GitHub API error: check repo name & token permissions.');
+          return;
+        }
+
+        const data = await res.json();
+        state.ghConfig.sha = data.sha;
+        window.localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(state.ghConfig));
+
+        const decodedJson = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
+        const parsed = JSON.parse(decodedJson);
+
+        if (parsed && Array.isArray(parsed.items)) {
+          if ((parsed.lastUpdated || 0) > state.lastUpdated) {
+            state.items = parsed.items;
+            if (Array.isArray(parsed.presets)) state.presets = parsed.presets;
+            state.lastUpdated = parsed.lastUpdated;
+            saveStateToLocalStorage();
+            renderApp();
+          } else if (state.lastUpdated > (parsed.lastUpdated || 0)) {
+            await pushToGitHubRepo();
+          }
+          updateSyncStatusUI('online', `GitHub (${repo})`);
+          if (!silent) showToast('✅ Synced directly with your GitHub repository!');
+        }
+      } catch (err) {
+        console.warn('GitHub pull error:', err);
+      }
+    }
+
+    async function pushToGitHubRepo() {
+      const { repo, token, sha } = state.ghConfig;
+      if (!repo || !token) return;
+
+      try {
+        const payload = {
+          items: state.items,
+          presets: state.presets,
+          lastUpdated: state.lastUpdated
+        };
+        const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+        const bodyObj = {
+          message: 'Update checklist-data.json from Weekend Hub',
+          content: contentBase64
+        };
+        if (sha) bodyObj.sha = sha;
+
+        const res = await fetch(`https://api.github.com/repos/${repo}/contents/checklist-data.json`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(bodyObj)
+        });
+
+        if (res.ok) {
+          const resData = await res.json();
+          if (resData.content && resData.content.sha) {
+            state.ghConfig.sha = resData.content.sha;
+            window.localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(state.ghConfig));
+          }
+          updateSyncStatusUI('online', `GitHub (${repo})`);
+          flashSavedIndicator('Saved to GitHub ☁️');
+        }
+      } catch (err) {
+        console.warn('GitHub push error:', err);
+      }
+    }
+
+    function updateSyncStatusUI(status, text) {
+      const dot = document.getElementById('syncStatusDot');
+      const label = document.getElementById('syncStatusLabel');
+      const modalBadge = document.getElementById('modalCloudBadge');
+      const tsEl = document.getElementById('lastSyncedTimestamp');
+
+      if (status === 'online') {
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-complete';
+        if (label) label.textContent = 'Synced';
+        if (modalBadge) {
+          modalBadge.className = 'text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-complete-light text-complete border border-complete-border';
+          modalBadge.textContent = `🟢 ${text}`;
+        }
+        if (tsEl) tsEl.textContent = `Active Cloud Sync: ${text}`;
+      } else if (status === 'connecting') {
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-amber-500 animate-pulse';
+        if (label) label.textContent = 'Syncing...';
+      } else {
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-amber-500';
+        if (label) label.textContent = 'Cloud Sync';
+        if (modalBadge) {
+          modalBadge.className = 'text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-surface text-ink-secondary border border-stoneBorder';
+          modalBadge.textContent = '📱 Saved Locally on Device';
+        }
+      }
+    }
+
+    // =========================================================
+    // 3. CUSTOMIZABLE 1-TAP ADD PRESETS (ADD, REMOVE, RESET)
+    // =========================================================
+    function getPresetCategoryStyle(category) {
+      if (category === 'groceries') {
+        return {
+          chip: 'bg-grocery-light active:bg-grocery-border text-grocery-dark border-grocery-border',
+          icon: '🛒'
+        };
+      }
+      if (category === 'bringback') {
+        return {
+          chip: 'bg-pack-light active:bg-pack-border text-pack-dark border-pack-border',
+          icon: '📦'
+        };
+      }
+      return {
+        chip: 'bg-todo-light active:bg-todo-border text-todo-dark border-todo-border',
+        icon: '✅'
+      };
+    }
+
+    function renderPresetsBar() {
+      const container = document.getElementById('presetChipsContainer');
+      if (!container) return;
+
+      if (state.presets.length === 0) {
+        container.innerHTML = `
+          <span class="text-xs text-ink-muted italic py-1">
+            No 1-Tap shortcuts yet. Tap <strong>+ New 1-Tap</strong> or <strong>⭐</strong> on any item to add your own!
+          </span>
+        `;
+        return;
+      }
+
+      const chipsHtml = state.presets.map(preset => {
+        const style = getPresetCategoryStyle(preset.category);
+        return `
+          <div class="inline-flex items-center shrink-0 rounded-lg border ${style.chip} text-xs font-medium transition-all overflow-hidden">
+            <button
+              type="button"
+              onclick="triggerPresetAdd('${preset.id}')"
+              dir="auto"
+              title="${preset.note ? escapeHtml(preset.note) : 'Tap to add to checklist'}"
+              class="px-2.5 py-1.5 flex items-center gap-1 hover:opacity-80 active:scale-95 transition-all"
+            >
+              <span>+</span>
+              <span>${style.icon}</span>
+              <span class="font-semibold">${escapeHtml(preset.title)}</span>
+              ${preset.priority ? '<span class="text-[10px]">⚡</span>' : ''}
+            </button>
+            <button
+              type="button"
+              onclick="deletePreset('${preset.id}', event)"
+              title="Remove this 1-Tap shortcut"
+              aria-label="Remove ${escapeHtml(preset.title)} from 1-Tap shortcuts"
+              class="${
+                state.presetManageMode
+                  ? 'px-2 py-1.5 bg-urgent text-white font-bold hover:bg-rose-700'
+                  : 'px-1.5 py-1.5 opacity-60 hover:opacity-100 hover:bg-black/10 text-[11px]'
+              } border-l border-current/20 transition-colors"
+            >
+              ✕
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <span class="text-ink-muted text-xs font-semibold shrink-0 pr-1">1-Tap:</span>
+        ${chipsHtml}
+      `;
+    }
+
+    function triggerPresetAdd(presetId) {
+      const preset = state.presets.find(p => p.id === presetId);
+      if (!preset) return;
+      addItem(preset.title, preset.category, preset.note || '', Boolean(preset.priority));
+      showToast(`Added "${preset.title}"`);
+    }
+
+    function addCustomPreset(title, category, note = '', priority = false) {
+      const cleanTitle = (title || '').trim();
+      if (!cleanTitle) return;
+
+      // Avoid exact duplicate preset in the same category
+      const exists = state.presets.some(
+        p => p.title.toLowerCase() === cleanTitle.toLowerCase() && p.category === category
+      );
+      if (exists) {
+        showToast(`"${cleanTitle}" is already in your 1-Tap bar!`);
+        return;
+      }
+
+      const newPreset = {
+        id: 'preset-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+        title: cleanTitle,
+        category: category || 'bringback',
+        note: (note || '').trim(),
+        priority: Boolean(priority)
+      };
+
+      state.presets.push(newPreset);
+      recordStateChange();
+      showToast(`⭐ Added "${cleanTitle}" to 1-Tap shortcuts!`);
+    }
+
+    function deletePreset(presetId, event) {
+      if (event) event.stopPropagation();
+      const idx = state.presets.findIndex(p => p.id === presetId);
+      if (idx === -1) return;
+
+      const removed = state.presets[idx];
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+
+      state.presets.splice(idx, 1);
+      recordStateChange();
+      showToast(`Removed 1-Tap "${removed.title}"`, true);
+    }
+
+    function saveComposerAsPreset() {
+      const titleInput = document.getElementById('itemTitleInput');
+      const noteInput = document.getElementById('itemNoteInput');
+      const catSelect = document.getElementById('itemCategorySelect');
+
+      const title = titleInput.value.trim();
+      if (!title) {
+        toggleNewPresetForm(true);
+        document.getElementById('presetTitleInput').focus();
+        return;
+      }
+
+      addCustomPreset(title, catSelect.value, noteInput.value, state.composerPriority);
+    }
+
+    function saveExistingItemAsPreset(itemId) {
+      const item = state.items.find(i => i.id === itemId);
+      if (!item) return;
+      addCustomPreset(item.title, item.category, item.note || '', Boolean(item.priority));
+    }
+
+    function toggleNewPresetForm(forceState) {
+      const drawer = document.getElementById('newPresetDrawer');
+      const shouldShow = typeof forceState === 'boolean' ? forceState : drawer.classList.contains('hidden');
+
+      if (shouldShow) {
+        drawer.classList.remove('hidden');
+        document.getElementById('presetTitleInput').focus();
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function handleAddPresetFromDrawer() {
+      const titleEl = document.getElementById('presetTitleInput');
+      const catEl = document.getElementById('presetCategorySelect');
+      const noteEl = document.getElementById('presetNoteInput');
+      const prioEl = document.getElementById('presetPriorityCheck');
+
+      const title = titleEl.value.trim();
+      if (!title) {
+        titleEl.focus();
+        return;
+      }
+
+      addCustomPreset(title, catEl.value, noteEl.value, prioEl.checked);
+      titleEl.value = '';
+      noteEl.value = '';
+      prioEl.checked = false;
+      toggleNewPresetForm(false);
+    }
+
+    function togglePresetManageMode() {
+      state.presetManageMode = !state.presetManageMode;
+      const btn = document.getElementById('togglePresetEditBtn');
+      const label = document.getElementById('togglePresetEditLabel');
+      const drawer = document.getElementById('newPresetDrawer');
+
+      if (state.presetManageMode) {
+        btn.className = 'inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold bg-urgent text-white border border-urgent transition-colors';
+        if (label) label.textContent = 'Done';
+        drawer.classList.remove('hidden');
+      } else {
+        btn.className = 'inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-semibold bg-canvas hover:bg-surface text-ink-secondary border border-stoneBorder transition-colors';
+        if (label) label.textContent = 'Edit';
+        drawer.classList.add('hidden');
+      }
+      renderPresetsBar();
+    }
+
+    function restoreDefaultPresets() {
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+      state.presets = JSON.parse(JSON.stringify(DEFAULT_PRESETS));
+      recordStateChange();
+      showToast('Restored default 1-Tap shortcuts!', true);
+    }
+
+    // =========================================================
+    // 4. PROGRESS METRICS & CELEBRATION ENGINE
+    // =========================================================
+    function updateProgressDashboard() {
+      const total = state.items.length;
+      const completed = state.items.filter(i => i.completed).length;
+      const pct = total === 0 ? 0 : Math.round((completed / total) * 100);
+
+      const pctEl = document.getElementById('overallPercentage');
+      const countEl = document.getElementById('overallCounter');
+      const barEl = document.getElementById('overallProgressBar');
+      const celebBadge = document.getElementById('celebrationBadge');
+
+      pctEl.textContent = `${pct}%`;
+      countEl.textContent = `${completed}/${total} done`;
+      barEl.style.width = `${pct}%`;
+      barEl.setAttribute('aria-valuenow', pct);
+
+      // Urgent / Must Bring counter in header
+      const urgentRemaining = state.items.filter(i => i.priority && !i.completed).length;
+      const urgentAlertEl = document.getElementById('urgentHeaderAlert');
+      const urgentCountEl = document.getElementById('urgentHeaderCount');
+
+      if (urgentRemaining > 0) {
+        urgentAlertEl.classList.remove('hidden');
+        urgentAlertEl.classList.add('inline-flex');
+        urgentCountEl.textContent = `${urgentRemaining} Must-Bring left`;
+      } else {
+        urgentAlertEl.classList.add('hidden');
+        urgentAlertEl.classList.remove('inline-flex');
+      }
+
+      // 100% Celebratory State
+      if (total > 0 && pct === 100) {
+        barEl.className = 'progress-bar-fill h-full rounded-full bg-complete';
+        celebBadge.classList.remove('hidden');
+        celebBadge.classList.add('inline-flex');
+
+        if (state.lastProgressPct < 100 && state.lastProgressPct !== 0) {
+          triggerConfettiCelebration();
+          showToast('🎉 100% Done! All weekend tasks & packing items complete.');
+        }
+      } else {
+        barEl.className = 'progress-bar-fill h-full rounded-full bg-gradient-to-r from-grocery via-pack to-todo';
+        celebBadge.classList.add('hidden');
+        celebBadge.classList.remove('inline-flex');
+      }
+
+      state.lastProgressPct = pct;
+
+      // Sub-category progress bars, column badges & mobile bottom nav remaining badges
+      const categories = ['groceries', 'bringback', 'todos'];
+      categories.forEach(cat => {
+        const catItems = state.items.filter(i => i.category === cat);
+        const catTotal = catItems.length;
+        const catDone = catItems.filter(i => i.completed).length;
+        const catRemaining = catTotal - catDone;
+        const catPct = catTotal === 0 ? 0 : Math.round((catDone / catTotal) * 100);
+
+        const subCount = document.getElementById(`subCount-${cat}`);
+        const subBar = document.getElementById(`subBar-${cat}`);
+        const colBadge = document.getElementById(`colBadge-${cat}`);
+        const mobCount = document.getElementById(`mobCount-${cat}`);
+
+        if (subCount) subCount.textContent = `${catDone}/${catTotal}`;
+        if (subBar) subBar.style.width = `${catPct}%`;
+        if (colBadge) colBadge.textContent = `${catDone}/${catTotal}`;
+        if (mobCount) mobCount.textContent = `${catRemaining}`;
+      });
+    }
+
+    // =========================================================
+    // 5. FILTERING & RENDERING CHECKLIST COLUMNS
+    // =========================================================
+    function getFilteredItemsForCategory(category) {
+      return state.items
+        .filter(item => {
+          if (item.category !== category) return false;
+
+          if (state.departureMode) {
+            if (item.completed) return false;
+            if (item.category !== 'bringback' && !item.priority) return false;
+          }
+
+          if (state.statusFilter === 'remaining' && item.completed) return false;
+          if (state.statusFilter === 'completed' && !item.completed) return false;
+
+          if (state.priorityOnly && !item.priority) return false;
+
+          if (state.searchQuery.trim() !== '') {
+            const q = state.searchQuery.toLowerCase();
+            const matchTitle = item.title.toLowerCase().includes(q);
+            const matchNote = (item.note || '').toLowerCase().includes(q);
+            if (!matchTitle && !matchNote) return false;
+          }
+
+          return true;
+        })
+        .sort((a, b) => {
+          if (a.completed !== b.completed) return a.completed ? 1 : -1;
+          if (a.priority !== b.priority) return a.priority ? -1 : 1;
+          return a.createdAt - b.createdAt;
+        });
+    }
+
+    function getCategoryAccentClasses(category) {
+      if (category === 'groceries') {
+        return {
+          checkboxChecked: 'bg-grocery border-grocery text-white',
+          checkboxUnchecked: 'border-stoneBorder hover:border-grocery',
+          noteBadge: 'bg-grocery-light text-grocery-dark border-grocery-border'
+        };
+      }
+      if (category === 'bringback') {
+        return {
+          checkboxChecked: 'bg-pack border-pack text-white',
+          checkboxUnchecked: 'border-stoneBorder hover:border-pack',
+          noteBadge: 'bg-pack-light text-pack-dark border-pack-border'
+        };
+      }
+      return {
+        checkboxChecked: 'bg-todo border-todo text-white',
+        checkboxUnchecked: 'border-stoneBorder hover:border-todo',
+        noteBadge: 'bg-todo-light text-todo-dark border-todo-border'
+      };
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderColumns() {
+      const categories = ['groceries', 'bringback', 'todos'];
+
+      categories.forEach(cat => {
+        const container = document.getElementById(`list-${cat}`);
+        const colSection = document.getElementById(`col-${cat}`);
+
+        // Handle Mobile Bottom Tab Visibility
+        if (state.mobileTab === 'all' || state.mobileTab === cat) {
+          colSection.classList.remove('hidden');
+          colSection.classList.add('flex');
+        } else {
+          colSection.classList.add('hidden');
+          colSection.classList.remove('flex');
+        }
+
+        const filtered = getFilteredItemsForCategory(cat);
+        const totalInCat = state.items.filter(i => i.category === cat).length;
+        const accent = getCategoryAccentClasses(cat);
+
+        if (filtered.length === 0) {
+          container.innerHTML = renderEmptyState(cat, totalInCat);
+          return;
+        }
+
+        container.innerHTML = filtered.map(item => {
+          // Inline Edit Mode Row
+          if (state.editingId === item.id) {
+            return `
+              <div class="p-3.5 bg-surface/90">
+                <form onsubmit="saveInlineEdit(event, '${item.id}')" class="flex flex-col gap-2.5">
+                  <input
+                    id="edit-title-${item.id}"
+                    type="text"
+                    dir="auto"
+                    required
+                    value="${escapeHtml(item.title)}"
+                    class="w-full px-3 py-2.5 rounded-xl bg-card border border-stoneBorder text-base sm:text-sm font-medium text-ink-primary focus:outline-none focus:border-ink-primary"
+                    placeholder="Item name..."
+                  />
+                  <div class="flex flex-wrap items-center gap-2">
+                    <input
+                      id="edit-note-${item.id}"
+                      type="text"
+                      dir="auto"
+                      value="${escapeHtml(item.note || '')}"
+                      class="flex-1 min-w-[130px] px-3 py-2 rounded-xl bg-card border border-stoneBorder text-base sm:text-xs font-mono text-ink-primary focus:outline-none focus:border-ink-primary"
+                      placeholder="Qty or location note..."
+                    />
+                    <select
+                      id="edit-cat-${item.id}"
+                      class="px-3 py-2 rounded-xl bg-card border border-stoneBorder text-base sm:text-xs font-semibold text-ink-primary"
+                    >
+                      <option value="groceries" ${item.category === 'groceries' ? 'selected' : ''}>🛒 Groceries</option>
+                      <option value="bringback" ${item.category === 'bringback' ? 'selected' : ''}>📦 Bring Back</option>
+                      <option value="todos" ${item.category === 'todos' ? 'selected' : ''}>✅ To-Dos</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center justify-between pt-1">
+                    <label class="inline-flex items-center gap-2 text-xs font-semibold text-urgent cursor-pointer select-none py-1">
+                      <input
+                        id="edit-prio-${item.id}"
+                        type="checkbox"
+                        ${item.priority ? 'checked' : ''}
+                        class="w-4 h-4 rounded border-stoneBorder text-urgent focus:ring-urgent"
+                      />
+                      <span>⚡ Must Bring</span>
+                    </label>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onclick="cancelInlineEdit()"
+                        class="px-3 py-1.5 rounded-xl text-xs font-semibold text-ink-secondary bg-card border border-stoneBorder"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="submit"
+                        class="px-4 py-1.5 rounded-xl text-xs font-semibold bg-ink-primary text-white"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            `;
+          }
+
+          // Standard Mobile-Ergonomic Checklist Row
+          const rowOpacity = item.completed ? 'opacity-60 bg-canvas/50' : 'bg-card';
+          const titleStyle = item.completed ? 'line-through text-ink-muted' : 'text-ink-primary font-medium';
+
+          return `
+            <div class="checklist-row group px-3.5 sm:px-4 py-3 flex items-start justify-between gap-2.5 ${rowOpacity}">
+              <!-- Left: Touch-Friendly Checkbox + Item Title & Badges -->
+              <div class="flex items-start gap-3 flex-1 min-w-0">
+                <button
+                  type="button"
+                  onclick="toggleItemCheck('${item.id}')"
+                  aria-label="${item.completed ? 'Mark as incomplete' : 'Mark as complete'}"
+                  class="check-box-btn mt-0.5 w-6 h-6 sm:w-5 sm:h-5 rounded-lg border-2 flex items-center justify-center shrink-0 ${
+                    item.completed ? accent.checkboxChecked + ' checked-anim' : accent.checkboxUnchecked + ' bg-white'
+                  }"
+                >
+                  ${
+                    item.completed
+                      ? `<svg class="w-4 h-4 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                         </svg>`
+                      : ''
+                  }
+                </button>
+
+                <div class="flex-1 min-w-0">
+                  <button
+                    type="button"
+                    dir="auto"
+                    onclick="toggleItemCheck('${item.id}')"
+                    class="item-title-text text-start text-[15px] leading-snug break-words w-full py-0.5 ${titleStyle}"
+                  >
+                    ${escapeHtml(item.title)}
+                  </button>
+
+                  ${
+                    item.note || item.priority
+                      ? `<div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+                          ${
+                            item.priority
+                              ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-urgent-light text-urgent border border-urgent-border">
+                                   <span>⚡ Must Bring</span>
+                                 </span>`
+                              : ''
+                          }
+                          ${
+                            item.note
+                              ? `<span dir="auto" class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-mono font-medium border ${accent.noteBadge}">
+                                   ${escapeHtml(item.note)}
+                                 </span>`
+                              : ''
+                          }
+                        </div>`
+                      : ''
+                  }
+                </div>
+              </div>
+
+              <!-- Right: Mobile-Visible Touch Action Buttons (Including ⭐ Save to 1-Tap) -->
+              <div class="flex items-center gap-0.5 sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100 transition-opacity shrink-0">
+                <button
+                  type="button"
+                  onclick="saveExistingItemAsPreset('${item.id}')"
+                  title="Save item as a permanent 1-Tap shortcut"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-xs text-ink-muted hover:text-amber-500 active:bg-surface transition-colors"
+                >
+                  ⭐
+                </button>
+                <button
+                  type="button"
+                  onclick="toggleItemPriority('${item.id}')"
+                  title="${item.priority ? 'Remove Must Bring priority' : 'Mark as Must Bring'}"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-xs transition-colors ${
+                    item.priority
+                      ? 'bg-urgent-light text-urgent border border-urgent-border'
+                      : 'text-ink-muted hover:text-urgent active:bg-urgent-light/50'
+                  }"
+                >
+                  ⚡
+                </button>
+                <button
+                  type="button"
+                  onclick="startInlineEdit('${item.id}')"
+                  title="Edit item"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-muted hover:text-ink-primary active:bg-surface transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onclick="deleteItem('${item.id}')"
+                  title="Delete item"
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-ink-muted hover:text-urgent active:bg-urgent-light/60 transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      });
+    }
+
+    function renderEmptyState(category, totalInCat) {
+      const labels = {
+        groceries: {
+          icon: '🥑',
+          emptyTitle: 'No groceries on the list yet',
+          emptySub: 'Add apartment staples, produce, or snacks for the week ahead.'
+        },
+        bringback: {
+          icon: '🥡',
+          emptyTitle: 'Nothing queued to pack back',
+          emptySub: 'Add fridge leftovers, chargers, or clean laundry so nothing stays behind.'
+        },
+        todos: {
+          icon: '✨',
+          emptyTitle: 'Weekend to-do list is clear',
+          emptySub: 'Add errands, laundry cycles, or Sunday prep tasks.'
+        }
+      };
+
+      const info = labels[category];
+
+      if (totalInCat > 0) {
+        return `
+          <div class="p-7 text-center">
+            <p class="text-2xl mb-1">🎉</p>
+            <p class="font-display text-sm font-bold text-ink-primary">All clear in this view</p>
+            <p class="text-xs text-ink-secondary mt-0.5">Switch your active filter to see other items.</p>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="p-7 text-center">
+          <p class="text-2xl mb-1.5">${info.icon}</p>
+          <p class="font-display text-sm font-bold text-ink-primary">${info.emptyTitle}</p>
+          <p class="text-xs text-ink-secondary mt-1 max-w-xs mx-auto">${info.emptySub}</p>
+        </div>
+      `;
+    }
+
+    function renderApp() {
+      updateProgressDashboard();
+      renderPresetsBar();
+      renderColumns();
+    }
+
+    // =========================================================
+    // 6. ITEM CRUD & WORKFLOW ACTIONS
+    // =========================================================
+    function addItem(title, category, note = '', priority = false) {
+      const cleanTitle = title.trim();
+      if (!cleanTitle) return;
+
+      const newItem = {
+        id: 'item-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+        title: cleanTitle,
+        category: category,
+        note: note.trim(),
+        priority: Boolean(priority),
+        completed: false,
+        createdAt: Date.now()
+      };
+
+      state.items.unshift(newItem);
+      recordStateChange();
+    }
+
+    function toggleItemCheck(id) {
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+      item.completed = !item.completed;
+      recordStateChange();
+    }
+
+    function toggleItemPriority(id) {
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+      item.priority = !item.priority;
+      recordStateChange();
+    }
+
+    function deleteItem(id) {
+      const idx = state.items.findIndex(i => i.id === id);
+      if (idx === -1) return;
+      const removed = state.items[idx];
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+      state.items.splice(idx, 1);
+      recordStateChange();
+      showToast(`Removed "${removed.title}"`, true);
+    }
+
+    function startInlineEdit(id) {
+      state.editingId = id;
+      renderColumns();
+      setTimeout(() => {
+        const input = document.getElementById(`edit-title-${id}`);
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      }, 20);
+    }
+
+    function cancelInlineEdit() {
+      state.editingId = null;
+      renderColumns();
+    }
+
+    function saveInlineEdit(e, id) {
+      e.preventDefault();
+      const item = state.items.find(i => i.id === id);
+      if (!item) return;
+
+      const newTitle = document.getElementById(`edit-title-${id}`).value.trim();
+      const newNote = document.getElementById(`edit-note-${id}`).value.trim();
+      const newCat = document.getElementById(`edit-cat-${id}`).value;
+      const newPrio = document.getElementById(`edit-prio-${id}`).checked;
+
+      if (newTitle) {
+        item.title = newTitle;
+        item.note = newNote;
+        item.category = newCat;
+        item.priority = newPrio;
+      }
+
+      state.editingId = null;
+      recordStateChange();
+    }
+
+    function setStatusFilter(filterVal) {
+      state.statusFilter = filterVal;
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        if (btn.dataset.filter === filterVal) {
+          btn.className = 'filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-ink-primary text-white shadow-warm-sm min-h-[34px]';
+        } else {
+          btn.className = 'filter-pill px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-ink-secondary hover:text-ink-primary min-h-[34px]';
+        }
+      });
+      renderColumns();
+    }
+
+    function togglePriorityFilter() {
+      state.priorityOnly = !state.priorityOnly;
+      const btn = document.getElementById('filterPriorityBtn');
+      if (state.priorityOnly) {
+        btn.className = 'inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-urgent bg-urgent text-white shadow-warm-sm transition-all min-h-[36px]';
+      } else {
+        btn.className = 'inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border border-stoneBorder bg-canvas text-ink-secondary hover:text-urgent hover:border-urgent-border transition-all min-h-[36px]';
+      }
+      renderColumns();
+    }
+
+    function toggleDepartureMode() {
+      state.departureMode = !state.departureMode;
+      const btn = document.getElementById('departureModeBtn');
+      const banner = document.getElementById('departureBanner');
+      const label = document.getElementById('departureModeLabel');
+
+      if (state.departureMode) {
+        btn.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-pack bg-pack text-white shadow-warm-sm transition-all active:scale-95 min-h-[40px]';
+        label.textContent = 'Exit Check';
+        banner.classList.remove('hidden');
+        banner.classList.add('flex');
+        if (window.innerWidth < 1024 && state.mobileTab !== 'all') {
+          setMobileTab('all');
+        }
+      } else {
+        btn.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-semibold border border-stoneBorder bg-surface hover:bg-pack-light hover:border-pack-border hover:text-pack-dark text-ink-primary transition-all active:scale-95 min-h-[40px]';
+        label.textContent = 'Leaving Check';
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }
+      renderColumns();
+    }
+
+    function setMobileTab(tab) {
+      state.mobileTab = tab;
+      document.querySelectorAll('.mob-tab-btn').forEach(btn => {
+        if (btn.dataset.mobtab === tab) {
+          btn.className = 'mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all bg-ink-primary text-white shadow-warm-sm';
+        } else {
+          btn.className = 'mob-tab-btn relative flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all text-ink-secondary';
+        }
+      });
+
+      if (tab !== 'all') {
+        const catSelect = document.getElementById('itemCategorySelect');
+        if (catSelect) catSelect.value = tab;
+      }
+
+      renderColumns();
+    }
+
+    function focusCategoryView(category) {
+      if (window.innerWidth < 1024) {
+        setMobileTab(category);
+      }
+      const el = document.getElementById(`col-${category}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function prefillCategoryComposer(category) {
+      const select = document.getElementById('itemCategorySelect');
+      const input = document.getElementById('itemTitleInput');
+      select.value = category;
+      input.focus();
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function clearSearch() {
+      state.searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderColumns();
+    }
+
+    function uncheckAllForNextWeekend() {
+      const checkedCount = state.items.filter(i => i.completed).length;
+      if (checkedCount === 0) {
+        showToast('All items are already unchecked and ready!');
+        return;
+      }
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+      state.items.forEach(item => {
+        item.completed = false;
+      });
+      state.lastProgressPct = 0;
+      recordStateChange();
+      showToast(`Reset ${checkedCount} items for next weekend!`, true);
+    }
+
+    function clearCompletedItems() {
+      const completedCount = state.items.filter(i => i.completed).length;
+      if (completedCount === 0) {
+        showToast('No completed items to clear.');
+        return;
+      }
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+      state.items = state.items.filter(i => !i.completed);
+      recordStateChange();
+      showToast(`Cleared ${completedCount} completed ${completedCount === 1 ? 'item' : 'items'}.`, true);
+    }
+
+    function restoreSampleList() {
+      state.undoSnapshot = {
+        items: JSON.parse(JSON.stringify(state.items)),
+        presets: JSON.parse(JSON.stringify(state.presets))
+      };
+      state.items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      state.statusFilter = 'all';
+      state.priorityOnly = false;
+      state.departureMode = false;
+      recordStateChange();
+      showToast('Restored starter weekend checklist!', true);
+    }
+
+    function undoLastAction() {
+      if (!state.undoSnapshot) return;
+      if (Array.isArray(state.undoSnapshot.items)) {
+        state.items = JSON.parse(JSON.stringify(state.undoSnapshot.items));
+      }
+      if (Array.isArray(state.undoSnapshot.presets)) {
+        state.presets = JSON.parse(JSON.stringify(state.undoSnapshot.presets));
+      }
+      state.undoSnapshot = null;
+      recordStateChange();
+      showToast('Action undone.');
+    }
+
+    function exportJsonBackup() {
+      const payload = {
+        lastUpdated: state.lastUpdated || Date.now(),
+        syncKey: state.syncKey,
+        items: state.items,
+        presets: state.presets
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'weekend-checklist-backup.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      showToast('⬇️ Downloaded JSON backup!');
+    }
+
+    function importJsonBackup(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if (parsed && Array.isArray(parsed.items)) {
+            state.undoSnapshot = {
+              items: JSON.parse(JSON.stringify(state.items)),
+              presets: JSON.parse(JSON.stringify(state.presets))
+            };
+            state.items = parsed.items;
+            if (Array.isArray(parsed.presets)) {
+              state.presets = parsed.presets;
+            }
+            recordStateChange();
+            closeSyncModal();
+            showToast('⬆️ Checklist & 1-Tap presets imported!', true);
+          }
+        } catch (err) {
+          showToast('Could not read JSON file.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function openSyncModal() {
+      const modal = document.getElementById('syncModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      const syncInput = document.getElementById('syncKeyInput');
+      if (syncInput) syncInput.value = state.syncKey;
+    }
+
+    function closeSyncModal() {
+      const modal = document.getElementById('syncModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // =========================================================
+    // 7. TOAST NOTIFICATIONS & CONFETTI
+    // =========================================================
+    function showToast(message, showUndo = false) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-ink-primary text-white text-xs sm:text-sm font-medium shadow-warm-lg border border-zinc-700 transition-all duration-300 transform translate-y-2 opacity-0';
+
+      toast.innerHTML = `
+        <span dir="auto">${escapeHtml(message)}</span>
+        ${
+          showUndo
+            ? `<button type="button" onclick="undoLastAction(); this.closest('div').remove();" class="px-2.5 py-1 rounded-lg bg-pack text-white font-bold text-xs hover:bg-pack-dark transition-colors shrink-0">
+                 Undo
+               </button>`
+            : ''
+        }
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    function triggerConfettiCelebration() {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const colors = ['#0D9488', '#EA580C', '#4F46E5', '#10B981', '#F59E0B', '#E11D48'];
+      const particles = Array.from({ length: 70 }, () => ({
+        x: Math.random() * canvas.width,
+        y: -20 - Math.random() * 80,
+        size: 6 + Math.random() * 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedX: (Math.random() - 0.5) * 5,
+        speedY: 3 + Math.random() * 4.5,
+        rotation: Math.random() * 360,
+        rotationSpeed: (Math.random() - 0.5) * 10
+      }));
+
+      let frame = 0;
+      function animateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+          p.rotation += p.rotationSpeed;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65);
+          ctx.restore();
+        });
+
+        frame++;
+        if (frame < 120) {
+          requestAnimationFrame(animateConfetti);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      requestAnimationFrame(animateConfetti);
+    }
+
+    // =========================================================
+    // 8. DOM READY & EVENT LISTENERS
+    // =========================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      // 1. Load saved items & custom 1-Tap presets from localStorage first!
+      loadStateFromLocalStorage();
+
+      const total = state.items.length;
+      const done = state.items.filter(i => i.completed).length;
+      state.lastProgressPct = total === 0 ? 0 : Math.round((done / total) * 100);
+
+      // 2. Render UI
+      renderApp();
+
+      // 3. Initialize Cross-Device Sync (if Sync Key or GitHub Repo is configured)
+      initCrossDeviceSync();
+
+      // Add Item Form Submission
+      const form = document.getElementById('addItemForm');
+      const titleInput = document.getElementById('itemTitleInput');
+      const noteInput = document.getElementById('itemNoteInput');
+      const catSelect = document.getElementById('itemCategorySelect');
+      const prioBtn = document.getElementById('priorityToggleBtn');
+
+      prioBtn.addEventListener('click', () => {
+        state.composerPriority = !state.composerPriority;
+        prioBtn.setAttribute('aria-pressed', String(state.composerPriority));
+        if (state.composerPriority) {
+          prioBtn.className = 'col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-urgent bg-urgent-light text-urgent text-xs sm:text-sm font-bold transition-all select-none shrink-0 min-h-[44px]';
+        } else {
+          prioBtn.className = 'col-span-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-xl border border-stoneBorder bg-canvas text-ink-secondary hover:border-urgent-border hover:text-urgent text-xs sm:text-sm font-semibold transition-all select-none shrink-0 min-h-[44px]';
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addItem(titleInput.value, catSelect.value, noteInput.value, state.composerPriority);
+        titleInput.value = '';
+        noteInput.value = '';
+        if (state.composerPriority) {
+          prioBtn.click();
+        }
+        if (window.innerWidth < 768) {
+          titleInput.blur();
+        } else {
+          titleInput.focus();
+        }
+      });
+
+      // Search Input Listener
+      const searchInput = document.getElementById('searchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      searchInput.addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        if (state.searchQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        renderColumns();
+      });
+
+      // Close modal on backdrop click
+      document.getElementById('syncModal').addEventListener('click', (e) => {
+        if (e.target.id === 'syncModal') closeSyncModal();
+      });
+
+      // Keyboard shortcut `/` to focus quick-add input
+      window.addEventListener('keydown', (e) => {
+        if (
+          e.key === '/' &&
+          document.activeElement.tagName !== 'INPUT' &&
+          document.activeElement.tagName !== 'TEXTAREA' &&
+          document.activeElement.tagName !== 'SELECT'
+        ) {
+          e.preventDefault();
+          titleInput.focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
