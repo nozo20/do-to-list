@@ -57,13 +57,6 @@
   ],
   "presets": [
     {
-      "id": "p-1",
-      "title": "Leftover food Tupperware",
-      "category": "bringback",
-      "note": "In fridge!",
-      "priority": true
-    },
-    {
       "id": "p-2",
       "title": "Phone & laptop chargers",
       "category": "bringback",
@@ -99,5 +92,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792272202580
+  "lastUpdated": 1792272211138
 }
