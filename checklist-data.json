@@ -48,20 +48,6 @@
   ],
   "presets": [
     {
-      "id": "p-3",
-      "title": "Clean laundry bag",
-      "category": "groceries",
-      "note": "By front door",
-      "priority": true
-    },
-    {
-      "id": "p-4",
-      "title": "Eggs, milk & bread",
-      "category": "groceries",
-      "note": "Staples",
-      "priority": false
-    },
-    {
       "id": "p-5",
       "title": "Strip guest bed sheets",
       "category": "todos",
@@ -169,6 +155,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330249782,
+  "lastUpdated": 1792330251633,
   "sender": "dev-6g5cod4"
 }
