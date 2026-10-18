@@ -141,41 +141,7 @@
     "מעבדה",
     "כללי"
   ],
-  "assignments": [
-    {
-      "id": "as-1",
-      "title": "גיליון תרגיל 3 — משוואות דיפרנציאליות",
-      "course": "מתמטיקה / חדו״א",
-      "type": "תרגיל בית",
-      "dueDate": "2026-10-20",
-      "status": "done",
-      "priority": true,
-      "note": "שאלות 1-5, להגיש ב-Moodle",
-      "createdAt": 1001
-    },
-    {
-      "id": "as-2",
-      "title": "דו״ח מעבדה 2 — מדידות אופטיות",
-      "course": "מעבדה",
-      "type": "דו״ח מעבדה",
-      "dueDate": "2026-10-23",
-      "status": "todo",
-      "priority": true,
-      "note": "הגשה בזוגות (10% מהציון)",
-      "createdAt": 1002
-    },
-    {
-      "id": "as-3",
-      "title": "קריאת מאמר מבוא וסיכום קצר",
-      "course": "כללי",
-      "type": "קריאה / סיכום",
-      "dueDate": "2026-10-17",
-      "status": "done",
-      "priority": false,
-      "note": "פרקים 1-2",
-      "createdAt": 1003
-    }
-  ],
+  "assignments": [],
   "uiLabels": {
     "ws_weekend_tab": "סופ״ש ודירה",
     "ws_study_tab": "מטלות לימודים",
@@ -204,6 +170,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331309534,
+  "lastUpdated": 1792331311822,
   "sender": "dev-u3q98j6"
 }
