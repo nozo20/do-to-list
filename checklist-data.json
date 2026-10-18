@@ -153,6 +153,13 @@
       "subtitle": "רשימה מותאמת אישית",
       "icon": "📋",
       "color": "emerald"
+    },
+    {
+      "id": "cat-1792332031839",
+      "title": "General",
+      "subtitle": "רשימה מותאמת אישית",
+      "icon": "📋",
+      "color": "orange"
     }
   ],
   "courses": [
@@ -192,6 +199,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332023622,
+  "lastUpdated": 1792332031839,
   "sender": "dev-s4zfszy"
 }
