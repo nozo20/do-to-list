@@ -114,7 +114,7 @@
     "ws_study_tab": "מטלות לימודים",
     "main_heading_weekend": "צ׳קליסט סופ״ש ומעבר לדירה",
     "main_heading_study": "מערכת עבודות ומטלות לימודים",
-    "leaving_check_btn": "Lst minut checksL",
+    "leaving_check_btn": "Last minut checksL",
     "departure_banner_text": "מצב יציאה לדירה: מציג רק פריטים שנותרו לקחת לדירה ופריטי חובה (⚡) כדי שלא תשכח כלום!",
     "must_bring_btn_label": "חובה",
     "add_item_btn_label": "הוסף",
@@ -137,6 +137,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329844675,
+  "lastUpdated": 1792329847435,
   "sender": "dev-6g5cod4"
 }
