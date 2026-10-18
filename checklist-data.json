@@ -109,6 +109,13 @@
       "category": "groceries",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792332194739",
+      "title": "שרי",
+      "category": "groceries",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -178,6 +185,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332172151,
+  "lastUpdated": 1792332194739,
   "sender": "dev-s4zfszy"
 }
