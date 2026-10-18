@@ -135,7 +135,6 @@
     }
   ],
   "courses": [
-    "מתמטיקה / חדו״א",
     "פיזיקה",
     "מדעי המחשב",
     "מעבדה",
@@ -170,6 +169,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331460266,
+  "lastUpdated": 1792331475064,
   "sender": "dev-u3q98j6"
 }
