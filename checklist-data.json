@@ -135,7 +135,6 @@
     }
   ],
   "courses": [
-    "מעבדה",
     "כללי"
   ],
   "assignments": [
@@ -179,6 +178,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331483788,
+  "lastUpdated": 1792331485541,
   "sender": "dev-u3q98j6"
 }
