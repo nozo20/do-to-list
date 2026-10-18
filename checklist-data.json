@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332371138",
+      "title": "אוכל מוכן",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332371138
+    },
+    {
       "id": "item-1792332367185",
       "title": "קניות אוכל",
       "category": "cat-1792330030718",
@@ -230,6 +239,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332367185,
+  "lastUpdated": 1792332371138,
   "sender": "dev-s4zfszy"
 }
