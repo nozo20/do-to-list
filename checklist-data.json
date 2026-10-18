@@ -134,13 +134,6 @@
       "color": "amber"
     },
     {
-      "id": "cat-1792332001616",
-      "title": "General",
-      "subtitle": "רשימה מותאמת אישית",
-      "icon": "📋",
-      "color": "rose"
-    },
-    {
       "id": "cat-1792332013411",
       "title": "General",
       "subtitle": "רשימה מותאמת אישית",
@@ -199,6 +192,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332031839,
+  "lastUpdated": 1792332038358,
   "sender": "dev-s4zfszy"
 }
