@@ -135,7 +135,8 @@
     }
   ],
   "courses": [
-    "כללי"
+    "כללי",
+    "asd"
   ],
   "assignments": [
     {
@@ -178,6 +179,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331485541,
+  "lastUpdated": 1792331506174,
   "sender": "dev-u3q98j6"
 }
