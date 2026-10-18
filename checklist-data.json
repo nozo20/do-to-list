@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332378161",
+      "title": "בגדים?",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332378161
+    },
+    {
       "id": "item-1792332371138",
       "title": "אוכל מוכן",
       "category": "cat-1792330030718",
@@ -239,6 +248,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332371138,
+  "lastUpdated": 1792332378161,
   "sender": "dev-s4zfszy"
 }
