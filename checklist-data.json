@@ -102,6 +102,13 @@
       "category": "groceries",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330324442",
+      "title": "קורנישונים",
+      "category": "groceries",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -197,6 +204,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330318338,
+  "lastUpdated": 1792330324442,
   "sender": "dev-6g5cod4"
 }
