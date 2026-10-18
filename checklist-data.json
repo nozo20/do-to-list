@@ -158,7 +158,7 @@
     "btn_reset_weekend": "Reset lists",
     "btn_clear_done": "Clear Done",
     "study_stat_todo": "To Do",
-    "study_stat_doing": "התחלתי (בתהליך)",
+    "study_stat_doing": "In Progress",
     "study_stat_done": "סיימתי (הוגש)",
     "study_stat_urgent": "קרוב להגשה / באיחור",
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
@@ -170,6 +170,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331339789,
+  "lastUpdated": 1792331347929,
   "sender": "dev-u3q98j6"
 }
