@@ -256,7 +256,19 @@
     "מכניקת מוצקים",
     "פונקציות מרוכבות"
   ],
-  "assignments": [],
+  "assignments": [
+    {
+      "id": "as-1792361175109",
+      "title": "גיליון 3",
+      "course": "פונקציות מרוכבות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-25",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1792361175109
+    }
+  ],
   "uiLabels": {
     "ws_weekend_tab": "סופ״ש ודירה",
     "ws_study_tab": "מטלות לימודים",
@@ -285,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361134372,
+  "lastUpdated": 1792361175109,
   "sender": "dev-sop0kjw"
 }
