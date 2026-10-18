@@ -30,7 +30,7 @@
     {
       "id": "item-1792329884021-yir",
       "title": "Clean laundry bag",
-      "category": "bringback",
+      "category": "groceries",
       "note": "By front door",
       "priority": true,
       "completed": false,
@@ -50,21 +50,21 @@
     {
       "id": "p-1",
       "title": "Leftover food Tupperware",
-      "category": "bringback",
+      "category": "groceries",
       "note": "In fridge!",
       "priority": true
     },
     {
       "id": "p-2",
       "title": "Phone & laptop chargers",
-      "category": "bringback",
+      "category": "groceries",
       "note": "Wall outlet",
       "priority": true
     },
     {
       "id": "p-3",
       "title": "Clean laundry bag",
-      "category": "bringback",
+      "category": "groceries",
       "note": "By front door",
       "priority": true
     },
@@ -85,7 +85,7 @@
     {
       "id": "p-6",
       "title": "Apartment keys & wallet",
-      "category": "bringback",
+      "category": "groceries",
       "note": "Entryway",
       "priority": true
     }
@@ -97,13 +97,6 @@
       "subtitle": "השלמות לדירה ולשבוע הקרוב",
       "icon": "🛒",
       "color": "teal"
-    },
-    {
-      "id": "bringback",
-      "title": "לקחת חזרה לדירה",
-      "subtitle": "אוכל מהמקרר, כביסה ומטענים",
-      "icon": "📦",
-      "color": "orange"
     },
     {
       "id": "todos",
@@ -197,6 +190,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330030719,
+  "lastUpdated": 1792330047989,
   "sender": "dev-6g5cod4"
 }
