@@ -330,7 +330,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1792360725348",
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792363644152,
+  "lastUpdated": 1792363669557,
   "sender": "dev-y4ho9av"
 }
