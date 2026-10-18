@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332253421",
+      "title": "מעמד לטלוויזיה",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332253421
+    },
+    {
       "id": "item-1792332246482",
       "title": "פח לחדר",
       "category": "cat-1792332023621",
@@ -212,6 +221,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332246483,
+  "lastUpdated": 1792332253421,
   "sender": "dev-s4zfszy"
 }
