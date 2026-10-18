@@ -258,6 +258,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1792362070688",
+      "title": "דוח מעבדה הרפיה",
+      "course": "מד\"ח",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-21",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1792362070688
+    },
+    {
       "id": "as-1792361175109",
       "title": "גיליון 3",
       "course": "פונקציות מרוכבות",
@@ -297,6 +308,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792362029863,
+  "lastUpdated": 1792362070688,
   "sender": "dev-sop0kjw"
 }
