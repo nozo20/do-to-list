@@ -60,6 +60,13 @@
       "category": "todos",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330278724",
+      "title": "סבון",
+      "category": "todos",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -155,6 +162,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330274471,
+  "lastUpdated": 1792330278724,
   "sender": "dev-6g5cod4"
 }
