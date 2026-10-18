@@ -80,15 +80,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332167665
-    },
-    {
-      "id": "item-1792329881635-8ei",
-      "title": "Strip guest bed sheets",
-      "category": "todos",
-      "note": "Before leaving",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792329881635
     }
   ],
   "presets": [
@@ -230,6 +221,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332338158,
+  "lastUpdated": 1792332348158,
   "sender": "dev-s4zfszy"
 }
