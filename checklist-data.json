@@ -135,7 +135,8 @@
     }
   ],
   "courses": [
-    "asd"
+    "asd",
+    "כללי"
   ],
   "assignments": [],
   "uiLabels": {
@@ -166,6 +167,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331517497,
+  "lastUpdated": 1792331527315,
   "sender": "dev-u3q98j6"
 }
