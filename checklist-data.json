@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332246482",
+      "title": "פח לחדר",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332246482
+    },
+    {
       "id": "item-1792332215229",
       "title": "מצעים?",
       "category": "groceries",
@@ -203,6 +212,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332215230,
+  "lastUpdated": 1792332246483,
   "sender": "dev-s4zfszy"
 }
