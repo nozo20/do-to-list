@@ -48,7 +48,7 @@
     {
       "id": "item-1792332215229",
       "title": "מצעים?",
-      "category": "groceries",
+      "category": "cat-1792332023621",
       "note": "",
       "priority": false,
       "completed": false,
@@ -80,15 +80,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332167665
-    },
-    {
-      "id": "item-1792329923715",
-      "title": "Itam",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792329923716
     },
     {
       "id": "item-1792329881635-8ei",
@@ -239,6 +230,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332327113,
+  "lastUpdated": 1792332338158,
   "sender": "dev-s4zfszy"
 }
