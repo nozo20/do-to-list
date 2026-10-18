@@ -253,7 +253,8 @@
     "גלים",
     "מכניקה אנליטית",
     "הסתברות",
-    "מכניקת מוצקים"
+    "מכניקת מוצקים",
+    "פונקציות מרוכבות"
   ],
   "assignments": [],
   "uiLabels": {
@@ -284,6 +285,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792360901243,
+  "lastUpdated": 1792361134372,
   "sender": "dev-sop0kjw"
 }
