@@ -148,7 +148,7 @@
       "course": "מתמטיקה / חדו״א",
       "type": "תרגיל בית",
       "dueDate": "2026-10-20",
-      "status": "doing",
+      "status": "done",
       "priority": true,
       "note": "שאלות 1-5, להגיש ב-Moodle",
       "createdAt": 1001
@@ -204,6 +204,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331263089,
+  "lastUpdated": 1792331309534,
   "sender": "dev-u3q98j6"
 }
