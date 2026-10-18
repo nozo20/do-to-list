@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792329884021-yir",
+      "title": "Clean laundry bag",
+      "category": "bringback",
+      "note": "By front door",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1792329884021
+    },
+    {
       "id": "item-1792329881635-8ei",
       "title": "Strip guest bed sheets",
       "category": "todos",
@@ -147,6 +156,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329881635,
+  "lastUpdated": 1792329884021,
   "sender": "dev-6g5cod4"
 }
