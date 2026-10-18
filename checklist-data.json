@@ -48,13 +48,6 @@
   ],
   "presets": [
     {
-      "id": "p-5",
-      "title": "Strip guest bed sheets",
-      "category": "todos",
-      "note": "Before leaving",
-      "priority": false
-    },
-    {
       "id": "p-6",
       "title": "Apartment keys & wallet",
       "category": "groceries",
@@ -155,6 +148,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330251633,
+  "lastUpdated": 1792330253351,
   "sender": "dev-6g5cod4"
 }
