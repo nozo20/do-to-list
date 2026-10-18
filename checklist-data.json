@@ -166,10 +166,10 @@
     "lbl_assign_course": "קורס / מקצוע",
     "lbl_assign_type": "סוג מטלה",
     "lbl_assign_due": "תאריך הגשה",
-    "lbl_assign_status": "סטטוס"
+    "lbl_assign_status": "Status"
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331410130,
+  "lastUpdated": 1792331423435,
   "sender": "dev-u3q98j6"
 }
