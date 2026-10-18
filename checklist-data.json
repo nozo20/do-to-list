@@ -60,7 +60,7 @@
       "category": "todos",
       "note": "Beat evening traffic",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 3004
     }
   ],
@@ -201,6 +201,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329369479,
+  "lastUpdated": 1792329372038,
   "sender": "dev-7qm65l8"
 }
