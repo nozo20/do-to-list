@@ -7,8 +7,8 @@
       "icon": "🏡",
       "blockOrder": [
         "progress",
-        "composer",
         "presets",
+        "composer",
         "filters",
         "categories"
       ],
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792363498281,
+  "lastUpdated": 1792363546865,
   "sender": "dev-y4ho9av"
 }
