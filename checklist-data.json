@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332289869",
+      "title": "צלחת לעציצים התלויים",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332289869
+    },
+    {
       "id": "item-1792332276562",
       "title": "כריות גב של כיסאות?",
       "category": "cat-1792332023621",
@@ -239,6 +248,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332276562,
+  "lastUpdated": 1792332289869,
   "sender": "dev-s4zfszy"
 }
