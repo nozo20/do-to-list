@@ -1,15 +1,6 @@
 {
   "items": [
     {
-      "id": "g-1",
-      "title": "Unsweetened oat milk & cold brew concentrate",
-      "category": "groceries",
-      "note": "2 cartons",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1001
-    },
-    {
       "id": "g-2",
       "title": "Pasture-raised eggs & sourdough loaf",
       "category": "groceries",
@@ -26,15 +17,6 @@
       "priority": false,
       "completed": true,
       "createdAt": 1003
-    },
-    {
-      "id": "g-4",
-      "title": "Dishwasher pods & paper towels",
-      "category": "groceries",
-      "note": "Apartment restock",
-      "priority": true,
-      "completed": false,
-      "createdAt": 1005
     },
     {
       "id": "b-1",
@@ -144,5 +126,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792319332419
+  "lastUpdated": 1792319334109
 }
