@@ -46,7 +46,15 @@
       "createdAt": 1792329881635
     }
   ],
-  "presets": [],
+  "presets": [
+    {
+      "id": "p-1792330268299",
+      "title": "מצעים",
+      "category": "todos",
+      "note": "",
+      "priority": false
+    }
+  ],
   "categories": [
     {
       "id": "groceries",
@@ -140,6 +148,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330254274,
+  "lastUpdated": 1792330268299,
   "sender": "dev-6g5cod4"
 }
