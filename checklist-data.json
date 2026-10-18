@@ -157,7 +157,7 @@
     "filter_completed": "בוצעו",
     "filter_must_bring": "Show must only",
     "btn_reset_weekend": "Reset done stuff",
-    "btn_clear_done": "נקה שבוצעו",
+    "btn_clear_done": "Clear done stuff",
     "study_stat_todo": "לעשות (To Do)",
     "study_stat_doing": "התחלתי (בתהליך)",
     "study_stat_done": "סיימתי (הוגש)",
@@ -171,6 +171,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331926260,
+  "lastUpdated": 1792331934147,
   "sender": "dev-s4zfszy"
 }
