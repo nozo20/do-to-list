@@ -1,336 +1,4 @@
 {
-  "tabs": [
-    {
-      "id": "tab-weekend",
-      "type": "checklist",
-      "title": "סופ״ש ודירה",
-      "icon": "🏡",
-      "blockOrder": [
-        "progress",
-        "composer",
-        "presets",
-        "filters",
-        "categories"
-      ],
-      "categories": [
-        {
-          "id": "groceries",
-          "title": "Groceries",
-          "subtitle": "קניות סופר לדירה בחיפה",
-          "icon": "🛒",
-          "color": "teal"
-        },
-        {
-          "id": "todos",
-          "title": "משימות לסופ״ש",
-          "subtitle": "",
-          "icon": "✅",
-          "color": "indigo"
-        },
-        {
-          "id": "cat-1792330030718",
-          "title": "Bring to Haifa",
-          "subtitle": "",
-          "icon": "📦",
-          "color": "amber"
-        },
-        {
-          "id": "cat-1792332023621",
-          "title": "General",
-          "subtitle": "",
-          "icon": "📋",
-          "color": "emerald"
-        }
-      ],
-      "items": [
-        {
-          "id": "item-1792360725348",
-          "title": "להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש. שהחלק למעלה עם הכותרת והלחצן עריכה וכל זה ייעלם עם הגלילה כשאני גולל למטה, אבל לא האפשרות לעבור בין החלוניות השונות. לעשות את העיצובים השונים לא סתם צבעים שונים אלא אשכרה עיצובים שונים, כל אחד בהתאם לתיאור שלו (הרגיל רגיל, הPinterest יותר מסוגנן וכזה, והסימפליסטי ממש שיראה כמעט כמו רשימת טקסט באפליקציית notes בלי אימוג׳י או הסחות דעת או דברים שתופסים את העין או הגדרות מיותרות על המסך.) שאם אני כותב משהו ארוך בזמן שאני עורך את אחד הפריטים אז שהתיבת טקסט תיפתח  בזמן שאני כותב שאוכל לראות ולגלול במה שאני כותב. ספציפית בחלק של הלימודים: שאוכל לערוך את המטלות שאני יוצר. שאוכל לערוך את הסינוסים לפי סטטוסים או לפחות שזה יתעדכן כשאני משנה את השם שלהם בחלק למעלה שנותן לי סקירה כללית על כמה יש מכל אחד. ושהרשימה מטלית עצמה תהיה יותר קומפקטית כי כרגע יכולים להיכנס לי על המסך רק שלושה במקביל מקסימום(אבל עדיין בשורות כמו רשימה). ושיהיה אפשר ליצור עוד חלוניות גם (מהמצב עריכה כמובן). ושכל דבר שמאפס דברים (הגדרות, רשימות וכזה) ידרוש לחצן אישור נוסף כדי שלא יילחץ בטעות. ולחצן undo וredo שמבטל את הפעולה האחרונה שבוצעה ואפשר ללחוץ עליו כמה פעמים ברצף כדי לבטל ומחזיר את הפעולה בחזרה.",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792360725348
-        },
-        {
-          "id": "item-1792360618447",
-          "title": "אגיסטן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": false,
-          "createdAt": 1792360618447
-        },
-        {
-          "id": "item-1792360606473",
-          "title": "Sabosel",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": false,
-          "createdAt": 1792360606473
-        },
-        {
-          "id": "item-1792332391505",
-          "title": "רדיאטור",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332391505
-        },
-        {
-          "id": "item-1792332378161",
-          "title": "בגדים?",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332378161
-        },
-        {
-          "id": "item-1792332371138",
-          "title": "אוכל מוכן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332371138
-        },
-        {
-          "id": "item-1792332367185",
-          "title": "קניות אוכל",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332367185
-        },
-        {
-          "id": "item-1792332289869",
-          "title": "צלחת לעציצים התלויים",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332289869
-        },
-        {
-          "id": "item-1792332276562",
-          "title": "כריות גב של כיסאות?",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332276562
-        },
-        {
-          "id": "item-1792332258563",
-          "title": "ריח לחדר",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332258563
-        },
-        {
-          "id": "item-1792332253421",
-          "title": "מעמד לטלוויזיה",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332253421
-        },
-        {
-          "id": "item-1792332246482",
-          "title": "פח לחדר",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332246482
-        },
-        {
-          "id": "item-1792332215229",
-          "title": "מצעים?",
-          "category": "cat-1792332023621",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332215230
-        },
-        {
-          "id": "item-1792332199287-82h",
-          "title": "שרי",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332199287
-        },
-        {
-          "id": "item-1792332172151-mlr",
-          "title": "קורנישונים",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332172151
-        },
-        {
-          "id": "item-1792332167665",
-          "title": "גבינות קשות",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332167665
-        }
-      ],
-      "presets": [
-        {
-          "id": "p-1792330268299",
-          "title": "מצעים",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330274471",
-          "title": "כביסה",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330278724",
-          "title": "סבון",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330284205",
-          "title": "קרם",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330288909",
-          "title": "ריצה",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330295029",
-          "title": "להכין אוכל",
-          "category": "todos",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330311693",
-          "title": "גבינות קשות",
-          "category": "groceries",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330318338",
-          "title": "קרקרים",
-          "category": "groceries",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792330324442",
-          "title": "קורנישונים",
-          "category": "groceries",
-          "note": "",
-          "priority": false
-        },
-        {
-          "id": "p-1792332194739",
-          "title": "שרי",
-          "category": "groceries",
-          "note": "",
-          "priority": false
-        }
-      ]
-    },
-    {
-      "id": "tab-study",
-      "type": "study",
-      "title": "מטלות לימודים",
-      "icon": "🎓",
-      "blockOrder": [
-        "stats",
-        "composer",
-        "filters",
-        "tasklist"
-      ],
-      "statuses": [
-        {
-          "id": "todo",
-          "label": "לעשות",
-          "icon": "📋",
-          "color": "slate",
-          "isDone": false
-        },
-        {
-          "id": "doing",
-          "label": "התחלתי",
-          "icon": "⏳",
-          "color": "amber",
-          "isDone": false
-        },
-        {
-          "id": "done",
-          "label": "סיימתי",
-          "icon": "✅",
-          "color": "emerald",
-          "isDone": true
-        }
-      ],
-      "courses": [
-        "כללי",
-        "מד\"ח",
-        "גלים",
-        "מכניקה אנליטית",
-        "הסתברות",
-        "מכניקת מוצקים",
-        "פונקציות מרוכבות"
-      ],
-      "assignments": [
-        {
-          "id": "as-1792362070688",
-          "title": "דוח מעבדה הרפיה",
-          "course": "מד\"ח",
-          "type": "תרגיל בית",
-          "dueDate": "2026-10-21",
-          "status": "todo",
-          "note": "",
-          "priority": false,
-          "createdAt": 1792362070688
-        },
-        {
-          "id": "as-1792361175109",
-          "title": "גיליון 3",
-          "course": "פונקציות מרוכבות",
-          "type": "תרגיל בית",
-          "dueDate": "2026-10-25",
-          "status": "doing",
-          "note": "",
-          "priority": false,
-          "createdAt": 1792361175109
-        }
-      ]
-    }
-  ],
-  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1792360725348",
@@ -477,36 +145,6 @@
       "createdAt": 1792332167665
     }
   ],
-  "categories": [
-    {
-      "id": "groceries",
-      "title": "Groceries",
-      "subtitle": "קניות סופר לדירה בחיפה",
-      "icon": "🛒",
-      "color": "teal"
-    },
-    {
-      "id": "todos",
-      "title": "משימות לסופ״ש",
-      "subtitle": "",
-      "icon": "✅",
-      "color": "indigo"
-    },
-    {
-      "id": "cat-1792330030718",
-      "title": "Bring to Haifa",
-      "subtitle": "",
-      "icon": "📦",
-      "color": "amber"
-    },
-    {
-      "id": "cat-1792332023621",
-      "title": "General",
-      "subtitle": "",
-      "icon": "📋",
-      "color": "emerald"
-    }
-  ],
   "presets": [
     {
       "id": "p-1792330268299",
@@ -579,6 +217,45 @@
       "priority": false
     }
   ],
+  "categories": [
+    {
+      "id": "groceries",
+      "title": "Groceries",
+      "subtitle": "קניות סופר לדירה בחיפה",
+      "icon": "🛒",
+      "color": "teal"
+    },
+    {
+      "id": "todos",
+      "title": "משימות לסופ״ש",
+      "subtitle": "",
+      "icon": "✅",
+      "color": "indigo"
+    },
+    {
+      "id": "cat-1792330030718",
+      "title": "Bring to Haifa",
+      "subtitle": "",
+      "icon": "📦",
+      "color": "amber"
+    },
+    {
+      "id": "cat-1792332023621",
+      "title": "General",
+      "subtitle": "",
+      "icon": "📋",
+      "color": "emerald"
+    }
+  ],
+  "courses": [
+    "כללי",
+    "מד\"ח",
+    "גלים",
+    "מכניקה אנליטית",
+    "הסתברות",
+    "מכניקת מוצקים",
+    "פונקציות מרוכבות"
+  ],
   "assignments": [
     {
       "id": "as-1792362070688",
@@ -603,17 +280,11 @@
       "createdAt": 1792361175109
     }
   ],
-  "courses": [
-    "כללי",
-    "מד\"ח",
-    "גלים",
-    "מכניקה אנליטית",
-    "הסתברות",
-    "מכניקת מוצקים",
-    "פונקציות מרוכבות"
-  ],
   "uiLabels": {
-    "app_main_title": "My Hub",
+    "ws_weekend_tab": "סופ״ש ודירה",
+    "ws_study_tab": "מטלות לימודים",
+    "main_heading_weekend": "My hub",
+    "main_heading_study": "מערכת עבודות ומטלות לימודים",
     "leaving_check_btn": "Last minute checks",
     "departure_banner_text": "מצב יציאה לדירה: מציג רק פריטים שנותרו לקחת לדירה ופריטי חובה (⚡) כדי שלא תשכח כלום!",
     "must_bring_btn_label": "Must",
@@ -624,23 +295,20 @@
     "filter_must_bring": "Show must only",
     "btn_reset_weekend": "Reset done stuff",
     "btn_clear_done": "Clear done stuff",
-    "study_stat_urgent": "Deadline soon",
-    "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
-    "ws_weekend_tab": "סופ״ש ודירה",
-    "ws_study_tab": "מטלות לימודים",
-    "main_heading_weekend": "My hub",
-    "main_heading_study": "מערכת עבודות ומטלות לימודים",
     "study_stat_todo": "To Do",
     "study_stat_doing": "In progress",
     "study_stat_done": "Done",
+    "study_stat_urgent": "Deadline soon",
+    "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
     "lbl_assign_title": "שם המטלה / העבודה",
     "lbl_assign_course": "קורס / מקצוע",
     "lbl_assign_type": "סוג מטלה",
     "lbl_assign_due": "תאריך הגשה",
-    "lbl_assign_status": "סטטוס"
+    "lbl_assign_status": "סטטוס",
+    "app_main_title": "My Hub"
   },
-  "theme": "minimal",
+  "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792364295090,
-  "sender": "dev-m5ihejf"
+  "lastUpdated": 1792364299061,
+  "sender": "dev-mkauu5w"
 }
