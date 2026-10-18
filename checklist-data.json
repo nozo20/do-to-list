@@ -9,8 +9,8 @@
         "progress",
         "presets",
         "filters",
-        "composer",
-        "categories"
+        "categories",
+        "composer"
       ],
       "categories": [
         {
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792363549892,
+  "lastUpdated": 1792363552486,
   "sender": "dev-y4ho9av"
 }
