@@ -157,7 +157,7 @@
     "filter_must_bring": "Must only",
     "btn_reset_weekend": "Reset lists",
     "btn_clear_done": "Clear Done",
-    "study_stat_todo": "To DO",
+    "study_stat_todo": "To Do",
     "study_stat_doing": "התחלתי (בתהליך)",
     "study_stat_done": "סיימתי (הוגש)",
     "study_stat_urgent": "קרוב להגשה / באיחור",
@@ -170,6 +170,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331335366,
+  "lastUpdated": 1792331339789,
   "sender": "dev-u3q98j6"
 }
