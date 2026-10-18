@@ -129,7 +129,7 @@
     {
       "id": "cat-1792330030718",
       "title": "Bring to Haifa",
-      "subtitle": "רשימה מותאמת אישית",
+      "subtitle": "",
       "icon": "📦",
       "color": "amber"
     }
@@ -171,6 +171,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331624214,
+  "lastUpdated": 1792331687109,
   "sender": "dev-u3q98j6"
 }
