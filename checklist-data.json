@@ -94,7 +94,7 @@
     {
       "id": "groceries",
       "title": "Groceries",
-      "subtitle": "השלמות לדירה ולשבוע הקרוב",
+      "subtitle": "קניות סופר לדירה בחיפה",
       "icon": "🛒",
       "color": "teal"
     },
@@ -183,6 +183,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330071457,
+  "lastUpdated": 1792330091277,
   "sender": "dev-6g5cod4"
 }
