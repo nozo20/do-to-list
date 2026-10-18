@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332367185",
+      "title": "קניות אוכל",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332367185
+    },
+    {
       "id": "item-1792332289869",
       "title": "צלחת לעציצים התלויים",
       "category": "cat-1792332023621",
@@ -221,6 +230,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332348158,
+  "lastUpdated": 1792332367185,
   "sender": "dev-s4zfszy"
 }
