@@ -138,7 +138,19 @@
     "מעבדה",
     "כללי"
   ],
-  "assignments": [],
+  "assignments": [
+    {
+      "id": "as-1792331483788",
+      "title": "asd",
+      "course": "מעבדה",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-21",
+      "status": "todo",
+      "note": "asd",
+      "priority": false,
+      "createdAt": 1792331483788
+    }
+  ],
   "uiLabels": {
     "ws_weekend_tab": "סופ״ש ודירה",
     "ws_study_tab": "מטלות לימודים",
@@ -167,6 +179,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331477569,
+  "lastUpdated": 1792331483788,
   "sender": "dev-u3q98j6"
 }
