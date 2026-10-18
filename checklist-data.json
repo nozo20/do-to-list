@@ -1,15 +1,6 @@
 {
   "items": [
     {
-      "id": "item-1792356819548-rrz",
-      "title": "מצעים",
-      "category": "todos",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792356819548
-    },
-    {
       "id": "item-1792332391505",
       "title": "רדיאטור",
       "category": "cat-1792330030718",
@@ -266,6 +257,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792356819548,
+  "lastUpdated": 1792356830514,
   "sender": "dev-cgx3s0e"
 }
