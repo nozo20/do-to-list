@@ -307,8 +307,8 @@
     "lbl_assign_status": "סטטוס",
     "app_main_title": "My Hub"
   },
-  "theme": "minimal",
+  "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792364086497,
+  "lastUpdated": 1792364089804,
   "sender": "dev-hg7dqs9"
 }
