@@ -285,7 +285,7 @@
     "btn_reset_weekend": "Reset done stuff",
     "btn_clear_done": "Clear done stuff",
     "study_stat_todo": "To Do",
-    "study_stat_doing": "התחלתי (בתהליך)",
+    "study_stat_doing": "In progress",
     "study_stat_done": "סיימתי (הוגש)",
     "study_stat_urgent": "קרוב להגשה / באיחור",
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
@@ -297,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361418982,
+  "lastUpdated": 1792361425884,
   "sender": "dev-sop0kjw"
 }
