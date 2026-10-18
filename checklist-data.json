@@ -135,7 +135,7 @@
     "main_heading_study": "מערכת עבודות ומטלות לימודים",
     "leaving_check_btn": "Last minut checks",
     "departure_banner_text": "מצב יציאה לדירה: מציג רק פריטים שנותרו לקחת לדירה ופריטי חובה (⚡) כדי שלא תשכח כלום!",
-    "must_bring_btn_label": "חובה",
+    "must_bring_btn_label": "Must",
     "add_item_btn_label": "הוסף",
     "filter_all": "הכל",
     "filter_remaining": "נותרו",
@@ -156,6 +156,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329884021,
+  "lastUpdated": 1792329904304,
   "sender": "dev-6g5cod4"
 }
