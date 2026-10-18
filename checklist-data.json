@@ -88,6 +88,13 @@
       "category": "todos",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330311693",
+      "title": "גבינות קשות",
+      "category": "groceries",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -183,6 +190,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330295029,
+  "lastUpdated": 1792330311693,
   "sender": "dev-6g5cod4"
 }
