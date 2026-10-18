@@ -186,7 +186,7 @@
     "must_bring_btn_label": "Must",
     "add_item_btn_label": "Add",
     "filter_all": "All",
-    "filter_remaining": "נותרו",
+    "filter_remaining": "Remaining",
     "filter_completed": "בוצעו",
     "filter_must_bring": "Must only",
     "btn_reset_weekend": "Reset lists",
@@ -204,6 +204,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331189607,
+  "lastUpdated": 1792331206525,
   "sender": "dev-u3q98j6"
 }
