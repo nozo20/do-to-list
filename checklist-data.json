@@ -1,69 +1,5 @@
 {
-  "items": [
-    {
-      "id": "b-1",
-      "title": "Mom's home-cooked containers / Tupperware",
-      "category": "bringback",
-      "note": "In parents’ fridge!",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2001
-    },
-    {
-      "id": "b-2",
-      "title": "Clean folded laundry & weekender duffel",
-      "category": "bringback",
-      "note": "2 loads",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2002
-    },
-    {
-      "id": "b-3",
-      "title": "MacBook MagSafe & phone bedside charger",
-      "category": "bringback",
-      "note": "Guest room outlet",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2003
-    },
-    {
-      "id": "b-5",
-      "title": "Apartment spare keys & transit card",
-      "category": "bringback",
-      "note": "Entryway bowl",
-      "priority": true,
-      "completed": true,
-      "createdAt": 2005
-    },
-    {
-      "id": "t-1",
-      "title": "Run dark & white laundry loads before Sunday noon",
-      "category": "todos",
-      "note": "Dryer cycle too",
-      "priority": true,
-      "completed": true,
-      "createdAt": 3001
-    },
-    {
-      "id": "t-3",
-      "title": "Strip guest bed sheets & tidy room before leaving",
-      "category": "todos",
-      "note": "Sunday afternoon",
-      "priority": false,
-      "completed": false,
-      "createdAt": 3003
-    },
-    {
-      "id": "t-4",
-      "title": "Fill up gas tank / check train schedule back",
-      "category": "todos",
-      "note": "Beat evening traffic",
-      "priority": false,
-      "completed": true,
-      "createdAt": 3004
-    }
-  ],
+  "items": [],
   "presets": [
     {
       "id": "p-1",
@@ -201,6 +137,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329372038,
+  "lastUpdated": 1792329377651,
   "sender": "dev-7qm65l8"
 }
