@@ -138,7 +138,8 @@
     "כללי",
     "מד\"ח",
     "גלים",
-    "מכניקה אנליטית"
+    "מכניקה אנליטית",
+    "הסתברות"
   ],
   "assignments": [],
   "uiLabels": {
@@ -169,6 +170,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331557563,
+  "lastUpdated": 1792331563547,
   "sender": "dev-u3q98j6"
 }
