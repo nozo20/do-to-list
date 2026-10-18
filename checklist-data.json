@@ -135,7 +135,8 @@
     }
   ],
   "courses": [
-    "כללי"
+    "כללי",
+    "מד\"ח"
   ],
   "assignments": [],
   "uiLabels": {
@@ -166,6 +167,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331528410,
+  "lastUpdated": 1792331538566,
   "sender": "dev-u3q98j6"
 }
