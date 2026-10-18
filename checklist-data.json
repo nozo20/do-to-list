@@ -1,24 +1,6 @@
 {
   "items": [
     {
-      "id": "g-2",
-      "title": "Pasture-raised eggs & sourdough loaf",
-      "category": "groceries",
-      "note": "Breakfast staples",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1002
-    },
-    {
-      "id": "g-3",
-      "title": "Baby spinach, cherry tomatoes & avocados",
-      "category": "groceries",
-      "note": "Produce aisle",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1003
-    },
-    {
       "id": "b-1",
       "title": "Mom's home-cooked containers / Tupperware",
       "category": "bringback",
@@ -126,5 +108,5 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792319334109
+  "lastUpdated": 1792319335292
 }
