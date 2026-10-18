@@ -118,6 +118,13 @@
       "subtitle": "רשימה מותאמת אישית",
       "icon": "📌",
       "color": "amber"
+    },
+    {
+      "id": "cat-1792330030718",
+      "title": "Bring to Haifa",
+      "subtitle": "רשימה מותאמת אישית",
+      "icon": "📦",
+      "color": "amber"
     }
   ],
   "courses": [
@@ -190,6 +197,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330016011,
+  "lastUpdated": 1792330030719,
   "sender": "dev-6g5cod4"
 }
