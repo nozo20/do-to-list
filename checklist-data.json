@@ -287,7 +287,7 @@
     "study_stat_todo": "To Do",
     "study_stat_doing": "In progress",
     "study_stat_done": "סיימתי (הוגש)",
-    "study_stat_urgent": "קרוב להגשה / באיחור",
+    "study_stat_urgent": "Deadline soon",
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
     "lbl_assign_title": "שם המטלה / העבודה",
     "lbl_assign_course": "קורס / מקצוע",
@@ -297,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361425884,
+  "lastUpdated": 1792361432943,
   "sender": "dev-sop0kjw"
 }
