@@ -93,7 +93,7 @@
   "categories": [
     {
       "id": "groceries",
-      "title": "קניות ומצרכים",
+      "title": "Groceries",
       "subtitle": "השלמות לדירה ולשבוע הקרוב",
       "icon": "🛒",
       "color": "teal"
@@ -183,6 +183,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330052138,
+  "lastUpdated": 1792330071457,
   "sender": "dev-6g5cod4"
 }
