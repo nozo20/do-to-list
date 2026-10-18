@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332276562",
+      "title": "כריות גב של כיסאות?",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332276562
+    },
+    {
       "id": "item-1792332258563",
       "title": "ריח לחדר",
       "category": "cat-1792332023621",
@@ -230,6 +239,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332258563,
+  "lastUpdated": 1792332276562,
   "sender": "dev-s4zfszy"
 }
