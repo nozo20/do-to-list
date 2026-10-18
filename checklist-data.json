@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332215229",
+      "title": "מצעים?",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332215230
+    },
+    {
       "id": "item-1792332199287-82h",
       "title": "שרי",
       "category": "groceries",
@@ -194,6 +203,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332199287,
+  "lastUpdated": 1792332215230,
   "sender": "dev-s4zfszy"
 }
