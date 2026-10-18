@@ -10,15 +10,6 @@
       "createdAt": 1792360725348
     },
     {
-      "id": "item-1792360689549",
-      "title": "להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש. להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש.",
-      "category": "cat-1792332023621",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792360689549
-    },
-    {
       "id": "item-1792360618447",
       "title": "אגיסטן",
       "category": "cat-1792330030718",
@@ -293,6 +284,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792360776382,
+  "lastUpdated": 1792360791096,
   "sender": "dev-sop0kjw"
 }
