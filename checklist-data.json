@@ -101,7 +101,7 @@
     {
       "id": "todos",
       "title": "משימות לסופ״ש",
-      "subtitle": "סידורים, כביסות והכנות לשבוע",
+      "subtitle": "דברים להספיק לעשות בסופש, אמן אמן.",
       "icon": "✅",
       "color": "indigo"
     },
@@ -183,6 +183,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330091277,
+  "lastUpdated": 1792330222918,
   "sender": "dev-6g5cod4"
 }
