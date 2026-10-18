@@ -95,6 +95,13 @@
       "category": "groceries",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330318338",
+      "title": "קרקרים",
+      "category": "groceries",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -190,6 +197,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330311693,
+  "lastUpdated": 1792330318338,
   "sender": "dev-6g5cod4"
 }
