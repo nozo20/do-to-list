@@ -53,6 +53,13 @@
       "category": "todos",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330274471",
+      "title": "כביסה",
+      "category": "todos",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -148,6 +155,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330268299,
+  "lastUpdated": 1792330274471,
   "sender": "dev-6g5cod4"
 }
