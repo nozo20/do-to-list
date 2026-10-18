@@ -74,6 +74,13 @@
       "category": "todos",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330288909",
+      "title": "ריצה",
+      "category": "todos",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -169,6 +176,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330284205,
+  "lastUpdated": 1792330288909,
   "sender": "dev-6g5cod4"
 }
