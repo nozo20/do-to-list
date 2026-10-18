@@ -62,15 +62,6 @@
           "createdAt": 1792360618447
         },
         {
-          "id": "item-1792332391505",
-          "title": "רדיאטור",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1792332391505
-        },
-        {
           "id": "item-1792360606473",
           "title": "Sabosel",
           "category": "cat-1792330030718",
@@ -78,6 +69,15 @@
           "priority": true,
           "completed": false,
           "createdAt": 1792360606473
+        },
+        {
+          "id": "item-1792332391505",
+          "title": "רדיאטור",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792332391505
         },
         {
           "id": "item-1792332378161",
@@ -351,15 +351,6 @@
       "createdAt": 1792360618447
     },
     {
-      "id": "item-1792332391505",
-      "title": "רדיאטור",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792332391505
-    },
-    {
       "id": "item-1792360606473",
       "title": "Sabosel",
       "category": "cat-1792330030718",
@@ -367,6 +358,15 @@
       "priority": true,
       "completed": false,
       "createdAt": 1792360606473
+    },
+    {
+      "id": "item-1792332391505",
+      "title": "רדיאטור",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332391505
     },
     {
       "id": "item-1792332378161",
@@ -641,6 +641,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792363463561,
+  "lastUpdated": 1792363464951,
   "sender": "dev-y4ho9av"
 }
