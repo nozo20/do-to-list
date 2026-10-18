@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792329923715",
+      "title": "Itam",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792329923716
+    },
+    {
       "id": "item-1792329916340",
       "title": "Add Itam",
       "category": "groceries",
@@ -165,6 +174,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329922548,
+  "lastUpdated": 1792329923716,
   "sender": "dev-6g5cod4"
 }
