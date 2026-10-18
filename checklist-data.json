@@ -164,12 +164,12 @@
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
     "lbl_assign_title": "שם המטלה / העבודה",
     "lbl_assign_course": "קורס / מקצוע",
-    "lbl_assign_type": "סוג מטלה",
+    "lbl_assign_type": "Type",
     "lbl_assign_due": "DeadLine",
     "lbl_assign_status": "Status"
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331432030,
+  "lastUpdated": 1792331440159,
   "sender": "dev-u3q98j6"
 }
