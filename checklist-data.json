@@ -306,17 +306,6 @@
       ],
       "assignments": [
         {
-          "id": "as-1792361175109",
-          "title": "גיליון 3",
-          "course": "פונקציות מרוכבות",
-          "type": "תרגיל בית",
-          "dueDate": "2026-10-25",
-          "status": "doing",
-          "note": "",
-          "priority": false,
-          "createdAt": 1792361175109
-        },
-        {
           "id": "as-1792362070688",
           "title": "דוח מעבדה הרפיה",
           "course": "מד\"ח",
@@ -326,11 +315,22 @@
           "note": "",
           "priority": false,
           "createdAt": 1792362070688
+        },
+        {
+          "id": "as-1792361175109",
+          "title": "גיליון 3",
+          "course": "פונקציות מרוכבות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-10-25",
+          "status": "doing",
+          "note": "",
+          "priority": false,
+          "createdAt": 1792361175109
         }
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1792360725348",
@@ -581,17 +581,6 @@
   ],
   "assignments": [
     {
-      "id": "as-1792361175109",
-      "title": "גיליון 3",
-      "course": "פונקציות מרוכבות",
-      "type": "תרגיל בית",
-      "dueDate": "2026-10-25",
-      "status": "doing",
-      "note": "",
-      "priority": false,
-      "createdAt": 1792361175109
-    },
-    {
       "id": "as-1792362070688",
       "title": "דוח מעבדה הרפיה",
       "course": "מד\"ח",
@@ -601,6 +590,17 @@
       "note": "",
       "priority": false,
       "createdAt": 1792362070688
+    },
+    {
+      "id": "as-1792361175109",
+      "title": "גיליון 3",
+      "course": "פונקציות מרוכבות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-25",
+      "status": "doing",
+      "note": "",
+      "priority": false,
+      "createdAt": 1792361175109
     }
   ],
   "courses": [
@@ -639,8 +639,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "pinterest",
+  "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1792363759365,
+  "lastUpdated": 1792363787430,
   "sender": "dev-y4ho9av"
 }
