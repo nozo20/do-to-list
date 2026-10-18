@@ -135,7 +135,6 @@
     }
   ],
   "courses": [
-    "פיזיקה",
     "מדעי המחשב",
     "מעבדה",
     "כללי"
@@ -169,6 +168,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331475064,
+  "lastUpdated": 1792331476609,
   "sender": "dev-u3q98j6"
 }
