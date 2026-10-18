@@ -81,6 +81,13 @@
       "category": "todos",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "p-1792330295029",
+      "title": "להכין אוכל",
+      "category": "todos",
+      "note": "",
+      "priority": false
     }
   ],
   "categories": [
@@ -176,6 +183,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330288909,
+  "lastUpdated": 1792330295029,
   "sender": "dev-6g5cod4"
 }
