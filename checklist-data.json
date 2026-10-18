@@ -6,7 +6,7 @@
       "category": "cat-1792332023621",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1792360725348
     },
     {
@@ -297,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361535918,
+  "lastUpdated": 1792361537666,
   "sender": "dev-sop0kjw"
 }
