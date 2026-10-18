@@ -263,7 +263,7 @@
       "course": "פונקציות מרוכבות",
       "type": "תרגיל בית",
       "dueDate": "2026-10-25",
-      "status": "todo",
+      "status": "doing",
       "note": "",
       "priority": false,
       "createdAt": 1792361175109
@@ -297,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361361737,
+  "lastUpdated": 1792361394913,
   "sender": "dev-sop0kjw"
 }
