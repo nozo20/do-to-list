@@ -286,7 +286,7 @@
     "btn_clear_done": "Clear done stuff",
     "study_stat_todo": "To Do",
     "study_stat_doing": "In progress",
-    "study_stat_done": "סיימתי (הוגש)",
+    "study_stat_done": "Done",
     "study_stat_urgent": "Deadline soon",
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
     "lbl_assign_title": "שם המטלה / העבודה",
@@ -297,6 +297,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792361432943,
+  "lastUpdated": 1792361437060,
   "sender": "dev-sop0kjw"
 }
