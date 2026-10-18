@@ -136,7 +136,7 @@
     {
       "id": "cat-1792332023621",
       "title": "General",
-      "subtitle": "רשימה מותאמת אישית",
+      "subtitle": "",
       "icon": "📋",
       "color": "emerald"
     }
@@ -178,6 +178,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332063084,
+  "lastUpdated": 1792332068406,
   "sender": "dev-s4zfszy"
 }
