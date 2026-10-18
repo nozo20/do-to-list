@@ -158,7 +158,7 @@
     "leaving_check_btn": "Last minute checks",
     "departure_banner_text": "מצב יציאה לדירה: מציג רק פריטים שנותרו לקחת לדירה ופריטי חובה (⚡) כדי שלא תשכח כלום!",
     "must_bring_btn_label": "Must",
-    "add_item_btn_label": "הוסף",
+    "add_item_btn_label": "Add",
     "filter_all": "הכל",
     "filter_remaining": "נותרו",
     "filter_completed": "בוצעו",
@@ -178,6 +178,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332073728,
+  "lastUpdated": 1792332091639,
   "sender": "dev-s4zfszy"
 }
