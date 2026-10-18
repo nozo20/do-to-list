@@ -188,7 +188,7 @@
     "filter_all": "הכל",
     "filter_remaining": "נותרו",
     "filter_completed": "בוצעו",
-    "filter_must_bring": "חובה בלבד",
+    "filter_must_bring": "Must only",
     "btn_reset_weekend": "איפוס סימונים לסופ״ש הבא",
     "btn_clear_done": "נקה שבוצעו",
     "study_stat_todo": "לעשות (To Do)",
@@ -204,6 +204,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330324442,
+  "lastUpdated": 1792330366063,
   "sender": "dev-6g5cod4"
 }
