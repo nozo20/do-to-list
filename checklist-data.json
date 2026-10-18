@@ -330,7 +330,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1792360725348",
@@ -639,8 +639,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "pinterest",
+  "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1792364214984,
+  "lastUpdated": 1792364218044,
   "sender": "dev-37b1i8e"
 }
