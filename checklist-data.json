@@ -140,6 +140,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1792331509924",
+      "title": "asd",
+      "course": "asd",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-21",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1792331509924
+    },
+    {
       "id": "as-1792331483788",
       "title": "asd",
       "course": "מעבדה",
@@ -179,6 +190,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331506174,
+  "lastUpdated": 1792331509924,
   "sender": "dev-u3q98j6"
 }
