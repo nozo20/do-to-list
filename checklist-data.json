@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332167665",
+      "title": "גבינות קשות",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332167665
+    },
+    {
       "id": "item-1792329950366",
       "title": "tamm",
       "category": "groceries",
@@ -17,15 +26,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792329923716
-    },
-    {
-      "id": "item-1792329884021-yir",
-      "title": "Clean laundry bag",
-      "category": "groceries",
-      "note": "By front door",
-      "priority": true,
-      "completed": false,
-      "createdAt": 1792329884021
     },
     {
       "id": "item-1792329881635-8ei",
@@ -169,6 +169,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332153281,
+  "lastUpdated": 1792332167665,
   "sender": "dev-s4zfszy"
 }
