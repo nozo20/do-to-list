@@ -6,7 +6,7 @@
       "category": "bringback",
       "note": "In parents’ fridge!",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2001
     },
     {
@@ -15,7 +15,7 @@
       "category": "bringback",
       "note": "2 loads",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2002
     },
     {
@@ -201,6 +201,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792329368121,
+  "lastUpdated": 1792329369479,
   "sender": "dev-7qm65l8"
 }
