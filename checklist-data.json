@@ -48,20 +48,6 @@
   ],
   "presets": [
     {
-      "id": "p-1",
-      "title": "Leftover food Tupperware",
-      "category": "groceries",
-      "note": "In fridge!",
-      "priority": true
-    },
-    {
-      "id": "p-2",
-      "title": "Phone & laptop chargers",
-      "category": "groceries",
-      "note": "Wall outlet",
-      "priority": true
-    },
-    {
       "id": "p-3",
       "title": "Clean laundry bag",
       "category": "groceries",
@@ -183,6 +169,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792330222918,
+  "lastUpdated": 1792330249782,
   "sender": "dev-6g5cod4"
 }
