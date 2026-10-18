@@ -1,60 +1,148 @@
 {
   "items": [
     {
-      "id": "item-1792272178644-lzwy",
-      "title": "מצעים?",
-      "category": "todos",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792272178644
-    },
-    {
-      "id": "item-1792272152572-xk9e",
-      "title": "קורנישונים",
+      "id": "g-1",
+      "title": "Unsweetened oat milk & cold brew concentrate",
       "category": "groceries",
-      "note": "",
+      "note": "2 cartons",
       "priority": false,
       "completed": false,
-      "createdAt": 1792272152572
+      "createdAt": 1001
     },
     {
-      "id": "item-1792272148846-vgod",
-      "title": "שרי",
+      "id": "g-2",
+      "title": "Pasture-raised eggs & sourdough loaf",
       "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792272148846
-    },
-    {
-      "id": "item-1792272146422-1qd5",
-      "title": "גבינות קשות",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1792272146422
-    },
-    {
-      "id": "item-1792271962758-fv9s",
-      "title": "test 1 1 1",
-      "category": "todos",
-      "note": "",
+      "note": "Breakfast staples",
       "priority": false,
       "completed": true,
-      "createdAt": 1792271962758
+      "createdAt": 1002
     },
     {
-      "id": "item-1792271935475-nin5",
-      "title": "hg",
+      "id": "g-3",
+      "title": "Baby spinach, cherry tomatoes & avocados",
+      "category": "groceries",
+      "note": "Produce aisle",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1003
+    },
+    {
+      "id": "g-4",
+      "title": "Dishwasher pods & paper towels",
+      "category": "groceries",
+      "note": "Apartment restock",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1005
+    },
+    {
+      "id": "b-1",
+      "title": "Mom's home-cooked containers / Tupperware",
       "category": "bringback",
-      "note": "",
-      "priority": false,
+      "note": "In parents’ fridge!",
+      "priority": true,
+      "completed": false,
+      "createdAt": 2001
+    },
+    {
+      "id": "b-2",
+      "title": "Clean folded laundry & weekender duffel",
+      "category": "bringback",
+      "note": "2 loads",
+      "priority": true,
+      "completed": false,
+      "createdAt": 2002
+    },
+    {
+      "id": "b-3",
+      "title": "MacBook MagSafe & phone bedside charger",
+      "category": "bringback",
+      "note": "Guest room outlet",
+      "priority": true,
+      "completed": false,
+      "createdAt": 2003
+    },
+    {
+      "id": "b-5",
+      "title": "Apartment spare keys & transit card",
+      "category": "bringback",
+      "note": "Entryway bowl",
+      "priority": true,
       "completed": true,
-      "createdAt": 1792271935475
+      "createdAt": 2005
+    },
+    {
+      "id": "t-1",
+      "title": "Run dark & white laundry loads before Sunday noon",
+      "category": "todos",
+      "note": "Dryer cycle too",
+      "priority": true,
+      "completed": true,
+      "createdAt": 3001
+    },
+    {
+      "id": "t-3",
+      "title": "Strip guest bed sheets & tidy room before leaving",
+      "category": "todos",
+      "note": "Sunday afternoon",
+      "priority": false,
+      "completed": false,
+      "createdAt": 3003
+    },
+    {
+      "id": "t-4",
+      "title": "Fill up gas tank / check train schedule back",
+      "category": "todos",
+      "note": "Beat evening traffic",
+      "priority": false,
+      "completed": false,
+      "createdAt": 3004
     }
   ],
-  "presets": [],
-  "lastUpdated": 1792272214790
+  "presets": [
+    {
+      "id": "p-1",
+      "title": "Leftover food Tupperware",
+      "category": "bringback",
+      "note": "In fridge!",
+      "priority": true
+    },
+    {
+      "id": "p-2",
+      "title": "Phone & laptop chargers",
+      "category": "bringback",
+      "note": "Wall outlet",
+      "priority": true
+    },
+    {
+      "id": "p-3",
+      "title": "Clean laundry bag",
+      "category": "bringback",
+      "note": "By front door",
+      "priority": true
+    },
+    {
+      "id": "p-4",
+      "title": "Eggs, milk & bread",
+      "category": "groceries",
+      "note": "Staples",
+      "priority": false
+    },
+    {
+      "id": "p-5",
+      "title": "Strip guest bed sheets",
+      "category": "todos",
+      "note": "Before leaving",
+      "priority": false
+    },
+    {
+      "id": "p-6",
+      "title": "Apartment keys & wallet",
+      "category": "bringback",
+      "note": "Entryway",
+      "priority": true
+    }
+  ],
+  "lastUpdated": 1792318254121
 }
