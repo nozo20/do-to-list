@@ -160,7 +160,7 @@
     "study_stat_todo": "To Do",
     "study_stat_doing": "In Progress",
     "study_stat_done": "Done",
-    "study_stat_urgent": "DeadLine immennent",
+    "study_stat_urgent": "DeadLine Imminent",
     "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
     "lbl_assign_title": "שם המטלה / העבודה",
     "lbl_assign_course": "קורס / מקצוע",
@@ -170,6 +170,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331386558,
+  "lastUpdated": 1792331410130,
   "sender": "dev-u3q98j6"
 }
