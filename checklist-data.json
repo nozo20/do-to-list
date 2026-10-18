@@ -11,7 +11,7 @@
     },
     {
       "id": "item-1792360689549",
-      "title": "להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש.",
+      "title": "להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש. להזיז כל בלוק כדי שאוכל לארגן את הסדר מחדש.",
       "category": "cat-1792332023621",
       "note": "",
       "priority": false,
@@ -293,6 +293,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1792360725348,
+  "lastUpdated": 1792360749044,
   "sender": "dev-sop0kjw"
 }
