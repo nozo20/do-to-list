@@ -24,7 +24,7 @@
       "category": "bringback",
       "note": "Guest room outlet",
       "priority": true,
-      "completed": false,
+      "completed": true,
       "createdAt": 2003
     },
     {
@@ -108,5 +108,99 @@
       "priority": true
     }
   ],
-  "lastUpdated": 1792319335292
+  "categories": [
+    {
+      "id": "groceries",
+      "title": "קניות ומצרכים",
+      "subtitle": "השלמות לדירה ולשבוע הקרוב",
+      "icon": "🛒",
+      "color": "teal"
+    },
+    {
+      "id": "bringback",
+      "title": "לקחת חזרה לדירה",
+      "subtitle": "אוכל מהמקרר, כביסה ומטענים",
+      "icon": "📦",
+      "color": "orange"
+    },
+    {
+      "id": "todos",
+      "title": "משימות לסופ״ש",
+      "subtitle": "סידורים, כביסות והכנות לשבוע",
+      "icon": "✅",
+      "color": "indigo"
+    }
+  ],
+  "courses": [
+    "מתמטיקה / חדו״א",
+    "פיזיקה",
+    "מדעי המחשב",
+    "מעבדה",
+    "כללי"
+  ],
+  "assignments": [
+    {
+      "id": "as-1",
+      "title": "גיליון תרגיל 3 — משוואות דיפרנציאליות",
+      "course": "מתמטיקה / חדו״א",
+      "type": "תרגיל בית",
+      "dueDate": "2026-10-20",
+      "status": "doing",
+      "priority": true,
+      "note": "שאלות 1-5, להגיש ב-Moodle",
+      "createdAt": 1001
+    },
+    {
+      "id": "as-2",
+      "title": "דו״ח מעבדה 2 — מדידות אופטיות",
+      "course": "מעבדה",
+      "type": "דו״ח מעבדה",
+      "dueDate": "2026-10-23",
+      "status": "todo",
+      "priority": true,
+      "note": "הגשה בזוגות (10% מהציון)",
+      "createdAt": 1002
+    },
+    {
+      "id": "as-3",
+      "title": "קריאת מאמר מבוא וסיכום קצר",
+      "course": "כללי",
+      "type": "קריאה / סיכום",
+      "dueDate": "2026-10-17",
+      "status": "done",
+      "priority": false,
+      "note": "פרקים 1-2",
+      "createdAt": 1003
+    }
+  ],
+  "uiLabels": {
+    "ws_weekend_tab": "סופ״ש ודירה",
+    "ws_study_tab": "מטלות לימודים",
+    "main_heading_weekend": "צ׳קליסט סופ״ש ומעבר לדירה",
+    "main_heading_study": "מערכת עבודות ומטלות לימודים",
+    "leaving_check_btn": "בדיקה לפני יציאה",
+    "departure_banner_text": "מצב יציאה לדירה: מציג רק פריטים שנותרו לקחת לדירה ופריטי חובה (⚡) כדי שלא תשכח כלום!",
+    "must_bring_btn_label": "חובה",
+    "add_item_btn_label": "הוסף",
+    "filter_all": "הכל",
+    "filter_remaining": "נותרו",
+    "filter_completed": "בוצעו",
+    "filter_must_bring": "חובה בלבד",
+    "btn_reset_weekend": "איפוס סימונים לסופ״ש הבא",
+    "btn_clear_done": "נקה שבוצעו",
+    "study_stat_todo": "לעשות (To Do)",
+    "study_stat_doing": "התחלתי (בתהליך)",
+    "study_stat_done": "סיימתי (הוגש)",
+    "study_stat_urgent": "קרוב להגשה / באיחור",
+    "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
+    "lbl_assign_title": "שם המטלה / העבודה",
+    "lbl_assign_course": "קורס / מקצוע",
+    "lbl_assign_type": "סוג מטלה",
+    "lbl_assign_due": "תאריך הגשה",
+    "lbl_assign_status": "סטטוס"
+  },
+  "theme": "classic",
+  "isDefaultState": false,
+  "lastUpdated": 1792329368121,
+  "sender": "dev-7qm65l8"
 }
