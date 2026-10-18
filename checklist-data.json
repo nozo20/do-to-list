@@ -162,7 +162,7 @@
     "study_stat_doing": "In Progress",
     "study_stat_done": "Done",
     "study_stat_urgent": "DeadLine Imminent",
-    "study_add_heading": "➕ הוספת מטלה / עבודה חדשה",
+    "study_add_heading": "➕ New Assignment",
     "lbl_assign_title": "Assignment",
     "lbl_assign_course": "Course",
     "lbl_assign_type": "Type",
@@ -171,6 +171,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331579199,
+  "lastUpdated": 1792331624214,
   "sender": "dev-u3q98j6"
 }
