@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "item-1792332172151-mlr",
+      "title": "קורנישונים",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792332172151
+    },
+    {
       "id": "item-1792332167665",
       "title": "גבינות קשות",
       "category": "groceries",
@@ -169,6 +178,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792332167665,
+  "lastUpdated": 1792332172151,
   "sender": "dev-s4zfszy"
 }
