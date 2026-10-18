@@ -137,7 +137,8 @@
   "courses": [
     "כללי",
     "מד\"ח",
-    "גלים"
+    "גלים",
+    "מכניקה אנליטית"
   ],
   "assignments": [],
   "uiLabels": {
@@ -168,6 +169,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792331546786,
+  "lastUpdated": 1792331557563,
   "sender": "dev-u3q98j6"
 }
