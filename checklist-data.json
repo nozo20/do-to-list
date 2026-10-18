@@ -267,8 +267,8 @@
       "title": "מטלות לימודים",
       "icon": "🎓",
       "blockOrder": [
-        "stats",
         "tasklist",
+        "stats",
         "composer",
         "filters"
       ],
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792363717722,
+  "lastUpdated": 1792363720142,
   "sender": "dev-y4ho9av"
 }
