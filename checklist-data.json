@@ -8,8 +8,8 @@
       "blockOrder": [
         "progress",
         "presets",
-        "composer",
         "filters",
+        "composer",
         "categories"
       ],
       "categories": [
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792363546865,
+  "lastUpdated": 1792363549892,
   "sender": "dev-y4ho9av"
 }
