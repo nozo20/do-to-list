@@ -269,8 +269,8 @@
       "blockOrder": [
         "composer",
         "filters",
-        "stats",
-        "tasklist"
+        "tasklist",
+        "stats"
       ],
       "statuses": [
         {
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391330200,
+  "lastUpdated": 1792391331978,
   "sender": "dev-udj1hvx"
 }
