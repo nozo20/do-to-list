@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1792442432055",
+          "title": "אורז",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792442432055
+        },
+        {
           "id": "item-1792332289869",
           "title": "צלחת לעציצים התלויים",
           "category": "cat-1792332023621",
@@ -323,6 +332,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1792442432055",
+      "title": "אורז",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792442432055
+    },
     {
       "id": "item-1792332289869",
       "title": "צלחת לעציצים התלויים",
@@ -623,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792442403163,
+  "lastUpdated": 1792442432055,
   "sender": "dev-hm9rswr"
 }
