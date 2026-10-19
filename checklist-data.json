@@ -268,8 +268,8 @@
       "icon": "🎓",
       "blockOrder": [
         "composer",
-        "stats",
         "filters",
+        "stats",
         "tasklist"
       ],
       "statuses": [
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391307259,
+  "lastUpdated": 1792391308676,
   "sender": "dev-udj1hvx"
 }
