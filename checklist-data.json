@@ -639,8 +639,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "minimal",
+  "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391232252,
+  "lastUpdated": 1792391256726,
   "sender": "dev-udj1hvx"
 }
