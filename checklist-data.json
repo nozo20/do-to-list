@@ -282,7 +282,7 @@
         },
         {
           "id": "doing",
-          "label": "התחלתי",
+          "label": "In progress",
           "icon": "⏳",
           "color": "amber",
           "isDone": false
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391269638,
+  "lastUpdated": 1792391277287,
   "sender": "dev-udj1hvx"
 }
