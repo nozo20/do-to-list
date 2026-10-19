@@ -311,7 +311,7 @@
           "course": "מד\"ח",
           "type": "תרגיל בית",
           "dueDate": "2026-10-21",
-          "status": "todo",
+          "status": "done",
           "note": "",
           "priority": false,
           "createdAt": 1792362070688
@@ -330,7 +330,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1792332289869",
@@ -586,7 +586,7 @@
       "course": "מד\"ח",
       "type": "תרגיל בית",
       "dueDate": "2026-10-21",
-      "status": "todo",
+      "status": "done",
       "note": "",
       "priority": false,
       "createdAt": 1792362070688
@@ -641,6 +641,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1792391211643,
+  "lastUpdated": 1792391232252,
   "sender": "dev-udj1hvx"
 }
