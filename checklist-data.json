@@ -275,7 +275,7 @@
       "statuses": [
         {
           "id": "todo",
-          "label": "לעשות",
+          "label": "To do",
           "icon": "📋",
           "color": "slate",
           "isDone": false
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391277287,
+  "lastUpdated": 1792391284841,
   "sender": "dev-udj1hvx"
 }
