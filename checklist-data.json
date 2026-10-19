@@ -289,7 +289,7 @@
         },
         {
           "id": "done",
-          "label": "סיימתי",
+          "label": "Done",
           "icon": "✅",
           "color": "emerald",
           "isDone": true
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792391256726,
+  "lastUpdated": 1792391269638,
   "sender": "dev-udj1hvx"
 }
