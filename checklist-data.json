@@ -322,7 +322,7 @@
           "course": "פונקציות מרוכבות",
           "type": "תרגיל בית",
           "dueDate": "2026-10-25",
-          "status": "doing",
+          "status": "done",
           "note": "",
           "priority": false,
           "createdAt": 1792361175109
@@ -330,7 +330,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1792442432055",
@@ -597,7 +597,7 @@
       "course": "פונקציות מרוכבות",
       "type": "תרגיל בית",
       "dueDate": "2026-10-25",
-      "status": "doing",
+      "status": "done",
       "note": "",
       "priority": false,
       "createdAt": 1792361175109
@@ -641,6 +641,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792523537221,
+  "lastUpdated": 1792523537941,
   "sender": "dev-s15npp2"
 }
