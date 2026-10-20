@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1792526288282",
+          "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
+          "category": "cat-1792332023621",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792526288282
+        },
+        {
           "id": "item-1792442432055",
           "title": "אורז",
           "category": "groceries",
@@ -332,6 +341,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1792526288282",
+      "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792526288282
+    },
     {
       "id": "item-1792442432055",
       "title": "אורז",
@@ -641,6 +659,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792523537941,
-  "sender": "dev-s15npp2"
+  "lastUpdated": 1792526288282,
+  "sender": "dev-c29y9ez"
 }
