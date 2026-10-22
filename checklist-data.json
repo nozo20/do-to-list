@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1792651945421",
+          "title": "קניות מהסוםר",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792651945421
+        },
+        {
           "id": "item-1792651876974",
           "title": "דברים להביא:\n\n- קניות מהסופר\n- ⁠פוך? (ההכי דק)\n- ⁠2 מתלים\n- ⁠ג׳קט רוח\n- ⁠חם צוואר רוח\n- ⁠סווצרטים\n ⁠חולצה ארוכה",
           "category": "cat-1792330030718",
@@ -359,6 +368,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1792651945421",
+      "title": "קניות מהסוםר",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792651945421
+    },
     {
       "id": "item-1792651876974",
       "title": "דברים להביא:\n\n- קניות מהסופר\n- ⁠פוך? (ההכי דק)\n- ⁠2 מתלים\n- ⁠ג׳קט רוח\n- ⁠חם צוואר רוח\n- ⁠סווצרטים\n ⁠חולצה ארוכה",
@@ -695,6 +713,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792651928128,
+  "lastUpdated": 1792651945421,
   "sender": "dev-08rlnxe"
 }
