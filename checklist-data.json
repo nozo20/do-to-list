@@ -119,7 +119,7 @@
           "id": "item-1792332378161",
           "title": "בגדים?",
           "category": "cat-1792330030718",
-          "note": "",
+          "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
           "priority": false,
           "completed": false,
           "createdAt": 1792332378161
@@ -435,7 +435,7 @@
       "id": "item-1792332378161",
       "title": "בגדים?",
       "category": "cat-1792330030718",
-      "note": "",
+      "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
       "priority": false,
       "completed": false,
       "createdAt": 1792332378161
@@ -695,6 +695,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792651888420,
+  "lastUpdated": 1792651928128,
   "sender": "dev-08rlnxe"
 }
