@@ -121,7 +121,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": true,
+          "completed": false,
           "createdAt": 1792332378161
         },
         {
@@ -437,7 +437,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1792332378161
     },
     {
@@ -695,6 +695,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792651886754,
+  "lastUpdated": 1792651888420,
   "sender": "dev-08rlnxe"
 }
