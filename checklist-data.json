@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1792651876974",
+          "title": "דברים להביא:\n\n- קניות מהסופר\n- ⁠פוך? (ההכי דק)\n- ⁠2 מתלים\n- ⁠ג׳קט רוח\n- ⁠חם צוואר רוח\n- ⁠סווצרטים\n ⁠חולצה ארוכה",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792651876974
+        },
+        {
           "id": "item-1792559626600",
           "title": "טישו של soft",
           "category": "groceries",
@@ -350,6 +359,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1792651876974",
+      "title": "דברים להביא:\n\n- קניות מהסופר\n- ⁠פוך? (ההכי דק)\n- ⁠2 מתלים\n- ⁠ג׳קט רוח\n- ⁠חם צוואר רוח\n- ⁠סווצרטים\n ⁠חולצה ארוכה",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792651876974
+    },
     {
       "id": "item-1792559626600",
       "title": "טישו של soft",
@@ -677,6 +695,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792559660990,
-  "sender": "dev-u1byykw"
+  "lastUpdated": 1792651876974,
+  "sender": "dev-08rlnxe"
 }
