@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1792651968887",
+          "title": "פוך?",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1792651968887
+        },
+        {
           "id": "item-1792651945421",
           "title": "קניות מהסוםר",
           "category": "cat-1792330030718",
@@ -368,6 +377,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1792651968887",
+      "title": "פוך?",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1792651968887
+    },
     {
       "id": "item-1792651945421",
       "title": "קניות מהסוםר",
@@ -713,6 +731,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792651958612,
+  "lastUpdated": 1792651968887,
   "sender": "dev-08rlnxe"
 }
