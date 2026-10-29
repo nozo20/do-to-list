@@ -356,21 +356,10 @@
         "מכניקה אנליטית",
         "הסתברות",
         "מכניקת מוצקים",
-        "פונקציות מרוכבות"
+        "פונקציות מרוכבות",
+        "מעבדה גלים"
       ],
-      "assignments": [
-        {
-          "id": "as-1792361175109",
-          "title": "גיליון 3",
-          "course": "פונקציות מרוכבות",
-          "type": "תרגיל בית",
-          "dueDate": "2026-10-25",
-          "status": "done",
-          "note": "",
-          "priority": false,
-          "createdAt": 1792361175109
-        }
-      ]
+      "assignments": []
     }
   ],
   "activeTabId": "tab-study",
@@ -676,19 +665,7 @@
       "priority": false
     }
   ],
-  "assignments": [
-    {
-      "id": "as-1792361175109",
-      "title": "גיליון 3",
-      "course": "פונקציות מרוכבות",
-      "type": "תרגיל בית",
-      "dueDate": "2026-10-25",
-      "status": "done",
-      "note": "",
-      "priority": false,
-      "createdAt": 1792361175109
-    }
-  ],
+  "assignments": [],
   "courses": [
     "כללי",
     "מד\"ח",
@@ -696,7 +673,8 @@
     "מכניקה אנליטית",
     "הסתברות",
     "מכניקת מוצקים",
-    "פונקציות מרוכבות"
+    "פונקציות מרוכבות",
+    "מעבדה גלים"
   ],
   "uiLabels": {
     "app_main_title": "My Hub",
@@ -727,6 +705,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793280207410,
+  "lastUpdated": 1793280277030,
   "sender": "dev-jdkeylw"
 }
