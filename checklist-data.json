@@ -359,7 +359,19 @@
         "פונקציות מרוכבות",
         "מעבדה גלים"
       ],
-      "assignments": []
+      "assignments": [
+        {
+          "id": "as-1793280378764",
+          "title": "לומדות",
+          "course": "מעבדה גלים",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-05",
+          "status": "todo",
+          "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
+          "priority": false,
+          "createdAt": 1793280378764
+        }
+      ]
     }
   ],
   "activeTabId": "tab-study",
@@ -665,7 +677,19 @@
       "priority": false
     }
   ],
-  "assignments": [],
+  "assignments": [
+    {
+      "id": "as-1793280378764",
+      "title": "לומדות",
+      "course": "מעבדה גלים",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-05",
+      "status": "todo",
+      "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
+      "priority": false,
+      "createdAt": 1793280378764
+    }
+  ],
   "courses": [
     "כללי",
     "מד\"ח",
@@ -705,6 +729,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793280277030,
+  "lastUpdated": 1793280378764,
   "sender": "dev-jdkeylw"
 }
