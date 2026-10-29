@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1793261557381",
+          "title": "ניילון נצמד",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1793261557381
+        },
+        {
           "id": "item-1793261552088",
           "title": "נוזל קלים",
           "category": "groceries",
@@ -377,6 +386,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1793261557381",
+      "title": "ניילון נצמד",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1793261557381
+    },
     {
       "id": "item-1793261552088",
       "title": "נוזל קלים",
@@ -731,6 +749,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793261552088,
+  "lastUpdated": 1793261557381,
   "sender": "dev-tyrpn8c"
 }
