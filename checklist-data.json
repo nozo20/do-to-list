@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1793261552088",
+          "title": "נוזל קלים",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1793261552088
+        },
+        {
           "id": "item-1792651968887",
           "title": "פוך?",
           "category": "cat-1792330030718",
@@ -368,6 +377,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1793261552088",
+      "title": "נוזל קלים",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1793261552088
+    },
     {
       "id": "item-1792651968887",
       "title": "פוך?",
@@ -713,6 +731,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1792651972623,
-  "sender": "dev-08rlnxe"
+  "lastUpdated": 1793261552088,
+  "sender": "dev-tyrpn8c"
 }
