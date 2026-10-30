@@ -361,6 +361,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1793362679847",
+          "title": "תרגיל 1",
+          "course": "מכניקה אנליטית",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-12",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1793362679847
+        },
+        {
           "id": "as-1793362381734",
           "title": "תרגיל 1",
           "course": "מכניקת מוצקים",
@@ -701,6 +712,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1793362679847",
+      "title": "תרגיל 1",
+      "course": "מכניקה אנליטית",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-12",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1793362679847
+    },
+    {
       "id": "as-1793362381734",
       "title": "תרגיל 1",
       "course": "מכניקת מוצקים",
@@ -773,6 +795,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793362381734,
+  "lastUpdated": 1793362679847,
   "sender": "dev-8xg0w39"
 }
