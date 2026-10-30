@@ -361,6 +361,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1793362056537",
+          "title": "גיליון ראשון (2)",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-30",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1793362056537
+        },
+        {
           "id": "as-1793280378764",
           "title": "לומדות",
           "course": "מעבדה גלים",
@@ -679,6 +690,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1793362056537",
+      "title": "גיליון ראשון (2)",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-30",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1793362056537
+    },
+    {
       "id": "as-1793280378764",
       "title": "לומדות",
       "course": "מעבדה גלים",
@@ -729,6 +751,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793361694902,
+  "lastUpdated": 1793362056537,
   "sender": "dev-8xg0w39"
 }
