@@ -361,6 +361,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1793362381734",
+          "title": "תרגיל 1",
+          "course": "מכניקת מוצקים",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-16",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1793362381734
+        },
+        {
           "id": "as-1793362056537",
           "title": "גיליון ראשון (2)",
           "course": "הסתברות",
@@ -690,6 +701,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1793362381734",
+      "title": "תרגיל 1",
+      "course": "מכניקת מוצקים",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-16",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1793362381734
+    },
+    {
       "id": "as-1793362056537",
       "title": "גיליון ראשון (2)",
       "course": "הסתברות",
@@ -751,6 +773,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793362056537,
+  "lastUpdated": 1793362381734,
   "sender": "dev-8xg0w39"
 }
