@@ -803,8 +803,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "classic",
+  "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428650767,
+  "lastUpdated": 1793428652201,
   "sender": "dev-2kgezdx"
 }
