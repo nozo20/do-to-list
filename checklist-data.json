@@ -448,18 +448,6 @@
           "priority": false,
           "note": "",
           "createdAt": 1793428581898
-        },
-        {
-          "id": "as-moodle-1793428581898-o0as",
-          "externalUid": "8174@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
-          "course": "01040034.200",
-          "type": "תרגיל בית",
-          "dueDate": "2027-01-14",
-          "status": "done",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428581898
         }
       ]
     }
@@ -847,18 +835,6 @@
       "priority": false,
       "note": "",
       "createdAt": 1793428581898
-    },
-    {
-      "id": "as-moodle-1793428581898-o0as",
-      "externalUid": "8174@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
-      "course": "01040034.200",
-      "type": "תרגיל בית",
-      "dueDate": "2027-01-14",
-      "status": "done",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428581898
     }
   ],
   "courses": [
@@ -901,6 +877,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428625836,
+  "lastUpdated": 1793428627136,
   "sender": "dev-2kgezdx"
 }
