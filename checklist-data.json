@@ -72,11 +72,11 @@
         },
         {
           "id": "item-1792651945421",
-          "title": "קניות מהסוםר",
+          "title": "קניות מהסופר",
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": true,
+          "completed": false,
           "createdAt": 1792651945421
         },
         {
@@ -447,11 +447,11 @@
     },
     {
       "id": "item-1792651945421",
-      "title": "קניות מהסוםר",
+      "title": "קניות מהסופר",
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1792651945421
     },
     {
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431327745,
+  "lastUpdated": 1793431335072,
   "sender": "dev-hzr0wcw"
 }
