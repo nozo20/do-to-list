@@ -328,11 +328,11 @@
         "stats"
       ],
       "moodleConfig": {
-        "icsUrl": "",
+        "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=custom",
         "autoSync": true,
         "includePast": false,
         "courseMapText": "",
-        "lastSyncAt": 0
+        "lastSyncAt": 1793428581898
       },
       "statuses": [
         {
@@ -365,7 +365,8 @@
         "הסתברות",
         "מכניקת מוצקים",
         "פונקציות מרוכבות",
-        "מעבדה גלים"
+        "מעבדה גלים",
+        "01040034.200"
       ],
       "assignments": [
         {
@@ -411,6 +412,66 @@
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
+        },
+        {
+          "id": "as-moodle-1793428581898-3wdf",
+          "externalUid": "8171@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+          "course": "01040034.200",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-30",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428581898
+        },
+        {
+          "id": "as-moodle-1793428581898-9a4m",
+          "externalUid": "8172@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+          "course": "01040034.200",
+          "type": "תרגיל בית",
+          "dueDate": "2026-12-16",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428581898
+        },
+        {
+          "id": "as-moodle-1793428581898-wj5l",
+          "externalUid": "8173@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+          "course": "01040034.200",
+          "type": "תרגיל בית",
+          "dueDate": "2026-12-30",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428581898
+        },
+        {
+          "id": "as-moodle-1793428581898-o0as",
+          "externalUid": "8174@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
+          "course": "01040034.200",
+          "type": "תרגיל בית",
+          "dueDate": "2027-01-14",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428581898
+        },
+        {
+          "id": "as-moodle-1793428581898-gxcv",
+          "externalUid": "8175@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
+          "course": "01040034.200",
+          "type": "תרגיל בית",
+          "dueDate": "2027-01-28",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428581898
         }
       ]
     }
@@ -762,6 +823,66 @@
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
+    },
+    {
+      "id": "as-moodle-1793428581898-3wdf",
+      "externalUid": "8171@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+      "course": "01040034.200",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-30",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428581898
+    },
+    {
+      "id": "as-moodle-1793428581898-9a4m",
+      "externalUid": "8172@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+      "course": "01040034.200",
+      "type": "תרגיל בית",
+      "dueDate": "2026-12-16",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428581898
+    },
+    {
+      "id": "as-moodle-1793428581898-wj5l",
+      "externalUid": "8173@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+      "course": "01040034.200",
+      "type": "תרגיל בית",
+      "dueDate": "2026-12-30",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428581898
+    },
+    {
+      "id": "as-moodle-1793428581898-o0as",
+      "externalUid": "8174@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
+      "course": "01040034.200",
+      "type": "תרגיל בית",
+      "dueDate": "2027-01-14",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428581898
+    },
+    {
+      "id": "as-moodle-1793428581898-gxcv",
+      "externalUid": "8175@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
+      "course": "01040034.200",
+      "type": "תרגיל בית",
+      "dueDate": "2027-01-28",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428581898
     }
   ],
   "courses": [
@@ -772,7 +893,8 @@
     "הסתברות",
     "מכניקת מוצקים",
     "פונקציות מרוכבות",
-    "מעבדה גלים"
+    "מעבדה גלים",
+    "01040034.200"
   ],
   "uiLabels": {
     "app_main_title": "My Hub",
@@ -803,6 +925,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428172390,
+  "lastUpdated": 1793428581899,
   "sender": "dev-2kgezdx"
 }
