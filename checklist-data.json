@@ -331,8 +331,8 @@
         "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=custom",
         "autoSync": true,
         "includePast": false,
-        "courseMapText": "",
-        "lastSyncAt": 1793428581898
+        "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים",
+        "lastSyncAt": 1793428894101
       },
       "statuses": [
         {
@@ -412,11 +412,71 @@
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
+        },
+        {
+          "id": "as-moodle-1793428894100-8sov",
+          "externalUid": "8171@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-30",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428894100
+        },
+        {
+          "id": "as-moodle-1793428894100-zb27",
+          "externalUid": "8172@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-12-16",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428894100
+        },
+        {
+          "id": "as-moodle-1793428894100-wogm",
+          "externalUid": "8173@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-12-30",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428894100
+        },
+        {
+          "id": "as-moodle-1793428894100-tys0",
+          "externalUid": "8174@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2027-01-14",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428894100
+        },
+        {
+          "id": "as-moodle-1793428894100-xt6x",
+          "externalUid": "8175@moodle26.technion.ac.il",
+          "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2027-01-28",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1793428894100
         }
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1793261557381",
@@ -763,6 +823,66 @@
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
+    },
+    {
+      "id": "as-moodle-1793428894100-8sov",
+      "externalUid": "8171@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-30",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428894100
+    },
+    {
+      "id": "as-moodle-1793428894100-zb27",
+      "externalUid": "8172@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-12-16",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428894100
+    },
+    {
+      "id": "as-moodle-1793428894100-wogm",
+      "externalUid": "8173@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-12-30",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428894100
+    },
+    {
+      "id": "as-moodle-1793428894100-tys0",
+      "externalUid": "8174@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2027-01-14",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428894100
+    },
+    {
+      "id": "as-moodle-1793428894100-xt6x",
+      "externalUid": "8175@moodle26.technion.ac.il",
+      "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2027-01-28",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1793428894100
     }
   ],
   "courses": [
@@ -805,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793428659812,
+  "lastUpdated": 1793428894101,
   "sender": "dev-2kgezdx"
 }
