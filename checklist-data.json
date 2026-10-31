@@ -9,8 +9,8 @@
         "categories",
         "presets",
         "filters",
-        "progress",
-        "composer"
+        "composer",
+        "progress"
       ],
       "categories": [
         {
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431452877,
+  "lastUpdated": 1793431454573,
   "sender": "dev-hzr0wcw"
 }
