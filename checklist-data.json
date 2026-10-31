@@ -229,7 +229,7 @@
           "category": "groceries",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1792332172151
         },
         {
@@ -664,7 +664,7 @@
       "category": "groceries",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792332172151
     },
     {
@@ -925,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793468791133,
+  "lastUpdated": 1793469442812,
   "sender": "dev-igqamb8"
 }
