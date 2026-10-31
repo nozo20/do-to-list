@@ -125,15 +125,6 @@
           "createdAt": 1792360606473
         },
         {
-          "id": "item-1792360618447",
-          "title": "אגיסטן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": true,
-          "createdAt": 1792360618447
-        },
-        {
           "id": "item-1792332371138",
           "title": "אוכל מוכן",
           "category": "cat-1792330030718",
@@ -150,6 +141,15 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332367185
+        },
+        {
+          "id": "item-1792360618447",
+          "title": "אגיסטן",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": true,
+          "completed": true,
+          "createdAt": 1792360618447
         },
         {
           "id": "item-1792332391505",
@@ -500,15 +500,6 @@
       "createdAt": 1792360606473
     },
     {
-      "id": "item-1792360618447",
-      "title": "אגיסטן",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": true,
-      "completed": true,
-      "createdAt": 1792360618447
-    },
-    {
       "id": "item-1792332371138",
       "title": "אוכל מוכן",
       "category": "cat-1792330030718",
@@ -525,6 +516,15 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332367185
+    },
+    {
+      "id": "item-1792360618447",
+      "title": "אגיסטן",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": true,
+      "completed": true,
+      "createdAt": 1792360618447
     },
     {
       "id": "item-1792332391505",
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431356967,
+  "lastUpdated": 1793431359150,
   "sender": "dev-hzr0wcw"
 }
