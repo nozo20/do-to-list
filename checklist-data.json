@@ -414,18 +414,6 @@
           "createdAt": 1793280378764
         },
         {
-          "id": "as-moodle-1793428894100-tys0",
-          "externalUid": "8174@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
-          "course": "הסתברות",
-          "type": "תרגיל בית",
-          "dueDate": "2027-01-14",
-          "status": "todo",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428894100
-        },
-        {
           "id": "as-moodle-1793428894100-xt6x",
           "externalUid": "8175@moodle26.technion.ac.il",
           "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
@@ -789,18 +777,6 @@
       "createdAt": 1793280378764
     },
     {
-      "id": "as-moodle-1793428894100-tys0",
-      "externalUid": "8174@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 9 - עד לתאריך 14.1.27 בשעה 23:00",
-      "course": "הסתברות",
-      "type": "תרגיל בית",
-      "dueDate": "2027-01-14",
-      "status": "todo",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428894100
-    },
-    {
       "id": "as-moodle-1793428894100-xt6x",
       "externalUid": "8175@moodle26.technion.ac.il",
       "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
@@ -853,6 +829,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793428916474,
+  "lastUpdated": 1793428917640,
   "sender": "dev-2kgezdx"
 }
