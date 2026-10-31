@@ -130,7 +130,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1792332367185
         },
         {
@@ -565,7 +565,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792332367185
     },
     {
@@ -925,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793469447099,
+  "lastUpdated": 1793469448784,
   "sender": "dev-igqamb8"
 }
