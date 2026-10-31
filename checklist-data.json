@@ -372,17 +372,6 @@
           "createdAt": 1793362679847
         },
         {
-          "id": "as-1793362381734",
-          "title": "תרגיל 1",
-          "course": "מכניקת מוצקים",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-16",
-          "status": "todo",
-          "note": "",
-          "priority": false,
-          "createdAt": 1793362381734
-        },
-        {
           "id": "as-1793362056537",
           "title": "גיליון ראשון (2)",
           "course": "הסתברות",
@@ -403,6 +392,17 @@
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
+        },
+        {
+          "id": "as-1793362381734",
+          "title": "תרגיל 1",
+          "course": "מכניקת מוצקים",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-16",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1793362381734
         }
       ]
     }
@@ -723,17 +723,6 @@
       "createdAt": 1793362679847
     },
     {
-      "id": "as-1793362381734",
-      "title": "תרגיל 1",
-      "course": "מכניקת מוצקים",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-16",
-      "status": "todo",
-      "note": "",
-      "priority": false,
-      "createdAt": 1793362381734
-    },
-    {
       "id": "as-1793362056537",
       "title": "גיליון ראשון (2)",
       "course": "הסתברות",
@@ -754,6 +743,17 @@
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
+    },
+    {
+      "id": "as-1793362381734",
+      "title": "תרגיל 1",
+      "course": "מכניקת מוצקים",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-16",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1793362381734
     }
   ],
   "courses": [
@@ -795,6 +795,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793426964360,
+  "lastUpdated": 1793426966946,
   "sender": "dev-jgq1dzh"
 }
