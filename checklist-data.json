@@ -67,7 +67,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1792651968887
         },
         {
@@ -416,7 +416,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1793261557381",
@@ -442,7 +442,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792651968887
     },
     {
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793428919627,
-  "sender": "dev-2kgezdx"
+  "lastUpdated": 1793431325412,
+  "sender": "dev-hzr0wcw"
 }
