@@ -412,18 +412,6 @@
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
-        },
-        {
-          "id": "as-moodle-1793428894100-xt6x",
-          "externalUid": "8175@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
-          "course": "הסתברות",
-          "type": "תרגיל בית",
-          "dueDate": "2027-01-28",
-          "status": "todo",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428894100
         }
       ]
     }
@@ -775,18 +763,6 @@
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
-    },
-    {
-      "id": "as-moodle-1793428894100-xt6x",
-      "externalUid": "8175@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 11- עד לתאריך 28.1.27 בשעה 23:00",
-      "course": "הסתברות",
-      "type": "תרגיל בית",
-      "dueDate": "2027-01-28",
-      "status": "todo",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428894100
     }
   ],
   "courses": [
@@ -829,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793428917640,
+  "lastUpdated": 1793428919627,
   "sender": "dev-2kgezdx"
 }
