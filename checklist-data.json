@@ -7,8 +7,8 @@
       "icon": "🏡",
       "blockOrder": [
         "progress",
-        "composer",
         "presets",
+        "composer",
         "filters",
         "categories"
       ],
@@ -125,15 +125,6 @@
           "createdAt": 1792332371138
         },
         {
-          "id": "item-1792651968887",
-          "title": "פוך?",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792651968887
-        },
-        {
           "id": "item-1792332367185",
           "title": "קניות אוכל",
           "category": "cat-1792330030718",
@@ -141,6 +132,15 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332367185
+        },
+        {
+          "id": "item-1792651968887",
+          "title": "פוך?",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": true,
+          "createdAt": 1792651968887
         },
         {
           "id": "item-1792360618447",
@@ -500,15 +500,6 @@
       "createdAt": 1792332371138
     },
     {
-      "id": "item-1792651968887",
-      "title": "פוך?",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792651968887
-    },
-    {
       "id": "item-1792332367185",
       "title": "קניות אוכל",
       "category": "cat-1792330030718",
@@ -516,6 +507,15 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332367185
+    },
+    {
+      "id": "item-1792651968887",
+      "title": "פוך?",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": true,
+      "createdAt": 1792651968887
     },
     {
       "id": "item-1792360618447",
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431363283,
+  "lastUpdated": 1793431412640,
   "sender": "dev-hzr0wcw"
 }
