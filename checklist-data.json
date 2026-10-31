@@ -8,8 +8,8 @@
       "blockOrder": [
         "progress",
         "presets",
-        "filters",
         "categories",
+        "filters",
         "composer"
       ],
       "categories": [
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431420735,
+  "lastUpdated": 1793431434028,
   "sender": "dev-hzr0wcw"
 }
