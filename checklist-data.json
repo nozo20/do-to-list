@@ -6,8 +6,8 @@
       "title": "סופ״ש ודירה",
       "icon": "🏡",
       "blockOrder": [
-        "progress",
         "categories",
+        "progress",
         "presets",
         "filters",
         "composer"
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431435236,
+  "lastUpdated": 1793431438499,
   "sender": "dev-hzr0wcw"
 }
