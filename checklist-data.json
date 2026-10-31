@@ -148,7 +148,7 @@
           "category": "cat-1792330030718",
           "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1792332378161
         },
         {
@@ -523,7 +523,7 @@
       "category": "cat-1792330030718",
       "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792332378161
     },
     {
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431335072,
+  "lastUpdated": 1793431341196,
   "sender": "dev-hzr0wcw"
 }
