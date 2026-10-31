@@ -62,15 +62,6 @@
           "createdAt": 1793261552088
         },
         {
-          "id": "item-1792651968887",
-          "title": "פוך?",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792651968887
-        },
-        {
           "id": "item-1792651945421",
           "title": "קניות מהסופר",
           "category": "cat-1792330030718",
@@ -78,6 +69,15 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792651945421
+        },
+        {
+          "id": "item-1792651968887",
+          "title": "פוך?",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": true,
+          "createdAt": 1792651968887
         },
         {
           "id": "item-1792559626600",
@@ -437,15 +437,6 @@
       "createdAt": 1793261552088
     },
     {
-      "id": "item-1792651968887",
-      "title": "פוך?",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792651968887
-    },
-    {
       "id": "item-1792651945421",
       "title": "קניות מהסופר",
       "category": "cat-1792330030718",
@@ -453,6 +444,15 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792651945421
+    },
+    {
+      "id": "item-1792651968887",
+      "title": "פוך?",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": true,
+      "createdAt": 1792651968887
     },
     {
       "id": "item-1792559626600",
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431359150,
+  "lastUpdated": 1793431361184,
   "sender": "dev-hzr0wcw"
 }
