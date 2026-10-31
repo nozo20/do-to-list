@@ -143,15 +143,6 @@
           "createdAt": 1792332391505
         },
         {
-          "id": "item-1792332378161",
-          "title": "בגדים?",
-          "category": "cat-1792330030718",
-          "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332378161
-        },
-        {
           "id": "item-1792332371138",
           "title": "אוכל מוכן",
           "category": "cat-1792330030718",
@@ -159,6 +150,15 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332371138
+        },
+        {
+          "id": "item-1792332378161",
+          "title": "בגדים?",
+          "category": "cat-1792330030718",
+          "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
+          "priority": false,
+          "completed": true,
+          "createdAt": 1792332378161
         },
         {
           "id": "item-1792332367185",
@@ -518,15 +518,6 @@
       "createdAt": 1792332391505
     },
     {
-      "id": "item-1792332378161",
-      "title": "בגדים?",
-      "category": "cat-1792330030718",
-      "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332378161
-    },
-    {
       "id": "item-1792332371138",
       "title": "אוכל מוכן",
       "category": "cat-1792330030718",
@@ -534,6 +525,15 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332371138
+    },
+    {
+      "id": "item-1792332378161",
+      "title": "בגדים?",
+      "category": "cat-1792330030718",
+      "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
+      "priority": false,
+      "completed": true,
+      "createdAt": 1792332378161
     },
     {
       "id": "item-1792332367185",
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431342822,
+  "lastUpdated": 1793431352883,
   "sender": "dev-hzr0wcw"
 }
