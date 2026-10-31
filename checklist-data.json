@@ -414,18 +414,6 @@
           "createdAt": 1793280378764
         },
         {
-          "id": "as-moodle-1793428894100-8sov",
-          "externalUid": "8171@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
-          "course": "הסתברות",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-30",
-          "status": "todo",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428894100
-        },
-        {
           "id": "as-moodle-1793428894100-zb27",
           "externalUid": "8172@moodle26.technion.ac.il",
           "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
@@ -825,18 +813,6 @@
       "createdAt": 1793280378764
     },
     {
-      "id": "as-moodle-1793428894100-8sov",
-      "externalUid": "8171@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
-      "course": "הסתברות",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-30",
-      "status": "todo",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428894100
-    },
-    {
       "id": "as-moodle-1793428894100-zb27",
       "externalUid": "8172@moodle26.technion.ac.il",
       "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
@@ -925,6 +901,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793428894101,
+  "lastUpdated": 1793428914339,
   "sender": "dev-2kgezdx"
 }
