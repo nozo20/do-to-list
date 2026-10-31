@@ -374,7 +374,7 @@
           "course": "מכניקה אנליטית",
           "type": "תרגיל בית",
           "dueDate": "2026-11-12",
-          "status": "todo",
+          "status": "doing",
           "note": "",
           "priority": false,
           "createdAt": 1793362679847
@@ -407,7 +407,7 @@
           "course": "מעבדה גלים",
           "type": "תרגיל בית",
           "dueDate": "2026-11-05",
-          "status": "doing",
+          "status": "done",
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
@@ -725,7 +725,7 @@
       "course": "מכניקה אנליטית",
       "type": "תרגיל בית",
       "dueDate": "2026-11-12",
-      "status": "todo",
+      "status": "doing",
       "note": "",
       "priority": false,
       "createdAt": 1793362679847
@@ -758,7 +758,7 @@
       "course": "מעבדה גלים",
       "type": "תרגיל בית",
       "dueDate": "2026-11-05",
-      "status": "doing",
+      "status": "done",
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
@@ -803,6 +803,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428164797,
+  "lastUpdated": 1793428166140,
   "sender": "dev-2kgezdx"
 }
