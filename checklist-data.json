@@ -432,7 +432,7 @@
           "course": "01040034.200",
           "type": "תרגיל בית",
           "dueDate": "2026-12-16",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "",
           "createdAt": 1793428581898
@@ -444,7 +444,7 @@
           "course": "01040034.200",
           "type": "תרגיל בית",
           "dueDate": "2026-12-30",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "",
           "createdAt": 1793428581898
@@ -456,7 +456,7 @@
           "course": "01040034.200",
           "type": "תרגיל בית",
           "dueDate": "2027-01-14",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "",
           "createdAt": 1793428581898
@@ -468,7 +468,7 @@
           "course": "01040034.200",
           "type": "תרגיל בית",
           "dueDate": "2027-01-28",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "",
           "createdAt": 1793428581898
@@ -843,7 +843,7 @@
       "course": "01040034.200",
       "type": "תרגיל בית",
       "dueDate": "2026-12-16",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "",
       "createdAt": 1793428581898
@@ -855,7 +855,7 @@
       "course": "01040034.200",
       "type": "תרגיל בית",
       "dueDate": "2026-12-30",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "",
       "createdAt": 1793428581898
@@ -867,7 +867,7 @@
       "course": "01040034.200",
       "type": "תרגיל בית",
       "dueDate": "2027-01-14",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "",
       "createdAt": 1793428581898
@@ -879,7 +879,7 @@
       "course": "01040034.200",
       "type": "תרגיל בית",
       "dueDate": "2027-01-28",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "",
       "createdAt": 1793428581898
@@ -925,6 +925,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428616505,
+  "lastUpdated": 1793428619237,
   "sender": "dev-2kgezdx"
 }
