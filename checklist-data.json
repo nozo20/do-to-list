@@ -374,7 +374,7 @@
           "course": "מכניקה אנליטית",
           "type": "תרגיל בית",
           "dueDate": "2026-11-12",
-          "status": "doing",
+          "status": "todo",
           "note": "",
           "priority": false,
           "createdAt": 1793362679847
@@ -725,7 +725,7 @@
       "course": "מכניקה אנליטית",
       "type": "תרגיל בית",
       "dueDate": "2026-11-12",
-      "status": "doing",
+      "status": "todo",
       "note": "",
       "priority": false,
       "createdAt": 1793362679847
@@ -803,6 +803,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428168924,
+  "lastUpdated": 1793428171076,
   "sender": "dev-2kgezdx"
 }
