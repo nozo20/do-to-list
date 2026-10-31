@@ -412,23 +412,11 @@
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
-        },
-        {
-          "id": "as-moodle-1793428581898-9a4m",
-          "externalUid": "8172@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
-          "course": "01040034.200",
-          "type": "תרגיל בית",
-          "dueDate": "2026-12-16",
-          "status": "done",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428581898
         }
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1793261557381",
@@ -775,18 +763,6 @@
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
-    },
-    {
-      "id": "as-moodle-1793428581898-9a4m",
-      "externalUid": "8172@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
-      "course": "01040034.200",
-      "type": "תרגיל בית",
-      "dueDate": "2026-12-16",
-      "status": "done",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428581898
     }
   ],
   "courses": [
@@ -827,8 +803,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "minimal",
+  "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1793428629255,
+  "lastUpdated": 1793428640215,
   "sender": "dev-2kgezdx"
 }
