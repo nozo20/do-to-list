@@ -320,12 +320,20 @@
       "type": "study",
       "title": "מטלות לימודים",
       "icon": "🎓",
+      "layoutUpgradedV5": true,
       "blockOrder": [
         "filters",
         "tasklist",
         "composer",
         "stats"
       ],
+      "moodleConfig": {
+        "icsUrl": "",
+        "autoSync": true,
+        "includePast": false,
+        "courseMapText": "",
+        "lastSyncAt": 0
+      },
       "statuses": [
         {
           "id": "todo",
@@ -795,6 +803,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793426972282,
-  "sender": "dev-jgq1dzh"
+  "lastUpdated": 1793428160850,
+  "sender": "dev-2kgezdx"
 }
