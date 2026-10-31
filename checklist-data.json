@@ -116,15 +116,6 @@
           "createdAt": 1792332289869
         },
         {
-          "id": "item-1792360618447",
-          "title": "אגיסטן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": true,
-          "createdAt": 1792360618447
-        },
-        {
           "id": "item-1792360606473",
           "title": "Sabosel",
           "category": "cat-1792330030718",
@@ -132,6 +123,15 @@
           "priority": true,
           "completed": false,
           "createdAt": 1792360606473
+        },
+        {
+          "id": "item-1792360618447",
+          "title": "אגיסטן",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": true,
+          "completed": true,
+          "createdAt": 1792360618447
         },
         {
           "id": "item-1792332371138",
@@ -143,15 +143,6 @@
           "createdAt": 1792332371138
         },
         {
-          "id": "item-1792332391505",
-          "title": "רדיאטור",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332391505
-        },
-        {
           "id": "item-1792332367185",
           "title": "קניות אוכל",
           "category": "cat-1792330030718",
@@ -159,6 +150,15 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332367185
+        },
+        {
+          "id": "item-1792332391505",
+          "title": "רדיאטור",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": false,
+          "completed": true,
+          "createdAt": 1792332391505
         },
         {
           "id": "item-1792332378161",
@@ -491,15 +491,6 @@
       "createdAt": 1792332289869
     },
     {
-      "id": "item-1792360618447",
-      "title": "אגיסטן",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": true,
-      "completed": true,
-      "createdAt": 1792360618447
-    },
-    {
       "id": "item-1792360606473",
       "title": "Sabosel",
       "category": "cat-1792330030718",
@@ -507,6 +498,15 @@
       "priority": true,
       "completed": false,
       "createdAt": 1792360606473
+    },
+    {
+      "id": "item-1792360618447",
+      "title": "אגיסטן",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": true,
+      "completed": true,
+      "createdAt": 1792360618447
     },
     {
       "id": "item-1792332371138",
@@ -518,15 +518,6 @@
       "createdAt": 1792332371138
     },
     {
-      "id": "item-1792332391505",
-      "title": "רדיאטור",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332391505
-    },
-    {
       "id": "item-1792332367185",
       "title": "קניות אוכל",
       "category": "cat-1792330030718",
@@ -534,6 +525,15 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332367185
+    },
+    {
+      "id": "item-1792332391505",
+      "title": "רדיאטור",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": false,
+      "completed": true,
+      "createdAt": 1792332391505
     },
     {
       "id": "item-1792332378161",
@@ -805,6 +805,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793431354334,
+  "lastUpdated": 1793431356967,
   "sender": "dev-hzr0wcw"
 }
