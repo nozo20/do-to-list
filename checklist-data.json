@@ -414,36 +414,12 @@
           "createdAt": 1793280378764
         },
         {
-          "id": "as-moodle-1793428581898-3wdf",
-          "externalUid": "8171@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
-          "course": "01040034.200",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-30",
-          "status": "done",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428581898
-        },
-        {
           "id": "as-moodle-1793428581898-9a4m",
           "externalUid": "8172@moodle26.technion.ac.il",
           "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
           "course": "01040034.200",
           "type": "תרגיל בית",
           "dueDate": "2026-12-16",
-          "status": "done",
-          "priority": false,
-          "note": "",
-          "createdAt": 1793428581898
-        },
-        {
-          "id": "as-moodle-1793428581898-wj5l",
-          "externalUid": "8173@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
-          "course": "01040034.200",
-          "type": "תרגיל בית",
-          "dueDate": "2026-12-30",
           "status": "done",
           "priority": false,
           "note": "",
@@ -801,36 +777,12 @@
       "createdAt": 1793280378764
     },
     {
-      "id": "as-moodle-1793428581898-3wdf",
-      "externalUid": "8171@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
-      "course": "01040034.200",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-30",
-      "status": "done",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428581898
-    },
-    {
       "id": "as-moodle-1793428581898-9a4m",
       "externalUid": "8172@moodle26.technion.ac.il",
       "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
       "course": "01040034.200",
       "type": "תרגיל בית",
       "dueDate": "2026-12-16",
-      "status": "done",
-      "priority": false,
-      "note": "",
-      "createdAt": 1793428581898
-    },
-    {
-      "id": "as-moodle-1793428581898-wj5l",
-      "externalUid": "8173@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
-      "course": "01040034.200",
-      "type": "תרגיל בית",
-      "dueDate": "2026-12-30",
       "status": "done",
       "priority": false,
       "note": "",
@@ -877,6 +829,6 @@
   },
   "theme": "minimal",
   "isDefaultState": false,
-  "lastUpdated": 1793428627136,
+  "lastUpdated": 1793428629255,
   "sender": "dev-2kgezdx"
 }
