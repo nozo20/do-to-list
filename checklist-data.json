@@ -355,6 +355,13 @@
           "icon": "✅",
           "color": "emerald",
           "isDone": true
+        },
+        {
+          "id": "st-1793704757919",
+          "label": "Later",
+          "icon": "🔖",
+          "color": "slate",
+          "isDone": false
         }
       ],
       "courses": [
@@ -455,7 +462,7 @@
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2027-01-14",
-          "status": "todo",
+          "status": "doing",
           "priority": false,
           "note": "",
           "createdAt": 1793468791133
@@ -866,7 +873,7 @@
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2027-01-14",
-      "status": "todo",
+      "status": "doing",
       "priority": false,
       "note": "",
       "createdAt": 1793468791133
@@ -923,6 +930,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704712097,
+  "lastUpdated": 1793704775517,
   "sender": "dev-bkntveh"
 }
