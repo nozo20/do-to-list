@@ -428,7 +428,7 @@
         {
           "id": "as-moodle-1793468791133-hbj9",
           "externalUid": "8172@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+          "title": "תרגיל בית 5",
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2026-12-16",
@@ -839,7 +839,7 @@
     {
       "id": "as-moodle-1793468791133-hbj9",
       "externalUid": "8172@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 5 - עד לתאריך 16.12.26 בשעה 23:00",
+      "title": "תרגיל בית 5",
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2026-12-16",
@@ -925,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704490952,
+  "lastUpdated": 1793704510720,
   "sender": "dev-bkntveh"
 }
