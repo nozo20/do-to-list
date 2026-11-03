@@ -376,6 +376,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1793704869750",
+          "title": "תרגיל בית 1 - אנליטית",
+          "course": "מכניקה אנליטית",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-17",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1793704869750
+        },
+        {
           "id": "as-1793704584989",
           "title": "תרגיל אלקטרוני 1",
           "course": "מד\"ח",
@@ -787,6 +798,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1793704869750",
+      "title": "תרגיל בית 1 - אנליטית",
+      "course": "מכניקה אנליטית",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-17",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1793704869750
+    },
+    {
       "id": "as-1793704584989",
       "title": "תרגיל אלקטרוני 1",
       "course": "מד\"ח",
@@ -930,6 +952,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704812904,
+  "lastUpdated": 1793704869750,
   "sender": "dev-bkntveh"
 }
