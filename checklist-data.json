@@ -410,7 +410,7 @@
         },
         {
           "id": "as-1793280378764",
-          "title": "לומדות",
+          "title": "לומדות - מעבדה",
           "course": "מעבדה גלים",
           "type": "תרגיל בית",
           "dueDate": "2026-11-05",
@@ -821,7 +821,7 @@
     },
     {
       "id": "as-1793280378764",
-      "title": "לומדות",
+      "title": "לומדות - מעבדה",
       "course": "מעבדה גלים",
       "type": "תרגיל בית",
       "dueDate": "2026-11-05",
@@ -930,6 +930,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704903136,
+  "lastUpdated": 1793704914457,
   "sender": "dev-bkntveh"
 }
