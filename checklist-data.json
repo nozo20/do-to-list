@@ -416,7 +416,7 @@
         {
           "id": "as-moodle-1793468791133-5ald",
           "externalUid": "8171@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+          "title": "תרגיל בית 2",
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2026-11-30",
@@ -476,7 +476,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1793261557381",
@@ -827,7 +827,7 @@
     {
       "id": "as-moodle-1793468791133-5ald",
       "externalUid": "8171@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 2 - עד לתאריך 30.11.26 בשעה 23:00",
+      "title": "תרגיל בית 2",
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2026-11-30",
@@ -925,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793469448784,
-  "sender": "dev-igqamb8"
+  "lastUpdated": 1793704490952,
+  "sender": "dev-bkntveh"
 }
