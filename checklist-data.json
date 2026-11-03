@@ -450,7 +450,7 @@
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2026-12-30",
-          "status": "todo",
+          "status": "doing",
           "priority": false,
           "note": "",
           "createdAt": 1793468791133
@@ -462,7 +462,7 @@
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2027-01-14",
-          "status": "doing",
+          "status": "st-1793704757919",
           "priority": false,
           "note": "",
           "createdAt": 1793468791133
@@ -474,7 +474,7 @@
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2027-01-28",
-          "status": "todo",
+          "status": "st-1793704757919",
           "priority": false,
           "note": "",
           "createdAt": 1793468791133
@@ -861,7 +861,7 @@
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2026-12-30",
-      "status": "todo",
+      "status": "doing",
       "priority": false,
       "note": "",
       "createdAt": 1793468791133
@@ -873,7 +873,7 @@
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2027-01-14",
-      "status": "doing",
+      "status": "st-1793704757919",
       "priority": false,
       "note": "",
       "createdAt": 1793468791133
@@ -885,7 +885,7 @@
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2027-01-28",
-      "status": "todo",
+      "status": "st-1793704757919",
       "priority": false,
       "note": "",
       "createdAt": 1793468791133
@@ -930,6 +930,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704775517,
+  "lastUpdated": 1793704785670,
   "sender": "dev-bkntveh"
 }
