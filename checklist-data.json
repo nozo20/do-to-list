@@ -440,7 +440,7 @@
         {
           "id": "as-moodle-1793468791133-1bir",
           "externalUid": "8173@moodle26.technion.ac.il",
-          "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+          "title": "תרגיל בית 7",
           "course": "הסתברות",
           "type": "תרגיל בית",
           "dueDate": "2026-12-30",
@@ -851,7 +851,7 @@
     {
       "id": "as-moodle-1793468791133-1bir",
       "externalUid": "8173@moodle26.technion.ac.il",
-      "title": "תיקייה להגשת תרגיל בית 7 - עד לתאריך 30.12.26 בשעה 23:00",
+      "title": "תרגיל בית 7",
       "course": "הסתברות",
       "type": "תרגיל בית",
       "dueDate": "2026-12-30",
@@ -925,6 +925,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704510720,
+  "lastUpdated": 1793704521047,
   "sender": "dev-bkntveh"
 }
