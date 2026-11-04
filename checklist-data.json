@@ -53,15 +53,6 @@
           "createdAt": 1793261557381
         },
         {
-          "id": "item-1793261552088",
-          "title": "נוזל קלים",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": false,
-          "createdAt": 1793261552088
-        },
-        {
           "id": "item-1792651945421",
           "title": "קניות מהסופר",
           "category": "cat-1792330030718",
@@ -485,15 +476,6 @@
       "createdAt": 1793261557381
     },
     {
-      "id": "item-1793261552088",
-      "title": "נוזל קלים",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": false,
-      "createdAt": 1793261552088
-    },
-    {
       "id": "item-1792651945421",
       "title": "קניות מהסופר",
       "category": "cat-1792330030718",
@@ -912,6 +894,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779760468,
+  "lastUpdated": 1793779762684,
   "sender": "dev-8xpfk2h"
 }
