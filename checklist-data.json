@@ -98,24 +98,6 @@
           "createdAt": 1792332371138
         },
         {
-          "id": "item-1792360618447",
-          "title": "אגיסטן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": true,
-          "createdAt": 1792360618447
-        },
-        {
-          "id": "item-1792332391505",
-          "title": "רדיאטור",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332391505
-        },
-        {
           "id": "item-1792332378161",
           "title": "בגדים?",
           "category": "cat-1792330030718",
@@ -494,24 +476,6 @@
       "createdAt": 1792332371138
     },
     {
-      "id": "item-1792360618447",
-      "title": "אגיסטן",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": true,
-      "completed": true,
-      "createdAt": 1792360618447
-    },
-    {
-      "id": "item-1792332391505",
-      "title": "רדיאטור",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332391505
-    },
-    {
       "id": "item-1792332378161",
       "title": "בגדים?",
       "category": "cat-1792330030718",
@@ -840,6 +804,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779809494,
+  "lastUpdated": 1793779811244,
   "sender": "dev-8xpfk2h"
 }
