@@ -94,7 +94,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1792332371138
         },
         {
@@ -508,7 +508,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1792332371138
     },
     {
@@ -876,6 +876,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779801987,
+  "lastUpdated": 1793779803263,
   "sender": "dev-8xpfk2h"
 }
