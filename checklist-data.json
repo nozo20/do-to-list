@@ -98,15 +98,6 @@
           "createdAt": 1792332371138
         },
         {
-          "id": "item-1792651968887",
-          "title": "פוך?",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792651968887
-        },
-        {
           "id": "item-1792360618447",
           "title": "אגיסטן",
           "category": "cat-1792330030718",
@@ -503,15 +494,6 @@
       "createdAt": 1792332371138
     },
     {
-      "id": "item-1792651968887",
-      "title": "פוך?",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792651968887
-    },
-    {
       "id": "item-1792360618447",
       "title": "אגיסטן",
       "category": "cat-1792330030718",
@@ -858,6 +840,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779808308,
+  "lastUpdated": 1793779809494,
   "sender": "dev-8xpfk2h"
 }
