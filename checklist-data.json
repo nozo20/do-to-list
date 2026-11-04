@@ -62,15 +62,6 @@
           "createdAt": 1792651945421
         },
         {
-          "id": "item-1792360606473",
-          "title": "Sabosel",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": true,
-          "completed": false,
-          "createdAt": 1792360606473
-        },
-        {
           "id": "item-1792526288282",
           "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
           "category": "cat-1792332023621",
@@ -485,15 +476,6 @@
       "createdAt": 1792651945421
     },
     {
-      "id": "item-1792360606473",
-      "title": "Sabosel",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": true,
-      "completed": false,
-      "createdAt": 1792360606473
-    },
-    {
       "id": "item-1792526288282",
       "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
       "category": "cat-1792332023621",
@@ -894,6 +876,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779787196,
+  "lastUpdated": 1793779800529,
   "sender": "dev-8xpfk2h"
 }
