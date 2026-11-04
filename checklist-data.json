@@ -80,15 +80,6 @@
           "createdAt": 1792360606473
         },
         {
-          "id": "item-1792559626600",
-          "title": "טישו של soft",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792559626600
-        },
-        {
           "id": "item-1792526288282",
           "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
           "category": "cat-1792332023621",
@@ -482,7 +473,7 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1793261557381",
@@ -519,15 +510,6 @@
       "priority": true,
       "completed": false,
       "createdAt": 1792360606473
-    },
-    {
-      "id": "item-1792559626600",
-      "title": "טישו של soft",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792559626600
     },
     {
       "id": "item-1792526288282",
@@ -930,6 +912,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793704914457,
-  "sender": "dev-bkntveh"
+  "lastUpdated": 1793779760468,
+  "sender": "dev-8xpfk2h"
 }
