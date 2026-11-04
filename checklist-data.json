@@ -58,7 +58,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": true,
+          "completed": false,
           "createdAt": 1792651945421
         },
         {
@@ -94,7 +94,7 @@
           "category": "cat-1792330030718",
           "note": "",
           "priority": false,
-          "completed": true,
+          "completed": false,
           "createdAt": 1792332371138
         },
         {
@@ -472,7 +472,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1792651945421
     },
     {
@@ -508,7 +508,7 @@
       "category": "cat-1792330030718",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1792332371138
     },
     {
@@ -876,6 +876,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779800529,
+  "lastUpdated": 1793779801987,
   "sender": "dev-8xpfk2h"
 }
