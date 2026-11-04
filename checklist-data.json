@@ -98,15 +98,6 @@
           "createdAt": 1792332371138
         },
         {
-          "id": "item-1792332378161",
-          "title": "בגדים?",
-          "category": "cat-1792330030718",
-          "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332378161
-        },
-        {
           "id": "item-1792332276562",
           "title": "כריות גב של כיסאות?",
           "category": "cat-1792332023621",
@@ -476,15 +467,6 @@
       "createdAt": 1792332371138
     },
     {
-      "id": "item-1792332378161",
-      "title": "בגדים?",
-      "category": "cat-1792330030718",
-      "note": "חולצה ארוכה, סווצרטים, ג׳קט רוח, 2 מתלים.",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332378161
-    },
-    {
       "id": "item-1792332276562",
       "title": "כריות גב של כיסאות?",
       "category": "cat-1792332023621",
@@ -804,6 +786,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779811244,
+  "lastUpdated": 1793779812310,
   "sender": "dev-8xpfk2h"
 }
