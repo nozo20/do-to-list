@@ -44,15 +44,6 @@
       ],
       "items": [
         {
-          "id": "item-1793261557381",
-          "title": "ניילון נצמד",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1793261557381
-        },
-        {
           "id": "item-1792651945421",
           "title": "קניות מהסופר",
           "category": "cat-1792330030718",
@@ -466,15 +457,6 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
-    {
-      "id": "item-1793261557381",
-      "title": "ניילון נצמד",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1793261557381
-    },
     {
       "id": "item-1792651945421",
       "title": "קניות מהסופר",
@@ -894,6 +876,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779775669,
+  "lastUpdated": 1793779776968,
   "sender": "dev-8xpfk2h"
 }
