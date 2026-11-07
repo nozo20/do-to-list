@@ -345,7 +345,7 @@
           "course": "מעבדה גלים",
           "type": "תרגיל בית",
           "dueDate": "2026-11-05",
-          "status": "todo",
+          "status": "done",
           "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
           "priority": false,
           "createdAt": 1793280378764
@@ -732,7 +732,7 @@
       "course": "מעבדה גלים",
       "type": "תרגיל בית",
       "dueDate": "2026-11-05",
-      "status": "todo",
+      "status": "done",
       "note": "פלייגריזם\nבטיחות בלייזר\nפייתון - סניפטים שכל לערוך של הכל הכל.",
       "priority": false,
       "createdAt": 1793280378764
@@ -888,6 +888,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037629951,
+  "lastUpdated": 1794037676911,
   "sender": "dev-yonhkyh"
 }
