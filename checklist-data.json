@@ -427,7 +427,7 @@
         {
           "id": "as-moodle-1794037527162-xdza",
           "externalUid": "24716@moodle26.technion.ac.il",
-          "title": "תרגיל בית 1 - הגשה 17.11",
+          "title": "תרגיל בית 1 - גלים",
           "course": "גלים",
           "type": "תרגיל בית",
           "dueDate": "2026-11-17",
@@ -792,7 +792,7 @@
     {
       "id": "as-moodle-1794037527162-xdza",
       "externalUid": "24716@moodle26.technion.ac.il",
-      "title": "תרגיל בית 1 - הגשה 17.11",
+      "title": "תרגיל בית 1 - גלים",
       "course": "גלים",
       "type": "תרגיל בית",
       "dueDate": "2026-11-17",
@@ -844,6 +844,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037717033,
+  "lastUpdated": 1794037726638,
   "sender": "dev-yonhkyh"
 }
