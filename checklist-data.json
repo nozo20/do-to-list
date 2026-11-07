@@ -318,17 +318,6 @@
           "createdAt": 1793704869750
         },
         {
-          "id": "as-1793704584989",
-          "title": "תרגיל אלקטרוני 1 - מדח",
-          "course": "מד\"ח",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-09",
-          "status": "todo",
-          "note": "",
-          "priority": false,
-          "createdAt": 1793704584989
-        },
-        {
           "id": "as-1793362056537",
           "title": "גיליון ראשון (2) - הסתברות",
           "course": "הסתברות",
@@ -705,17 +694,6 @@
       "createdAt": 1793704869750
     },
     {
-      "id": "as-1793704584989",
-      "title": "תרגיל אלקטרוני 1 - מדח",
-      "course": "מד\"ח",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-09",
-      "status": "todo",
-      "note": "",
-      "priority": false,
-      "createdAt": 1793704584989
-    },
-    {
       "id": "as-1793362056537",
       "title": "גיליון ראשון (2) - הסתברות",
       "course": "הסתברות",
@@ -888,6 +866,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037676911,
+  "lastUpdated": 1794037688040,
   "sender": "dev-yonhkyh"
 }
