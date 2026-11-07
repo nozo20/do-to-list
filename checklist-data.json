@@ -395,7 +395,7 @@
           "course": "מד״ח",
           "type": "תרגיל בית",
           "dueDate": "2026-11-09",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "יש לענות נכונה על כל 15 השאלות.  אין הגבלה על מספר הנסיונות.",
           "createdAt": 1794037527162
@@ -760,7 +760,7 @@
       "course": "מד״ח",
       "type": "תרגיל בית",
       "dueDate": "2026-11-09",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "יש לענות נכונה על כל 15 השאלות.  אין הגבלה על מספר הנסיונות.",
       "createdAt": 1794037527162
@@ -844,6 +844,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037726638,
-  "sender": "dev-yonhkyh"
+  "lastUpdated": 1794039032676,
+  "sender": "dev-xzkw7z6"
 }
