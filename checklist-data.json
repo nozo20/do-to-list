@@ -307,17 +307,6 @@
       ],
       "assignments": [
         {
-          "id": "as-1793704869750",
-          "title": "תרגיל בית 1 - אנליטית",
-          "course": "מכניקה אנליטית",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-17",
-          "status": "todo",
-          "note": "",
-          "priority": false,
-          "createdAt": 1793704869750
-        },
-        {
           "id": "as-1793362056537",
           "title": "גיליון ראשון (2) - הסתברות",
           "course": "הסתברות",
@@ -683,17 +672,6 @@
   ],
   "assignments": [
     {
-      "id": "as-1793704869750",
-      "title": "תרגיל בית 1 - אנליטית",
-      "course": "מכניקה אנליטית",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-17",
-      "status": "todo",
-      "note": "",
-      "priority": false,
-      "createdAt": 1793704869750
-    },
-    {
       "id": "as-1793362056537",
       "title": "גיליון ראשון (2) - הסתברות",
       "course": "הסתברות",
@@ -866,6 +844,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037700343,
+  "lastUpdated": 1794037707727,
   "sender": "dev-yonhkyh"
 }
