@@ -260,7 +260,7 @@
         "autoSync": true,
         "includePast": false,
         "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים",
-        "lastSyncAt": 1793468791133
+        "lastSyncAt": 1794037527163
       },
       "statuses": [
         {
@@ -300,7 +300,10 @@
         "הסתברות",
         "פונקציות מרוכבות",
         "מעבדה גלים",
-        "01040034.200"
+        "01040034.200",
+        "1140035/1140038",
+        "מד״ח",
+        "51060007.200"
       ],
       "assignments": [
         {
@@ -406,11 +409,71 @@
           "priority": false,
           "note": "",
           "createdAt": 1793468791133
+        },
+        {
+          "id": "as-moodle-1794037527162-teup",
+          "externalUid": "24493@moodle26.technion.ac.il",
+          "title": "תרגיל פייתון - 531 - רנין (עד לתאריך)",
+          "course": "1140035/1140038",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-05",
+          "status": "todo",
+          "priority": false,
+          "note": "הגשת התרגיל: מעלים את קובץ המחברת (.ipynb) אחרי Kernel → Restart & Run All, בלי שגיאות. התרגיל נעשה בלי כלי בינה מלאכותית (AI).  מועד ההגשה:",
+          "createdAt": 1794037527162
+        },
+        {
+          "id": "as-moodle-1794037527162-d6mw",
+          "externalUid": "23225@moodle26.technion.ac.il",
+          "title": "תאריך סגירה: תרגיל אלקטרוני 1",
+          "course": "מד״ח",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-09",
+          "status": "todo",
+          "priority": false,
+          "note": "יש לענות נכונה על כל 15 השאלות.  אין הגבלה על מספר הנסיונות.",
+          "createdAt": 1794037527162
+        },
+        {
+          "id": "as-moodle-1794037527162-f4v5",
+          "externalUid": "17955@moodle26.technion.ac.il",
+          "title": "(Zoom) Intro to nuclear energy lecture",
+          "course": "51060007.200",
+          "type": "תרגיל בית",
+          "dueDate": "2027-02-24",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794037527162
+        },
+        {
+          "id": "as-moodle-1794037527162-t7u5",
+          "externalUid": "22234@moodle26.technion.ac.il",
+          "title": "הגשת תרגיל בית 1",
+          "course": "מכניקה אנליטית",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-17",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794037527162
+        },
+        {
+          "id": "as-moodle-1794037527162-xdza",
+          "externalUid": "24716@moodle26.technion.ac.il",
+          "title": "תרגיל בית 1 - הגשה 17.11",
+          "course": "גלים",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-17",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794037527162
         }
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1793779787196",
@@ -745,6 +808,66 @@
       "priority": false,
       "note": "",
       "createdAt": 1793468791133
+    },
+    {
+      "id": "as-moodle-1794037527162-teup",
+      "externalUid": "24493@moodle26.technion.ac.il",
+      "title": "תרגיל פייתון - 531 - רנין (עד לתאריך)",
+      "course": "1140035/1140038",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-05",
+      "status": "todo",
+      "priority": false,
+      "note": "הגשת התרגיל: מעלים את קובץ המחברת (.ipynb) אחרי Kernel → Restart & Run All, בלי שגיאות. התרגיל נעשה בלי כלי בינה מלאכותית (AI).  מועד ההגשה:",
+      "createdAt": 1794037527162
+    },
+    {
+      "id": "as-moodle-1794037527162-d6mw",
+      "externalUid": "23225@moodle26.technion.ac.il",
+      "title": "תאריך סגירה: תרגיל אלקטרוני 1",
+      "course": "מד״ח",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-09",
+      "status": "todo",
+      "priority": false,
+      "note": "יש לענות נכונה על כל 15 השאלות.  אין הגבלה על מספר הנסיונות.",
+      "createdAt": 1794037527162
+    },
+    {
+      "id": "as-moodle-1794037527162-f4v5",
+      "externalUid": "17955@moodle26.technion.ac.il",
+      "title": "(Zoom) Intro to nuclear energy lecture",
+      "course": "51060007.200",
+      "type": "תרגיל בית",
+      "dueDate": "2027-02-24",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794037527162
+    },
+    {
+      "id": "as-moodle-1794037527162-t7u5",
+      "externalUid": "22234@moodle26.technion.ac.il",
+      "title": "הגשת תרגיל בית 1",
+      "course": "מכניקה אנליטית",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-17",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794037527162
+    },
+    {
+      "id": "as-moodle-1794037527162-xdza",
+      "externalUid": "24716@moodle26.technion.ac.il",
+      "title": "תרגיל בית 1 - הגשה 17.11",
+      "course": "גלים",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-17",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794037527162
     }
   ],
   "courses": [
@@ -755,7 +878,10 @@
     "הסתברות",
     "פונקציות מרוכבות",
     "מעבדה גלים",
-    "01040034.200"
+    "01040034.200",
+    "1140035/1140038",
+    "מד״ח",
+    "51060007.200"
   ],
   "uiLabels": {
     "app_main_title": "My Hub",
@@ -786,6 +912,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1793779812310,
-  "sender": "dev-8xpfk2h"
+  "lastUpdated": 1794037527163,
+  "sender": "dev-yonhkyh"
 }
