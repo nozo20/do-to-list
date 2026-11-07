@@ -402,7 +402,7 @@
         {
           "id": "as-moodle-1794037527162-d6mw",
           "externalUid": "23225@moodle26.technion.ac.il",
-          "title": "תאריך סגירה: תרגיל אלקטרוני 1",
+          "title": "תרגיל אלקטרוני 1 - מד\"ח",
           "course": "מד״ח",
           "type": "תרגיל בית",
           "dueDate": "2026-11-09",
@@ -778,7 +778,7 @@
     {
       "id": "as-moodle-1794037527162-d6mw",
       "externalUid": "23225@moodle26.technion.ac.il",
-      "title": "תאריך סגירה: תרגיל אלקטרוני 1",
+      "title": "תרגיל אלקטרוני 1 - מד\"ח",
       "course": "מד״ח",
       "type": "תרגיל בית",
       "dueDate": "2026-11-09",
@@ -866,6 +866,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037688040,
+  "lastUpdated": 1794037700343,
   "sender": "dev-yonhkyh"
 }
