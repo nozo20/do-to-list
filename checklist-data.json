@@ -411,18 +411,6 @@
           "createdAt": 1793468791133
         },
         {
-          "id": "as-moodle-1794037527162-teup",
-          "externalUid": "24493@moodle26.technion.ac.il",
-          "title": "תרגיל פייתון - 531 - רנין (עד לתאריך)",
-          "course": "1140035/1140038",
-          "type": "תרגיל בית",
-          "dueDate": "2026-11-05",
-          "status": "todo",
-          "priority": false,
-          "note": "הגשת התרגיל: מעלים את קובץ המחברת (.ipynb) אחרי Kernel → Restart & Run All, בלי שגיאות. התרגיל נעשה בלי כלי בינה מלאכותית (AI).  מועד ההגשה:",
-          "createdAt": 1794037527162
-        },
-        {
           "id": "as-moodle-1794037527162-d6mw",
           "externalUid": "23225@moodle26.technion.ac.il",
           "title": "תאריך סגירה: תרגיל אלקטרוני 1",
@@ -810,18 +798,6 @@
       "createdAt": 1793468791133
     },
     {
-      "id": "as-moodle-1794037527162-teup",
-      "externalUid": "24493@moodle26.technion.ac.il",
-      "title": "תרגיל פייתון - 531 - רנין (עד לתאריך)",
-      "course": "1140035/1140038",
-      "type": "תרגיל בית",
-      "dueDate": "2026-11-05",
-      "status": "todo",
-      "priority": false,
-      "note": "הגשת התרגיל: מעלים את קובץ המחברת (.ipynb) אחרי Kernel → Restart & Run All, בלי שגיאות. התרגיל נעשה בלי כלי בינה מלאכותית (AI).  מועד ההגשה:",
-      "createdAt": 1794037527162
-    },
-    {
       "id": "as-moodle-1794037527162-d6mw",
       "externalUid": "23225@moodle26.technion.ac.il",
       "title": "תאריך סגירה: תרגיל אלקטרוני 1",
@@ -912,6 +888,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037527163,
+  "lastUpdated": 1794037629951,
   "sender": "dev-yonhkyh"
 }
