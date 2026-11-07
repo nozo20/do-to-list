@@ -415,7 +415,7 @@
         {
           "id": "as-moodle-1794037527162-t7u5",
           "externalUid": "22234@moodle26.technion.ac.il",
-          "title": "הגשת תרגיל בית 1",
+          "title": "תרגיל בית 1 - מכניקה אנליטית",
           "course": "מכניקה אנליטית",
           "type": "תרגיל בית",
           "dueDate": "2026-11-17",
@@ -780,7 +780,7 @@
     {
       "id": "as-moodle-1794037527162-t7u5",
       "externalUid": "22234@moodle26.technion.ac.il",
-      "title": "הגשת תרגיל בית 1",
+      "title": "תרגיל בית 1 - מכניקה אנליטית",
       "course": "מכניקה אנליטית",
       "type": "תרגיל בית",
       "dueDate": "2026-11-17",
@@ -844,6 +844,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794037707727,
+  "lastUpdated": 1794037717033,
   "sender": "dev-yonhkyh"
 }
