@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794159625568",
+          "title": "סבון",
+          "category": "cat-1792332023621",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794159625568
+        },
+        {
           "id": "item-1794159583959",
           "title": "אוראו",
           "category": "groceries",
@@ -423,6 +432,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794159625568",
+      "title": "סבון",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794159625568
+    },
     {
       "id": "item-1794159583959",
       "title": "אוראו",
@@ -808,6 +826,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794159603521,
+  "lastUpdated": 1794159625568,
   "sender": "dev-60uj4gz"
 }
