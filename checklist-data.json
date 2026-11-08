@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794140840236",
+          "title": "טורטיות",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794140840236
+        },
+        {
           "id": "item-1794139997544",
           "title": "שמנת",
           "category": "groceries",
@@ -468,6 +477,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794140840236",
+      "title": "טורטיות",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794140840236
+    },
     {
       "id": "item-1794139997544",
       "title": "שמנת",
@@ -898,6 +916,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794139997544,
+  "lastUpdated": 1794140840236,
   "sender": "dev-kivuu2n"
 }
