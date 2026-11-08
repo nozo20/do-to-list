@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794159583959",
+          "title": "אוראו",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794159583959
+        },
+        {
           "id": "item-1794140840236",
           "title": "טורטיות",
           "category": "groceries",
@@ -477,6 +486,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794159583959",
+      "title": "אוראו",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794159583959
+    },
     {
       "id": "item-1794140840236",
       "title": "טורטיות",
@@ -916,6 +934,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794140840236,
-  "sender": "dev-kivuu2n"
+  "lastUpdated": 1794159583960,
+  "sender": "dev-60uj4gz"
 }
