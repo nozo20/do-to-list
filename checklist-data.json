@@ -89,24 +89,6 @@
           "createdAt": 1794139977103
         },
         {
-          "id": "item-1793779787196",
-          "title": "טונה",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1793779787196
-        },
-        {
-          "id": "item-1792651945421",
-          "title": "קניות מהסופר",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792651945421
-        },
-        {
           "id": "item-1792526288282",
           "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
           "category": "cat-1792332023621",
@@ -116,15 +98,6 @@
           "createdAt": 1792526288282
         },
         {
-          "id": "item-1792442432055",
-          "title": "אורז",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792442432055
-        },
-        {
           "id": "item-1792332289869",
           "title": "צלחת לעציצים התלויים",
           "category": "cat-1792332023621",
@@ -132,15 +105,6 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332289869
-        },
-        {
-          "id": "item-1792332371138",
-          "title": "אוכל מוכן",
-          "category": "cat-1792330030718",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332371138
         },
         {
           "id": "item-1792332276562",
@@ -186,33 +150,6 @@
           "priority": false,
           "completed": false,
           "createdAt": 1792332215230
-        },
-        {
-          "id": "item-1792332199287-82h",
-          "title": "שרי",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332199287
-        },
-        {
-          "id": "item-1792332172151-mlr",
-          "title": "קורנישונים",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332172151
-        },
-        {
-          "id": "item-1792332167665",
-          "title": "גבינות קשות",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1792332167665
         }
       ],
       "presets": [
@@ -532,24 +469,6 @@
       "createdAt": 1794139977103
     },
     {
-      "id": "item-1793779787196",
-      "title": "טונה",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1793779787196
-    },
-    {
-      "id": "item-1792651945421",
-      "title": "קניות מהסופר",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792651945421
-    },
-    {
       "id": "item-1792526288282",
       "title": "https://www.instagram.com/reel/Dd9JYxLIcTD/?utm_source=ig_web_copy_link",
       "category": "cat-1792332023621",
@@ -559,15 +478,6 @@
       "createdAt": 1792526288282
     },
     {
-      "id": "item-1792442432055",
-      "title": "אורז",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792442432055
-    },
-    {
       "id": "item-1792332289869",
       "title": "צלחת לעציצים התלויים",
       "category": "cat-1792332023621",
@@ -575,15 +485,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332289869
-    },
-    {
-      "id": "item-1792332371138",
-      "title": "אוכל מוכן",
-      "category": "cat-1792330030718",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332371138
     },
     {
       "id": "item-1792332276562",
@@ -629,33 +530,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1792332215230
-    },
-    {
-      "id": "item-1792332199287-82h",
-      "title": "שרי",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332199287
-    },
-    {
-      "id": "item-1792332172151-mlr",
-      "title": "קורנישונים",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332172151
-    },
-    {
-      "id": "item-1792332167665",
-      "title": "גבינות קשות",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1792332167665
     }
   ],
   "categories": [
@@ -934,6 +808,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794159591085,
+  "lastUpdated": 1794159603521,
   "sender": "dev-60uj4gz"
 }
