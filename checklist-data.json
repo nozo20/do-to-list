@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794139977103",
+          "title": "שיטאקי",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794139977103
+        },
+        {
           "id": "item-1793779787196",
           "title": "טונה",
           "category": "groceries",
@@ -439,8 +448,17 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794139977103",
+      "title": "שיטאקי",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794139977103
+    },
     {
       "id": "item-1793779787196",
       "title": "טונה",
@@ -844,6 +862,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794039032676,
-  "sender": "dev-xzkw7z6"
+  "lastUpdated": 1794139977103,
+  "sender": "dev-kivuu2n"
 }
