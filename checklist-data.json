@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794139994500",
+          "title": "גבינת שמנת",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794139994500
+        },
+        {
           "id": "item-1794139977103",
           "title": "שיטאקי",
           "category": "groceries",
@@ -450,6 +459,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794139994500",
+      "title": "גבינת שמנת",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794139994500
+    },
     {
       "id": "item-1794139977103",
       "title": "שיטאקי",
@@ -862,6 +880,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794139977103,
+  "lastUpdated": 1794139994500,
   "sender": "dev-kivuu2n"
 }
