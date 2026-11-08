@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794159633426",
+          "title": "קרם לחות",
+          "category": "cat-1792332023621",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794159633426
+        },
+        {
           "id": "item-1794159625568",
           "title": "סבון",
           "category": "cat-1792332023621",
@@ -432,6 +441,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794159633426",
+      "title": "קרם לחות",
+      "category": "cat-1792332023621",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794159633426
+    },
     {
       "id": "item-1794159625568",
       "title": "סבון",
@@ -826,6 +844,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794159625568,
+  "lastUpdated": 1794159633426,
   "sender": "dev-60uj4gz"
 }
