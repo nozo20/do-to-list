@@ -260,7 +260,7 @@
         "autoSync": true,
         "includePast": false,
         "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים",
-        "lastSyncAt": 1794037527163
+        "lastSyncAt": 1794164388532
       },
       "statuses": [
         {
@@ -435,11 +435,23 @@
           "priority": false,
           "note": "",
           "createdAt": 1794037527162
+        },
+        {
+          "id": "as-moodle-1794164388532-47ip",
+          "externalUid": "27004@moodle26.technion.ac.il",
+          "title": "הגשת תרגיל בית 2",
+          "course": "מכניקה אנליטית",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-24",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794164388532
         }
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1794159633426",
@@ -800,6 +812,18 @@
       "priority": false,
       "note": "",
       "createdAt": 1794037527162
+    },
+    {
+      "id": "as-moodle-1794164388532-47ip",
+      "externalUid": "27004@moodle26.technion.ac.il",
+      "title": "הגשת תרגיל בית 2",
+      "course": "מכניקה אנליטית",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-24",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794164388532
     }
   ],
   "courses": [
@@ -844,6 +868,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794159639003,
-  "sender": "dev-60uj4gz"
+  "lastUpdated": 1794164388532,
+  "sender": "dev-ebh4wlc"
 }
