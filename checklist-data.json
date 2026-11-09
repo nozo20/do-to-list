@@ -259,7 +259,7 @@
         "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=custom",
         "autoSync": true,
         "includePast": false,
-        "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים",
+        "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים\n5106007 = אנרגיה גרעינית",
         "lastSyncAt": 1794164388532
       },
       "statuses": [
@@ -303,7 +303,8 @@
         "01040034.200",
         "1140035/1140038",
         "מד״ח",
-        "51060007.200"
+        "51060007.200",
+        "אנרגיה גרעינית"
       ],
       "assignments": [
         {
@@ -815,7 +816,8 @@
     "01040034.200",
     "1140035/1140038",
     "מד״ח",
-    "51060007.200"
+    "51060007.200",
+    "אנרגיה גרעינית"
   ],
   "uiLabels": {
     "app_main_title": "My Hub",
@@ -846,6 +848,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794243283682,
+  "lastUpdated": 1794243285524,
   "sender": "dev-y9x4255"
 }
