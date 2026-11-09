@@ -259,7 +259,7 @@
         "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=custom",
         "autoSync": true,
         "includePast": false,
-        "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים\n5106007 = אנרגיה גרעינית",
+        "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים\n51060007 = אנרגיה גרעינית",
         "lastSyncAt": 1794164388532
       },
       "statuses": [
@@ -388,18 +388,6 @@
           "status": "done",
           "priority": false,
           "note": "יש לענות נכונה על כל 15 השאלות.  אין הגבלה על מספר הנסיונות.",
-          "createdAt": 1794037527162
-        },
-        {
-          "id": "as-moodle-1794037527162-f4v5",
-          "externalUid": "17955@moodle26.technion.ac.il",
-          "title": "(Zoom) Intro to nuclear energy lecture",
-          "course": "51060007.200",
-          "type": "תרגיל בית",
-          "dueDate": "2027-02-24",
-          "status": "todo",
-          "priority": false,
-          "note": "",
           "createdAt": 1794037527162
         },
         {
@@ -757,18 +745,6 @@
       "createdAt": 1794037527162
     },
     {
-      "id": "as-moodle-1794037527162-f4v5",
-      "externalUid": "17955@moodle26.technion.ac.il",
-      "title": "(Zoom) Intro to nuclear energy lecture",
-      "course": "51060007.200",
-      "type": "תרגיל בית",
-      "dueDate": "2027-02-24",
-      "status": "todo",
-      "priority": false,
-      "note": "",
-      "createdAt": 1794037527162
-    },
-    {
       "id": "as-moodle-1794037527162-t7u5",
       "externalUid": "22234@moodle26.technion.ac.il",
       "title": "תרגיל בית 1 - מכניקה אנליטית",
@@ -848,6 +824,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794243285524,
+  "lastUpdated": 1794243303144,
   "sender": "dev-y9x4255"
 }
