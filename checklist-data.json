@@ -63,11 +63,11 @@
         },
         {
           "id": "item-1794379271154",
-          "title": "לבבות דקל",
+          "title": "לבבות דקל (שימורים)",
           "category": "groceries",
           "note": "",
           "priority": false,
-          "completed": true,
+          "completed": false,
           "createdAt": 1794379271154
         },
         {
@@ -524,11 +524,11 @@
     },
     {
       "id": "item-1794379271154",
-      "title": "לבבות דקל",
+      "title": "לבבות דקל (שימורים)",
       "category": "groceries",
       "note": "",
       "priority": false,
-      "completed": true,
+      "completed": false,
       "createdAt": 1794379271154
     },
     {
@@ -970,6 +970,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379290517,
+  "lastUpdated": 1794379298467,
   "sender": "dev-k1glhn2"
 }
