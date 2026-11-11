@@ -110,7 +110,7 @@
           "id": "item-1794379260997",
           "title": "עגבניות",
           "category": "groceries",
-          "note": "",
+          "note": "אני",
           "priority": false,
           "completed": false,
           "createdAt": 1794379260997
@@ -692,7 +692,7 @@
       "id": "item-1794379260997",
       "title": "עגבניות",
       "category": "groceries",
-      "note": "",
+      "note": "אני",
       "priority": false,
       "completed": false,
       "createdAt": 1794379260997
@@ -1142,6 +1142,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794431625316,
+  "lastUpdated": 1794431630523,
   "sender": "dev-yt1wz5k"
 }
