@@ -549,8 +549,8 @@
       "title": "עבודה",
       "icon": "📋",
       "blockOrder": [
-        "progress",
         "composer",
+        "progress",
         "presets",
         "filters",
         "categories"
@@ -1078,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401832317,
+  "lastUpdated": 1794401928074,
   "sender": "dev-65g9tcm"
 }
