@@ -549,8 +549,8 @@
       "title": "עבודה",
       "icon": "📋",
       "blockOrder": [
-        "composer",
         "categories",
+        "composer",
         "presets",
         "filters",
         "progress"
@@ -558,7 +558,7 @@
       "categories": [
         {
           "id": "cat-1-1794401832317",
-          "title": "רשימה ראשית",
+          "title": "דברים לעבודה",
           "subtitle": "פריטים ומשימות",
           "icon": "📌",
           "color": "teal"
@@ -1078,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401961293,
+  "lastUpdated": 1794401982948,
   "sender": "dev-65g9tcm"
 }
