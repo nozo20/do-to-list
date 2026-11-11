@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379256107",
+          "title": "לחם",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379256107
+        },
+        {
           "id": "item-1794159633426",
           "title": "קרם לחות",
           "category": "cat-1792332023621",
@@ -448,8 +457,17 @@
       ]
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379256107",
+      "title": "לחם",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379256107
+    },
     {
       "id": "item-1794159633426",
       "title": "קרם לחות",
@@ -862,6 +880,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794243443961,
-  "sender": "dev-y9x4255"
+  "lastUpdated": 1794379256107,
+  "sender": "dev-k1glhn2"
 }
