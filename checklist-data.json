@@ -542,9 +542,33 @@
           "createdAt": 1794401821159
         }
       ]
+    },
+    {
+      "id": "tab-1794401832317",
+      "type": "checklist",
+      "title": "עבודה",
+      "icon": "📋",
+      "blockOrder": [
+        "progress",
+        "composer",
+        "presets",
+        "filters",
+        "categories"
+      ],
+      "categories": [
+        {
+          "id": "cat-1-1794401832317",
+          "title": "רשימה ראשית",
+          "subtitle": "פריטים ומשימות",
+          "icon": "📌",
+          "color": "teal"
+        }
+      ],
+      "items": [],
+      "presets": []
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-1794401832317",
   "items": [
     {
       "id": "item-1794385626518",
@@ -1054,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401821160,
+  "lastUpdated": 1794401832317,
   "sender": "dev-65g9tcm"
 }
