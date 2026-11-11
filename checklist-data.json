@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794385623349",
+          "title": "שוקולד?",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794385623349
+        },
+        {
           "id": "item-1794379287034",
           "title": "גבינות קשות",
           "category": "groceries",
@@ -504,6 +513,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794385623349",
+      "title": "שוקולד?",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794385623349
+    },
     {
       "id": "item-1794379287034",
       "title": "גבינות קשות",
@@ -970,6 +988,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379298467,
+  "lastUpdated": 1794385623349,
   "sender": "dev-k1glhn2"
 }
