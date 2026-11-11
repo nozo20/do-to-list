@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794432035307",
+          "title": "חולצה ארוכה",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": true,
+          "completed": false,
+          "createdAt": 1794432035307
+        },
+        {
           "id": "item-1794431608117",
           "title": "קפסולות קפה",
           "category": "groceries",
@@ -626,6 +635,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794432035307",
+      "title": "חולצה ארוכה",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1794432035307
+    },
+    {
       "id": "item-1794431608117",
       "title": "קפסולות קפה",
       "category": "groceries",
@@ -1142,6 +1160,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794431630523,
+  "lastUpdated": 1794432035307,
   "sender": "dev-yt1wz5k"
 }
