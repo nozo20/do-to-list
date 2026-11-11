@@ -550,9 +550,9 @@
       "icon": "📋",
       "blockOrder": [
         "composer",
-        "progress",
         "presets",
         "filters",
+        "progress",
         "categories"
       ],
       "categories": [
@@ -1078,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401928074,
+  "lastUpdated": 1794401935241,
   "sender": "dev-65g9tcm"
 }
