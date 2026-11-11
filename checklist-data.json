@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794385626518",
+          "title": "בוטנים",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794385626518
+        },
+        {
           "id": "item-1794385623349",
           "title": "שוקולד?",
           "category": "groceries",
@@ -513,6 +522,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794385626518",
+      "title": "בוטנים",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794385626518
+    },
     {
       "id": "item-1794385623349",
       "title": "שוקולד?",
@@ -988,6 +1006,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794385623349,
+  "lastUpdated": 1794385626518,
   "sender": "dev-k1glhn2"
 }
