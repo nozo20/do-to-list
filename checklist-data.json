@@ -564,7 +564,17 @@
           "color": "teal"
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "id": "item-1794402355437",
+          "title": "מיפוי vlan 7",
+          "category": "cat-1-1794401832317",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794402355437
+        }
+      ],
       "presets": []
     }
   ],
@@ -1076,8 +1086,8 @@
     "lbl_assign_due": "תאריך הגשה",
     "lbl_assign_status": "סטטוס"
   },
-  "theme": "classic",
+  "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794402012689,
+  "lastUpdated": 1794402355438,
   "sender": "dev-65g9tcm"
 }
