@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794431608117",
+          "title": "קפסולות קפה",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794431608117
+        },
+        {
           "id": "item-1794385626518",
           "title": "בוטנים",
           "category": "groceries",
@@ -614,8 +623,17 @@
       "presets": []
     }
   ],
-  "activeTabId": "tab-1794401832317",
+  "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794431608117",
+      "title": "קפסולות קפה",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794431608117
+    },
     {
       "id": "item-1794385626518",
       "title": "בוטנים",
@@ -1124,6 +1142,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794405720870,
-  "sender": "dev-zeb9v50"
+  "lastUpdated": 1794431608117,
+  "sender": "dev-yt1wz5k"
 }
