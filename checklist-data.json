@@ -332,7 +332,7 @@
         "autoSync": true,
         "includePast": false,
         "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים\n51060007 = אנרגיה גרעינית",
-        "lastSyncAt": 1794164388532
+        "lastSyncAt": 1794401821160
       },
       "statuses": [
         {
@@ -516,11 +516,35 @@
           "priority": false,
           "note": "",
           "createdAt": 1794164388532
+        },
+        {
+          "id": "as-moodle-1794401821159-xgbb",
+          "externalUid": "17955@moodle26.technion.ac.il",
+          "title": "(Zoom) Intro to nuclear energy lecture",
+          "course": "אנרגיה גרעינית",
+          "type": "תרגיל בית",
+          "dueDate": "2027-02-24",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794401821159
+        },
+        {
+          "id": "as-moodle-1794401821159-8m16",
+          "externalUid": "27985@moodle26.technion.ac.il",
+          "title": "הגשת גיליון בית 1",
+          "course": "מד״ח",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-16",
+          "status": "todo",
+          "priority": false,
+          "note": "",
+          "createdAt": 1794401821159
         }
       ]
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1794385626518",
@@ -964,6 +988,30 @@
       "priority": false,
       "note": "",
       "createdAt": 1794164388532
+    },
+    {
+      "id": "as-moodle-1794401821159-xgbb",
+      "externalUid": "17955@moodle26.technion.ac.il",
+      "title": "(Zoom) Intro to nuclear energy lecture",
+      "course": "אנרגיה גרעינית",
+      "type": "תרגיל בית",
+      "dueDate": "2027-02-24",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794401821159
+    },
+    {
+      "id": "as-moodle-1794401821159-8m16",
+      "externalUid": "27985@moodle26.technion.ac.il",
+      "title": "הגשת גיליון בית 1",
+      "course": "מד״ח",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-16",
+      "status": "todo",
+      "priority": false,
+      "note": "",
+      "createdAt": 1794401821159
     }
   ],
   "courses": [
@@ -1006,6 +1054,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794385626518,
-  "sender": "dev-k1glhn2"
+  "lastUpdated": 1794401821160,
+  "sender": "dev-65g9tcm"
 }
