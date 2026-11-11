@@ -569,7 +569,7 @@
           "id": "item-1794402355437",
           "title": "מיפוי vlan 7",
           "category": "cat-1-1794401832317",
-          "note": "",
+          "note": "להתחיל לעשות לוגים וחוקי allow עליו ולראות מה צריך למה (ל, ו-מ, הvlan הזה) בשביל להכין חוקים שלמים עם deny all לכניסה ויציאה ממנו בסוף בלי לחסום אף שימוש שאמור להיות בו.",
           "priority": false,
           "completed": false,
           "createdAt": 1794402355437
@@ -1088,6 +1088,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794402355438,
+  "lastUpdated": 1794402464042,
   "sender": "dev-65g9tcm"
 }
