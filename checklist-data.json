@@ -566,6 +566,15 @@
       ],
       "items": [
         {
+          "id": "item-1794405720870",
+          "title": "לוודא לגבי פתיחת all to all",
+          "category": "cat-1-1794401832317",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794405720870
+        },
+        {
           "id": "item-1794405706471",
           "title": "לשאול לגבי מחיקת חוקים שלא בשימוש.",
           "category": "cat-1-1794401832317",
@@ -1115,6 +1124,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794405706471,
+  "lastUpdated": 1794405720870,
   "sender": "dev-zeb9v50"
 }
