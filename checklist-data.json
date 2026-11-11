@@ -552,8 +552,8 @@
         "composer",
         "presets",
         "filters",
-        "progress",
-        "categories"
+        "categories",
+        "progress"
       ],
       "categories": [
         {
@@ -1078,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401956340,
+  "lastUpdated": 1794401959471,
   "sender": "dev-65g9tcm"
 }
