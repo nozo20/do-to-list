@@ -551,8 +551,8 @@
       "blockOrder": [
         "categories",
         "composer",
-        "presets",
         "filters",
+        "presets",
         "progress"
       ],
       "categories": [
@@ -1078,6 +1078,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794401982948,
+  "lastUpdated": 1794401992009,
   "sender": "dev-65g9tcm"
 }
