@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379267027",
+          "title": "קורנישונים",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379267027
+        },
+        {
           "id": "item-1794379260997",
           "title": "עגבניות",
           "category": "groceries",
@@ -468,6 +477,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379267027",
+      "title": "קורנישונים",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379267027
+    },
     {
       "id": "item-1794379260997",
       "title": "עגבניות",
@@ -898,6 +916,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379260997,
+  "lastUpdated": 1794379267027,
   "sender": "dev-k1glhn2"
 }
