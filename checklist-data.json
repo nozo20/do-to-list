@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379287034",
+          "title": "גבינות קשות",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379287034
+        },
+        {
           "id": "item-1794379282453",
           "title": "לבבות ארטישוק (שימורים)",
           "category": "groceries",
@@ -495,6 +504,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379287034",
+      "title": "גבינות קשות",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379287034
+    },
     {
       "id": "item-1794379282453",
       "title": "לבבות ארטישוק (שימורים)",
@@ -952,6 +970,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379282453,
+  "lastUpdated": 1794379287034,
   "sender": "dev-k1glhn2"
 }
