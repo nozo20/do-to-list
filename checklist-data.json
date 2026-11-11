@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379282453",
+          "title": "לבבות ארטישוק (שימורים)",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379282453
+        },
+        {
           "id": "item-1794379271154",
           "title": "לבבות דקל",
           "category": "groceries",
@@ -486,6 +495,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379282453",
+      "title": "לבבות ארטישוק (שימורים)",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379282453
+    },
     {
       "id": "item-1794379271154",
       "title": "לבבות דקל",
@@ -934,6 +952,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379271154,
+  "lastUpdated": 1794379282453,
   "sender": "dev-k1glhn2"
 }
