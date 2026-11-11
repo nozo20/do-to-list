@@ -566,6 +566,15 @@
       ],
       "items": [
         {
+          "id": "item-1794405676925",
+          "title": "למצוא את הקובץ מיפוי פורטים",
+          "category": "cat-1-1794401832317",
+          "note": "יגאל",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794405676925
+        },
+        {
           "id": "item-1794402355437",
           "title": "מיפוי vlan 7",
           "category": "cat-1-1794401832317",
@@ -1088,6 +1097,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794402464042,
-  "sender": "dev-65g9tcm"
+  "lastUpdated": 1794405676925,
+  "sender": "dev-zeb9v50"
 }
