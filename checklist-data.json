@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379271154",
+          "title": "לבבות דקל",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379271154
+        },
+        {
           "id": "item-1794379267027",
           "title": "קורנישונים",
           "category": "groceries",
@@ -477,6 +486,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379271154",
+      "title": "לבבות דקל",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379271154
+    },
     {
       "id": "item-1794379267027",
       "title": "קורנישונים",
@@ -916,6 +934,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379267027,
+  "lastUpdated": 1794379271154,
   "sender": "dev-k1glhn2"
 }
