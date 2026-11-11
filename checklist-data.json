@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794379260997",
+          "title": "עגבניות",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794379260997
+        },
+        {
           "id": "item-1794379256107",
           "title": "לחם",
           "category": "groceries",
@@ -459,6 +468,15 @@
   ],
   "activeTabId": "tab-weekend",
   "items": [
+    {
+      "id": "item-1794379260997",
+      "title": "עגבניות",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794379260997
+    },
     {
       "id": "item-1794379256107",
       "title": "לחם",
@@ -880,6 +898,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794379256107,
+  "lastUpdated": 1794379260997,
   "sender": "dev-k1glhn2"
 }
