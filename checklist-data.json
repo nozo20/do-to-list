@@ -47,7 +47,7 @@
           "id": "item-1794431608117",
           "title": "קפסולות קפה",
           "category": "groceries",
-          "note": "",
+          "note": "אני",
           "priority": false,
           "completed": false,
           "createdAt": 1794431608117
@@ -629,7 +629,7 @@
       "id": "item-1794431608117",
       "title": "קפסולות קפה",
       "category": "groceries",
-      "note": "",
+      "note": "אני",
       "priority": false,
       "completed": false,
       "createdAt": 1794431608117
@@ -1142,6 +1142,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794431608117,
+  "lastUpdated": 1794431616392,
   "sender": "dev-yt1wz5k"
 }
