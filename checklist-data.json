@@ -518,7 +518,7 @@
           "course": "גלים",
           "type": "תרגיל בית",
           "dueDate": "2026-11-17",
-          "status": "todo",
+          "status": "done",
           "priority": false,
           "note": "",
           "createdAt": 1794037527162
@@ -632,7 +632,7 @@
       "presets": []
     }
   ],
-  "activeTabId": "tab-weekend",
+  "activeTabId": "tab-study",
   "items": [
     {
       "id": "item-1794432035307",
@@ -1078,7 +1078,7 @@
       "course": "גלים",
       "type": "תרגיל בית",
       "dueDate": "2026-11-17",
-      "status": "todo",
+      "status": "done",
       "priority": false,
       "note": "",
       "createdAt": 1794037527162
@@ -1160,6 +1160,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794432035307,
-  "sender": "dev-yt1wz5k"
+  "lastUpdated": 1794468264751,
+  "sender": "dev-v56vgpe"
 }
