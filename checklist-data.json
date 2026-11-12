@@ -121,7 +121,7 @@
           "category": "groceries",
           "note": "אני",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1794379260997
         },
         {
@@ -712,7 +712,7 @@
       "category": "groceries",
       "note": "אני",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1794379260997
     },
     {
@@ -1160,6 +1160,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794503617837,
+  "lastUpdated": 1794503620363,
   "sender": "dev-ef4ptaf"
 }
