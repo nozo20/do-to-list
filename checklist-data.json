@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794505206992",
+          "title": "ברוקולי",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794505206992
+        },
+        {
           "id": "item-1794505198003",
           "title": "בטטה",
           "category": "groceries",
@@ -653,6 +662,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794505206992",
+      "title": "ברוקולי",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794505206992
+    },
+    {
       "id": "item-1794505198003",
       "title": "בטטה",
       "category": "groceries",
@@ -1196,6 +1214,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794505198003,
+  "lastUpdated": 1794505206992,
   "sender": "dev-eu3rbbr"
 }
