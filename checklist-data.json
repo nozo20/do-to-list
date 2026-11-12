@@ -67,7 +67,7 @@
           "category": "groceries",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1794385626518
         },
         {
@@ -632,7 +632,7 @@
       "presets": []
     }
   ],
-  "activeTabId": "tab-study",
+  "activeTabId": "tab-weekend",
   "items": [
     {
       "id": "item-1794432035307",
@@ -658,7 +658,7 @@
       "category": "groceries",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1794385626518
     },
     {
@@ -1160,6 +1160,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794483197805,
-  "sender": "dev-z36jtqe"
+  "lastUpdated": 1794503617837,
+  "sender": "dev-ef4ptaf"
 }
