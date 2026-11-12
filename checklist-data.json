@@ -554,7 +554,7 @@
           "course": "מד״ח",
           "type": "תרגיל בית",
           "dueDate": "2026-11-16",
-          "status": "todo",
+          "status": "doing",
           "priority": false,
           "note": "",
           "createdAt": 1794401821159
@@ -1114,7 +1114,7 @@
       "course": "מד״ח",
       "type": "תרגיל בית",
       "dueDate": "2026-11-16",
-      "status": "todo",
+      "status": "doing",
       "priority": false,
       "note": "",
       "createdAt": 1794401821159
@@ -1160,6 +1160,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794468264751,
-  "sender": "dev-v56vgpe"
+  "lastUpdated": 1794483192890,
+  "sender": "dev-z36jtqe"
 }
