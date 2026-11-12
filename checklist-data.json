@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794505191377",
+          "title": "כרובית",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794505191377
+        },
+        {
           "id": "item-1794432035307",
           "title": "חולצה ארוכה",
           "category": "cat-1792330030718",
@@ -635,6 +644,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794505191377",
+      "title": "כרובית",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794505191377
+    },
+    {
       "id": "item-1794432035307",
       "title": "חולצה ארוכה",
       "category": "cat-1792330030718",
@@ -1160,6 +1178,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794504479661,
+  "lastUpdated": 1794505191377,
   "sender": "dev-eu3rbbr"
 }
