@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794505198003",
+          "title": "בטטה",
+          "category": "groceries",
+          "note": "",
+          "priority": false,
+          "completed": false,
+          "createdAt": 1794505198003
+        },
+        {
           "id": "item-1794505191377",
           "title": "כרובית",
           "category": "groceries",
@@ -644,6 +653,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794505198003",
+      "title": "בטטה",
+      "category": "groceries",
+      "note": "",
+      "priority": false,
+      "completed": false,
+      "createdAt": 1794505198003
+    },
+    {
       "id": "item-1794505191377",
       "title": "כרובית",
       "category": "groceries",
@@ -1178,6 +1196,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794505191377,
+  "lastUpdated": 1794505198003,
   "sender": "dev-eu3rbbr"
 }
