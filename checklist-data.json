@@ -49,7 +49,7 @@
           "category": "groceries",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1794505206992
         },
         {
@@ -58,7 +58,7 @@
           "category": "groceries",
           "note": "",
           "priority": false,
-          "completed": false,
+          "completed": true,
           "createdAt": 1794505198003
         },
         {
@@ -667,7 +667,7 @@
       "category": "groceries",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1794505206992
     },
     {
@@ -676,7 +676,7 @@
       "category": "groceries",
       "note": "",
       "priority": false,
-      "completed": false,
+      "completed": true,
       "createdAt": 1794505198003
     },
     {
@@ -1214,6 +1214,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794505206992,
-  "sender": "dev-eu3rbbr"
+  "lastUpdated": 1794571652045,
+  "sender": "dev-poj1n0c"
 }
