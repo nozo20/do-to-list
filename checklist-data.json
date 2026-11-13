@@ -296,6 +296,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1794572369552",
+          "title": "הסתברות - וואבווארק 2",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-22",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1794572369552
+        },
+        {
           "id": "as-1794572208164",
           "title": "גלים תרגיל בית - 2",
           "course": "גלים",
@@ -768,6 +779,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1794572369552",
+      "title": "הסתברות - וואבווארק 2",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-22",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1794572369552
+    },
+    {
       "id": "as-1794572208164",
       "title": "גלים תרגיל בית - 2",
       "course": "גלים",
@@ -984,6 +1006,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794572354751,
+  "lastUpdated": 1794572369552,
   "sender": "dev-poj1n0c"
 }
