@@ -44,24 +44,6 @@
       ],
       "items": [
         {
-          "id": "item-1794505206992",
-          "title": "ברוקולי",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794505206992
-        },
-        {
-          "id": "item-1794505198003",
-          "title": "בטטה",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794505198003
-        },
-        {
           "id": "item-1794505191377",
           "title": "כרובית",
           "category": "groceries",
@@ -80,87 +62,6 @@
           "createdAt": 1794432035307
         },
         {
-          "id": "item-1794431608117",
-          "title": "קפסולות קפה",
-          "category": "groceries",
-          "note": "אני",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794431608117
-        },
-        {
-          "id": "item-1794385626518",
-          "title": "בוטנים",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794385626518
-        },
-        {
-          "id": "item-1794385623349",
-          "title": "שוקולד?",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794385623349
-        },
-        {
-          "id": "item-1794379287034",
-          "title": "גבינות קשות",
-          "category": "groceries",
-          "note": "אני",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379287034
-        },
-        {
-          "id": "item-1794379282453",
-          "title": "לבבות ארטישוק (שימורים)",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379282453
-        },
-        {
-          "id": "item-1794379271154",
-          "title": "לבבות דקל (שימורים)",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379271154
-        },
-        {
-          "id": "item-1794379267027",
-          "title": "קורנישונים",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379267027
-        },
-        {
-          "id": "item-1794379260997",
-          "title": "עגבניות",
-          "category": "groceries",
-          "note": "אני",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379260997
-        },
-        {
-          "id": "item-1794379256107",
-          "title": "לחם",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794379256107
-        },
-        {
           "id": "item-1794159633426",
           "title": "קרם לחות",
           "category": "cat-1792332023621",
@@ -177,33 +78,6 @@
           "priority": false,
           "completed": false,
           "createdAt": 1794159625568
-        },
-        {
-          "id": "item-1794159583959",
-          "title": "אוראו",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794159583959
-        },
-        {
-          "id": "item-1794140840236",
-          "title": "טורטיות",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794140840236
-        },
-        {
-          "id": "item-1794139997544",
-          "title": "שמנת",
-          "category": "groceries",
-          "note": "",
-          "priority": false,
-          "completed": true,
-          "createdAt": 1794139997544
         },
         {
           "id": "item-1794139994500",
@@ -662,24 +536,6 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
-      "id": "item-1794505206992",
-      "title": "ברוקולי",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794505206992
-    },
-    {
-      "id": "item-1794505198003",
-      "title": "בטטה",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794505198003
-    },
-    {
       "id": "item-1794505191377",
       "title": "כרובית",
       "category": "groceries",
@@ -698,87 +554,6 @@
       "createdAt": 1794432035307
     },
     {
-      "id": "item-1794431608117",
-      "title": "קפסולות קפה",
-      "category": "groceries",
-      "note": "אני",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794431608117
-    },
-    {
-      "id": "item-1794385626518",
-      "title": "בוטנים",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794385626518
-    },
-    {
-      "id": "item-1794385623349",
-      "title": "שוקולד?",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794385623349
-    },
-    {
-      "id": "item-1794379287034",
-      "title": "גבינות קשות",
-      "category": "groceries",
-      "note": "אני",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379287034
-    },
-    {
-      "id": "item-1794379282453",
-      "title": "לבבות ארטישוק (שימורים)",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379282453
-    },
-    {
-      "id": "item-1794379271154",
-      "title": "לבבות דקל (שימורים)",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379271154
-    },
-    {
-      "id": "item-1794379267027",
-      "title": "קורנישונים",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379267027
-    },
-    {
-      "id": "item-1794379260997",
-      "title": "עגבניות",
-      "category": "groceries",
-      "note": "אני",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379260997
-    },
-    {
-      "id": "item-1794379256107",
-      "title": "לחם",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794379256107
-    },
-    {
       "id": "item-1794159633426",
       "title": "קרם לחות",
       "category": "cat-1792332023621",
@@ -795,33 +570,6 @@
       "priority": false,
       "completed": false,
       "createdAt": 1794159625568
-    },
-    {
-      "id": "item-1794159583959",
-      "title": "אוראו",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794159583959
-    },
-    {
-      "id": "item-1794140840236",
-      "title": "טורטיות",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794140840236
-    },
-    {
-      "id": "item-1794139997544",
-      "title": "שמנת",
-      "category": "groceries",
-      "note": "",
-      "priority": false,
-      "completed": true,
-      "createdAt": 1794139997544
     },
     {
       "id": "item-1794139994500",
@@ -1214,6 +962,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794571654884,
+  "lastUpdated": 1794571663949,
   "sender": "dev-poj1n0c"
 }
