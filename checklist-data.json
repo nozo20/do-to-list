@@ -247,7 +247,7 @@
         "stats"
       ],
       "moodleConfig": {
-        "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=custom",
+        "icsUrl": "https://moodle26.technion.ac.il/calendar/export_execute.php?userid=20622&authtoken=3b088aca22b6efe81d2a06e53f4777409013f1e8&preset_what=all&preset_time=recentupcoming",
         "autoSync": true,
         "includePast": false,
         "courseMapText": "01040034 = הסתברות\n01040220 = מד״ח\n01140101 = מכניקה אנליטית\n01140086 = גלים\n03140003 = מכניקת מוצקים\n01140035 = מעבדה 3 - גלים\n51060007 = אנרגיה גרעינית",
@@ -295,6 +295,17 @@
         "אנרגיה גרעינית"
       ],
       "assignments": [
+        {
+          "id": "as-1794572208164",
+          "title": "גלים תרגיל בית - 2",
+          "course": "גלים",
+          "type": "תרגיל בית",
+          "dueDate": "2026-11-24",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1794572208164
+        },
         {
           "id": "as-1794243439267",
           "title": "הסתברות - וואבווארק 2",
@@ -757,6 +768,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1794572208164",
+      "title": "גלים תרגיל בית - 2",
+      "course": "גלים",
+      "type": "תרגיל בית",
+      "dueDate": "2026-11-24",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1794572208164
+    },
+    {
       "id": "as-1794243439267",
       "title": "הסתברות - וואבווארק 2",
       "course": "הסתברות",
@@ -962,6 +984,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794571692022,
+  "lastUpdated": 1794572208164,
   "sender": "dev-poj1n0c"
 }
