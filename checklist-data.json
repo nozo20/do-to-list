@@ -296,6 +296,17 @@
       ],
       "assignments": [
         {
+          "id": "as-1794572402686",
+          "title": "הסתברות - וואבווארק 3",
+          "course": "הסתברות",
+          "type": "תרגיל בית",
+          "dueDate": "2026-12-06",
+          "status": "todo",
+          "note": "",
+          "priority": false,
+          "createdAt": 1794572402686
+        },
+        {
           "id": "as-1794572369552",
           "title": "הסתברות - וואבווארק 2",
           "course": "הסתברות",
@@ -779,6 +790,17 @@
   ],
   "assignments": [
     {
+      "id": "as-1794572402686",
+      "title": "הסתברות - וואבווארק 3",
+      "course": "הסתברות",
+      "type": "תרגיל בית",
+      "dueDate": "2026-12-06",
+      "status": "todo",
+      "note": "",
+      "priority": false,
+      "createdAt": 1794572402686
+    },
+    {
       "id": "as-1794572369552",
       "title": "הסתברות - וואבווארק 2",
       "course": "הסתברות",
@@ -1006,6 +1028,6 @@
   },
   "theme": "pinterest",
   "isDefaultState": false,
-  "lastUpdated": 1794572388473,
+  "lastUpdated": 1794572402686,
   "sender": "dev-poj1n0c"
 }
