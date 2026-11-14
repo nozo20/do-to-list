@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794646447509",
+          "title": "מקלדת",
+          "category": "groceries",
+          "note": "",
+          "priority": true,
+          "completed": false,
+          "createdAt": 1794646447509
+        },
+        {
           "id": "item-1794646429208",
           "title": "סבוסל",
           "category": "groceries",
@@ -587,6 +596,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794646447509",
+      "title": "מקלדת",
+      "category": "groceries",
+      "note": "",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1794646447509
+    },
+    {
       "id": "item-1794646429208",
       "title": "סבוסל",
       "category": "groceries",
@@ -1064,6 +1082,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1794646429208,
+  "lastUpdated": 1794646447509,
   "sender": "dev-6abyb3h"
 }
