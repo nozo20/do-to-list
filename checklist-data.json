@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794646462585",
+          "title": "מכונת תספורת?",
+          "category": "cat-1792330030718",
+          "note": "",
+          "priority": true,
+          "completed": false,
+          "createdAt": 1794646462585
+        },
+        {
           "id": "item-1794646447509",
           "title": "מקלדת",
           "category": "groceries",
@@ -596,6 +605,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794646462585",
+      "title": "מכונת תספורת?",
+      "category": "cat-1792330030718",
+      "note": "",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1794646462585
+    },
+    {
       "id": "item-1794646447509",
       "title": "מקלדת",
       "category": "groceries",
@@ -1082,6 +1100,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1794646447509,
+  "lastUpdated": 1794646462585,
   "sender": "dev-6abyb3h"
 }
