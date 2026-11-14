@@ -44,6 +44,15 @@
       ],
       "items": [
         {
+          "id": "item-1794646429208",
+          "title": "סבוסל",
+          "category": "groceries",
+          "note": "",
+          "priority": true,
+          "completed": false,
+          "createdAt": 1794646429208
+        },
+        {
           "id": "item-1794587215531",
           "title": "Cookbook",
           "category": "todos",
@@ -578,6 +587,15 @@
   "activeTabId": "tab-weekend",
   "items": [
     {
+      "id": "item-1794646429208",
+      "title": "סבוסל",
+      "category": "groceries",
+      "note": "",
+      "priority": true,
+      "completed": false,
+      "createdAt": 1794646429208
+    },
+    {
       "id": "item-1794587215531",
       "title": "Cookbook",
       "category": "todos",
@@ -1046,6 +1064,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1794587215531,
-  "sender": "dev-bsj2x6v"
+  "lastUpdated": 1794646429208,
+  "sender": "dev-6abyb3h"
 }
