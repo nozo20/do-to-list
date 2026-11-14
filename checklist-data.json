@@ -55,7 +55,7 @@
         {
           "id": "item-1794646447509",
           "title": "מקלדת",
-          "category": "groceries",
+          "category": "cat-1792330030718",
           "note": "",
           "priority": true,
           "completed": false,
@@ -616,7 +616,7 @@
     {
       "id": "item-1794646447509",
       "title": "מקלדת",
-      "category": "groceries",
+      "category": "cat-1792330030718",
       "note": "",
       "priority": true,
       "completed": false,
@@ -1100,6 +1100,6 @@
   },
   "theme": "classic",
   "isDefaultState": false,
-  "lastUpdated": 1794646471712,
+  "lastUpdated": 1794646475105,
   "sender": "dev-6abyb3h"
 }
